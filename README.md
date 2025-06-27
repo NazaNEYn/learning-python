@@ -29,8 +29,17 @@ print("Hello World! \nHello World! \nHello World")
 ### Combining strings
 
 ```python
+# Hello Naz
+
+# We could add an empty strng in between the words :
 print("Hello" + " " + "Naz")
 
+# or
+print("Hello " + "Naz")
+# Hello Naz
+
+# or
+print("Hello" + " Naz")
 # Hello Naz
 ```
 
