@@ -1,2 +1,4 @@
 # learning-python
-Taking paython notes
+
+
+## Taking paython notes from [Dr. Angela Yu's](https://www.udemy.com/course/100-days-of-code/?srsltid=AfmBOoqVLnX2FVCJWsKZIQXpZmtsk2hJeZ4mki6rIAl8QL7ykq0aBmsq) course
