@@ -9,12 +9,4 @@
 ## Printing outputs : <br>
 ```python
 print("Hello World!")
-
-
-
-
-
-
-
-
-
+```
