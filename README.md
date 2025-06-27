@@ -10,3 +10,25 @@
 ```python
 print("Hello World!")
 ```
+<br>
+Instead of writing multiple lines like
+
+```python
+print("Hello World!")
+print("Hello World!")
+print("Hello World!")
+```
+
+We could write 
+```python
+print("Hello World! \nHello World! \nHello World")
+
+# Hello World 
+# Hello World 
+# Hello World
+```
+
+
+
+
+
