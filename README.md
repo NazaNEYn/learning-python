@@ -48,10 +48,15 @@ print("Hello" + " Naz")
 
 ```python
 input("A prompt for the user")
+```
+Example:
 
-# Example:
+```python
 input("What is your name?")
 ```
+
+
+
 
 
 
