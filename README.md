@@ -26,7 +26,7 @@ print("Hello World! \nHello World! \nHello World")
 # Hello World
 ```
 
-### Combining strings
+### String Concatenation (Combining Strings)
 
 ```python
 # Hello Naz
