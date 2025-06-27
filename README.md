@@ -63,6 +63,11 @@ print("Hello " + input("What is your name?") + "!")
 ----------------------------------------------
 
 ## Variables 
+Variable is somtheing that can be changed or varied.
 
+```python
+name = input("What is your name?")
+print(name)
+```
 
 
