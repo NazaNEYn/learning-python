@@ -56,7 +56,13 @@ input("What is your name?")
 ```
 
 
+```python
+print("Hello " + input("What is your name?") + "!")
+```
 
+----------------------------------------------
+
+## Variables 
 
 
 
