@@ -43,5 +43,15 @@ print("Hello" + " Naz")
 # Hello Naz
 ```
 
+----------------------------------------------
+## Input Function
+
+```python
+input("A prompt for the user")
+
+# Example:
+input("What is your name?")
+```
+
 
 
