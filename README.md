@@ -101,3 +101,26 @@ print("Hello"[-1])
 
 # o
 ```
+
+----------------------------------------------
+
+## Integer (Whole Number)
+
+```python
+print(123 + 456)
+
+# 468
+```
+
+## Large Integer 
+
+For writing big numbers like 123,456,786 we use `_` instead of `,`
+```python
+print(123_456_789)
+
+# 123456789
+```
+
+
+----------------------------------------------
+
