@@ -88,7 +88,7 @@ print(name)
 Pulling out a particular element from a string and the number between square brackets determines which character you're going to pull out
 
 ```python
-print("Hello[0]")
+print("Hello"[0])
 
 # H
 ```
