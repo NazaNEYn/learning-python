@@ -70,4 +70,12 @@ name = input("What is your name?")
 print(name)
 ```
 
+----------------------------------------------
 
+
+## Dat Types
+
+1. String
+2. Integer
+3. Float
+4. Boolean
