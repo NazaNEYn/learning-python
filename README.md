@@ -92,3 +92,12 @@ print("Hello"[0])
 
 # H
 ```
+
+* Tip :
+We can use `-` and get the last character
+
+```python
+print("Hello"[-1])
+
+# o
+```
