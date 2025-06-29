@@ -341,4 +341,4 @@ if condition3:
   do C
 ```
 
-
+It doesn't necessary need a `else` block.
