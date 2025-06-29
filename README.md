@@ -185,5 +185,15 @@ print(round(55.9222 , 1))
 # 56.9
 ```
 ----------------------------------------------
+## Condituinal Statement (`if / else`)
+
+
+```python
+if condition:
+    do this
+else:
+    do this
+```
+
 
 
