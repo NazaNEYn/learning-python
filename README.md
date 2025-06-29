@@ -171,8 +171,19 @@ print(round(55.222))
 
 print(round(55.9222))
 #56
+```
 
+It lets you add a second argument to specify how many decimal places to show for rounding is:
 
+`round(number, ndigits)`
+
+```python
+print(round(55.2255452 , 2))
+# 55.23
+
+print(round(55.9222 , 1))
+# 56.9
+```
 ----------------------------------------------
 
 
