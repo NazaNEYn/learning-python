@@ -342,3 +342,20 @@ if condition3:
 ```
 
 It doesn't necessary need a `else` block.
+----------------------------------------------
+
+##  Logocal Operators
+
+
+```python
+A and B
+# of both condictions are true = True
+#if just one of them is true = False
+
+C ord D
+# if only either of them is true = True
+# False or False = False
+
+not E
+```
+
