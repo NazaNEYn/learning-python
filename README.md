@@ -222,28 +222,26 @@ if condition:
 else:
   do this
 ```
+
+```python
+height = int(input("How tall are you?"))
+
+if height >= 120:
+    print("You can ride")
+    age = int(input("How old are you?"))
+    if age >= 18:
+      print("you have to pay 12$")
+    else:
+      print("you have to pay 7$")
+else:
+    print("Sorry you are short")
+```
+
 ----------------------------------------------
 
 
 
-## Modulo Operator (`%`)
 
-Simple Example: Cookies and Bags
-
-Let's say you have `10` cookies and each bag holds `3` cookies.
-
-You fill the first bag: You use `3` cookies. You have `7` left.
-
-You fill the second bag: You use another `3` cookies. You have `4` left.
-
-You fill the third bag: You use another `3` cookies. You have `1` left.
-
-Can you fill another bag? No, because you only have `1` cookie left, and a bag needs `3`.
-
-So, the number of cookies **left over** is 1.
-
-In Python, this would be:
-`10 % 3` which equals 1.
 
 ## Modulo Operator (`%`)
 
