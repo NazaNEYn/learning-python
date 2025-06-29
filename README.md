@@ -209,6 +209,22 @@ else:
 `==` is for checking equality
 
 ----------------------------------------------
+## Nested `if / else`
+
+
+
+```python
+if condition:
+  if another condition:
+    do this
+  else:
+    do this
+else:
+  do this
+```
+----------------------------------------------
+
+
 
 ## Modulo Operator (`%`)
 
