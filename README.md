@@ -195,5 +195,13 @@ else:
     do this
 ```
 
+```python
+height = int(input("How tall are you?\n"))
+
+if height >= 120:
+  print("You can enter to ride the rollecoaster")
+else:
+  print("sorry, you are short")
+```
 
 
