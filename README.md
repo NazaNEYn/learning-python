@@ -239,9 +239,39 @@ else:
 
 ----------------------------------------------
 
+##  `if / elif/ else`
 
 
 
+```python
+if condition1:
+  do A
+elif conditio2:
+  do B
+else:
+  do This
+```
+
+
+
+```python
+height = int(input("How tall are you?"))
+
+if height >= 120:
+    print("You can ride")
+    age = int(input("How old are you?"))
+    if age <= 12:
+      print("you have to pay 5$")
+    elif age >= 18:
+      print("you have to pay 12$")
+    else:
+      print("you have to pay 7$")
+else:
+    print("Sorry you are short")
+```
+
+
+----------------------------------------------
 
 ## Modulo Operator (`%`)
 
