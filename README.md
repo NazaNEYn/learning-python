@@ -204,4 +204,7 @@ else:
   print("sorry, you are short")
 ```
 
+**Tip**
+`=` is for assignment
+`==` is for checking equality
 
