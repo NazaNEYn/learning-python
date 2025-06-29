@@ -139,3 +139,40 @@ print(False)
 ```
 
 ----------------------------------------------
+
+## Type Conversion Functions (Type casting)
+
+
+**`int()`** Converts a value to an integer. If the input is a float, it truncates the decimal part (rounds towards zero). If the input is a string, it must represent a whole number.
+
+```python
+print(int(55.222))
+#55
+
+print(int(55.9222))
+#55
+```
+
+**`float()`** Converts a value to a floating-point number. If the input is an integer, it adds a decimal part (e.g., 5 becomes 5.0). If the input is a string, it must represent a valid number (integer or decimal).
+
+```python
+print(float(55.222))
+# 55.222
+
+print(float(55.9222))
+# 55.9222
+```
+
+**`round()`** is used to round a number to the nearest integer or to a specified number of decimal places.
+
+```python
+print(round(55.222))
+#55
+
+print(round(55.9222))
+#56
+
+
+----------------------------------------------
+
+
