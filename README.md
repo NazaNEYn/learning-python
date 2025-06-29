@@ -208,3 +208,60 @@ else:
 `=` is for assignment
 `==` is for checking equality
 
+----------------------------------------------
+
+## Modulo Operator (`%`)
+
+Simple Example: Cookies and Bags
+
+Let's say you have `10` cookies and each bag holds `3` cookies.
+
+You fill the first bag: You use `3` cookies. You have `7` left.
+
+You fill the second bag: You use another `3` cookies. You have `4` left.
+
+You fill the third bag: You use another `3` cookies. You have `1` left.
+
+Can you fill another bag? No, because you only have `1` cookie left, and a bag needs `3`.
+
+So, the number of cookies **left over** is 1.
+
+In Python, this would be:
+`10 % 3` which equals 1.
+
+## Modulo Operator (`%`)
+
+Simple Example: Cookies and Bags
+
+Let's say you have `10` cookies and each bag holds `3` cookies.
+
+You fill the first bag: You use `3` cookies. You have `7` left.
+
+You fill the second bag: You use another `3` cookies. You have `4` left.
+
+You fill the third bag: You use another `3` cookies. You have `1` left.
+
+Can you fill another bag? No, because you only have `1` cookie left, and a bag needs `3`.
+
+So, the number of cookies **left over** is 1.
+
+In Python, this would be:
+`10 % 3` which equals 1.
+
+
+
+```python
+print(10 % 3)  # Output: 1 (10 divided by 3 is 3 with a remainder of 1)
+# 3 * 3 = 9 and 10 - 9 = 1
+
+print(15 % 4)  # Output: 3 (15 divided by 4 is 3 with a remainder of 3)
+# 4 * 3 = 12 and 15 - 12 = 3
+
+print(7 % 2)   # Output: 1 (7 divided by 2 is 3 with a remainder of 1 - useful for checking odd/even)
+# 2 * 3 = 6 and 7 - 6 = 1
+
+print(20 % 5)  # Output: 0 (20 divided by 5 is 4 with a remainder of 0)
+# 5 * 4 = 0 and there is no remaining
+
+print(5 % 20)  # Output: 5 (5 divided by 20 is 0 with a remainder of 5)
+```
