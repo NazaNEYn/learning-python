@@ -185,6 +185,44 @@ print(round(55.9222 , 1))
 # 56.9
 ```
 ----------------------------------------------
+## Modulo Operator (`%`)
+
+Simple Example: Cookies and Bags
+
+Let's say you have `10` cookies and each bag holds `3` cookies.
+
+You fill the first bag: You use `3` cookies. You have `7` left.
+
+You fill the second bag: You use another `3` cookies. You have `4` left.
+
+You fill the third bag: You use another `3` cookies. You have `1` left.
+
+Can you fill another bag? No, because you only have `1` cookie left, and a bag needs `3`.
+
+So, the number of cookies **left over** is 1.
+
+In Python, this would be:
+`10 % 3` which equals 1.
+
+
+
+```python
+print(10 % 3)  # Output: 1 (10 divided by 3 is 3 with a remainder of 1)
+# 3 * 3 = 9 and 10 - 9 = 1
+
+print(15 % 4)  # Output: 3 (15 divided by 4 is 3 with a remainder of 3)
+# 4 * 3 = 12 and 15 - 12 = 3
+
+print(7 % 2)   # Output: 1 (7 divided by 2 is 3 with a remainder of 1 - useful for checking odd/even)
+# 2 * 3 = 6 and 7 - 6 = 1
+
+print(20 % 5)  # Output: 0 (20 divided by 5 is 4 with a remainder of 0)
+# 5 * 4 = 0 and there is no remaining
+
+print(5 % 20)  # Output: 5 (5 divided by 20 is 0 with a remainder of 5)
+```
+
+----------------------------------------------
 ## Condituinal Statement (`if / else`)
 
 
@@ -257,55 +295,49 @@ else:
 ```python
 height = int(input("How tall are you?"))
 
-if height >= 120:
-    print("You can ride")
-    age = int(input("How old are you?"))
-    if age <= 12:
-      print("you have to pay 5$")
-    elif age >= 18:
-      print("you have to pay 12$")
-    else:
-      print("you have to pay 7$")
-else:
-    print("Sorry you are short")
-```
+# Prompt the user for their height and convert the input string to an integer.
+# This variable will be used to determine initial ride eligibility.
+height = int(input("How tall are you?\n")) # Added \n for better prompt display
 
+# Check if the person meets the minimum height requirement for the ride.
+if height >= 120:
+    # If tall enough, inform the user they can ride and proceed to age-based pricing.
+    print("You can ride")
+
+    # Prompt the user for their age and convert the input string to an integer.
+    # This variable will determine the specific ticket price.
+    age = int(input("How old are you?\n")) # Added \n for better prompt display
+
+    # Determine the ticket price based on age, using a clear tiered system.
+
+    # If age is 12 or younger, apply the child price.
+    if age <= 12:
+        print("You have to pay 5$")
+    # If age is 18 or older, apply the adult price.
+    # This 'elif' ensures that ages 13-17 are correctly skipped for this condition.
+    elif age >= 18:
+        print("You have to pay 12$")
+    # If none of the above conditions are met (i.e., age is between 13 and 17, inclusive),
+    # apply the 'teen' or 'standard' price.
+    else: # This implicitly covers ages > 12 and < 18 (i.e., 13, 14, 15, 16, 17)
+        print("You have to pay 7$")
+
+# If the person does not meet the minimum height requirement,
+# inform them they cannot ride.
+else:
+    print("Sorry you are too short") # Changed "short" to "too short" for clarity```
 
 ----------------------------------------------
-
-## Modulo Operator (`%`)
-
-Simple Example: Cookies and Bags
-
-Let's say you have `10` cookies and each bag holds `3` cookies.
-
-You fill the first bag: You use `3` cookies. You have `7` left.
-
-You fill the second bag: You use another `3` cookies. You have `4` left.
-
-You fill the third bag: You use another `3` cookies. You have `1` left.
-
-Can you fill another bag? No, because you only have `1` cookie left, and a bag needs `3`.
-
-So, the number of cookies **left over** is 1.
-
-In Python, this would be:
-`10 % 3` which equals 1.
-
+##  Multiple if
 
 
 ```python
-print(10 % 3)  # Output: 1 (10 divided by 3 is 3 with a remainder of 1)
-# 3 * 3 = 9 and 10 - 9 = 1
-
-print(15 % 4)  # Output: 3 (15 divided by 4 is 3 with a remainder of 3)
-# 4 * 3 = 12 and 15 - 12 = 3
-
-print(7 % 2)   # Output: 1 (7 divided by 2 is 3 with a remainder of 1 - useful for checking odd/even)
-# 2 * 3 = 6 and 7 - 6 = 1
-
-print(20 % 5)  # Output: 0 (20 divided by 5 is 4 with a remainder of 0)
-# 5 * 4 = 0 and there is no remaining
-
-print(5 % 20)  # Output: 5 (5 divided by 20 is 0 with a remainder of 5)
+if condition1:
+  do A
+if condition2:
+  do B
+if condition3:
+  do C
 ```
+
+
