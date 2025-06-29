@@ -325,7 +325,8 @@ if height >= 120:
 # If the person does not meet the minimum height requirement,
 # inform them they cannot ride.
 else:
-    print("Sorry you are too short") # Changed "short" to "too short" for clarity```
+    print("Sorry you are too short") 
+```
 
 ----------------------------------------------
 ##  Multiple if
