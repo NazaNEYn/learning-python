@@ -382,3 +382,55 @@ random_number_0_to_1 = random.random()
 print(random_number_0_to_1)
 # Generates a random number between 0-1
 ```
+----------------------------------------------
+
+
+##  Lists
+
+```python
+variable = [item1, item2, item3]
+```
+
+```python
+fruits = ["apple", "orange", "strawberry", "cherry"]
+print(fruits[0])
+# apple
+
+print(fruits[-1])
+# Gets the last one
+# cherry
+```
+
+How to change a variable?
+
+```python
+fruits = ["apple", "orange", "strawberry", "cherry"]
+
+fruits[1] = "banana"
+
+print(fruits)
+# ['apple', 'banana', 'strawberry', 'cherry']
+```
+
+How to add a new variable? (`append() function`)
+
+```python
+fruits = ["apple", "orange", "strawberry", "cherry"]
+
+fruits.append("banana")
+
+print(fruits)
+# ['apple', 'orange', 'strawberry', 'cherry', 'banana']
+```
+
+How to add a list? (`extend() function`)
+```python
+fruits = ["apple", "orange", "strawberry", "cherry"]
+
+fruits.extend(["banana", "melon", "lemon"])
+
+print(fruits)
+# ['apple', 'orange', 'strawberry', 'cherry', 'banana', 'melon', 'lemon']
+```
+
+----------------------------------------------
