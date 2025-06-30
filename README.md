@@ -359,3 +359,26 @@ C ord D
 not E
 ```
 
+----------------------------------------------
+
+##  Random Module
+
+What is `module? <br>
+A module in Python is a very specific, low-level concept: it's literally a single .py file that contains Python code (functions, classes, variables). It's the most basic unit of code organization and reuse in Python.
+
+
+The first thing that we need to do is to add `import random`. <br>
+*[link](https://docs.python.org/3/library/random.html)*
+
+
+```python
+random_number = random.randint(1, 99)
+# random numbes between 1-99
+```
+
+
+```python
+random_number_0_to_1 = random.random()
+print(random_number_0_to_1)
+# Generates a random number between 0-1
+```
