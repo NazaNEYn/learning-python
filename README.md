@@ -434,3 +434,23 @@ print(fruits)
 ```
 
 ----------------------------------------------
+
+
+## For Loop
+
+
+```python
+for item in list_of_items:
+# Do spmething to each item
+```
+Example:
+
+```python
+fruits = ["apple", "strawberry", "melon"]
+for fruit in fruits:
+    print(fruit)
+
+# apple     
+# strawberry
+# melon 
+```
