@@ -454,3 +454,28 @@ for fruit in fruits:
 # strawberry
 # melon 
 ```
+
+----------------------------------------------
+
+## Function
+
+
+```python
+def name(args):
+    pass
+```
+
+Example :
+
+```python
+def my_function():
+    print("Hello")
+    print("Bye")
+
+
+my_function()
+
+# Hello
+# Bye
+```
+----------------------------------------------
