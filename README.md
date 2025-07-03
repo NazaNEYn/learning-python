@@ -479,3 +479,13 @@ my_function()
 # Bye
 ```
 ----------------------------------------------
+## While Loop
+
+
+```python
+while something_is_true:
+    # Do something 
+    # The loop will stop hen something becomes false
+```
+----------------------------------------------
+
