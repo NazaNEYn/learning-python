@@ -543,3 +543,42 @@ bio = {}
 # {'name': 'Ash', 'age': 31}
 ```
 
+
+ ## Nesting lists inside a dictionary
+
+
+```python
+bio = {
+    "name": ["Ash", "Max", "Naz"],
+    "age": 31,
+}
+
+bio = {
+    "name": ["Ash", "Max", "Naz", ["Alex", "John"]],
+    "age": 31,
+} 
+```
+
+### How to print out the values inside the nested lists?
+
+
+```python
+bio = {
+    "name": ["Ash", "Max", "Naz"],
+    "age": 31,
+}
+
+print(bio["name"][1])
+# Max
+```
+
+```python
+bio = {
+    "name": ["Ash", "Max", "Naz", ["Alex", "John"]],
+    "age": 31,
+}
+
+print(bio["name"][3][1])
+# John 
+```
+
