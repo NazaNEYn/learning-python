@@ -582,3 +582,23 @@ print(bio["name"][3][1])
 # John 
 ```
 
+
+ ## A nested dictionary
+
+
+```python
+user_profile = {
+    "name": "Alex",
+    "contact": {
+        "email": "alex@example.com",
+        "phone": "123-456-7890",
+    },
+    "status": "Active",
+}
+
+
+print(user_profile["contact"]["phone"])
+# 123-456-7890
+```
+
+
