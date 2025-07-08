@@ -600,5 +600,29 @@ user_profile = {
 print(user_profile["contact"]["phone"])
 # 123-456-7890
 ```
+----------------------------------------------
 
+ ## How to loop through a dictionary
+
+When we loop through a dictionary, it loops through the `keys.
+
+In this example each fruit is a `key` and the color is the `value`.
+```python
+color_box = {
+    "apple": "red",
+    "orange": "orange",
+    "peach": "pink",
+    "banana": "yellow",
+}
+
+
+# looping throgh `keys`
+for fruit in color_box:
+    print(fruit)
+
+# looping through `values`
+for fruit in color_box:
+    print(color_box[fruit])
+
+```
 
