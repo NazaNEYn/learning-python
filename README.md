@@ -488,4 +488,58 @@ while something_is_true:
     # The loop will stop hen something becomes false
 ```
 ----------------------------------------------
+ ## Dictionary
+
+
+```python
+dictionary = {
+    "key": "value",
+}
+```
+
+Example:
+
+```python
+bio = {
+    "name": "naz",
+    "age": 31,
+}
+
+# {'name': 'naz', 'age': 31}
+```
+
+## Assigning a new key
+
+```python
+bio["is_employed"] = True
+# {'name': 'naz', 'age': 31, 'is_employed': True}
+```
+
+## Reassigning a new key
+
+```python
+bio = {
+    "name": "naz",
+    "age": 31,
+}
+
+bio["name"] = "Ash"
+
+# {'name': 'Ash', 'age': 31}
+```
+
+## Wiping/deleting the dictionary 
+
+```python
+bio = {
+    "name": "naz",
+    "age": 31,
+}
+
+bio = {}
+
+# {}
+
+# {'name': 'Ash', 'age': 31}
+```
 
