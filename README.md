@@ -626,3 +626,50 @@ for fruit in color_box:
 
 ```
 
+----------------------------------------------
+
+## `return` keyword :
+In Python, if a function doesn't have a `return` statement, or if the return statement is reached without an explicit value (like just `return`), the function implicitly returns `None`. <br>
+
+Coding partner
+Imagine you send your robot helper 🤖 to go do a job.
+
+If you tell the robot to "Go clean your room!" and it just does it, but you don't tell it to report anything back to you, the robot will just finish the job and then stand there quietly. That's like the function implicitly returning `None`. It did its job, but didn't give you a message or a toy back.
+
+Now, if you tell the robot, "Go get me a snack!" and it comes back holding a cookie 🍪, that's like the function explicitly returning a **value** (the cookie).
+
+So, if your function doesn't specifically give you something back with a `return` command, Python just assumes it gave you nothing important, which it calls `None`.
+<br>
+
+* The return statement's job in a function is precisely like **reporting back** and **bringing you a value**.<br>
+
+Think of it this way:
+
+When you call a function, you're asking it to perform a task.
+
+Once it's done with that task, the return statement is how the function gives you the result of its work, or simply a confirmation that it finished.
+
+Without return, the function might do its job internally (like printing something), but it doesn't hand anything back to the part of the code that called it. If it doesn't explicitly hand anything back, Python automatically hands back None, which means "nothing special."
+<br>
+
+That's the primary purpose of return in a function: it **fetches the value** computed or determined within the function so you can **use that value in the code that called the function**.
+
+It's like a messenger delivering a specific piece of information from the function's internal work back to the main operation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
