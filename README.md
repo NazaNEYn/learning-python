@@ -687,7 +687,7 @@ So, by using functions, you effectively encapsulate variables. They only exist a
 4. Fix the errors (red underlines)
 5. Use `print()`
 6. Use a debugger :
-7. [https://pythontutor.com/python-compiler.html](pythontutor)
+7. (pythontutor)[https://pythontutor.com/python-compiler.html]
 
 
 
