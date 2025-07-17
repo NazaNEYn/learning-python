@@ -675,6 +675,23 @@ Think of it like this:
 So, by using functions, you effectively encapsulate variables. They only exist and are accessible while the function is running, and then they're cleaned up. This makes your code much cleaner, more organized, and less prone to unexpected bugs from variables accidentally interfering with each other.
 
 
+-------------------------------------------------
+
+## Debugging
+
+1. Describe the problem.
+2.  Reproduce the bug:
+  It simply means make the problem happen again on purpose. <br>
+  Imagine your game crashed. To fix it, you need to figure out exactly what you did before it crashed so you can make it crash again. Once you can make it crash every time, you can then try to find out why it's crashing.
+3.
+
+
+
+
+
+
+
+
 
 
 
