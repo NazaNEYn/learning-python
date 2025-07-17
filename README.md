@@ -683,7 +683,11 @@ So, by using functions, you effectively encapsulate variables. They only exist a
 2.  Reproduce the bug:
   It simply means make the problem happen again on purpose. <br>
   Imagine your game crashed. To fix it, you need to figure out exactly what you did before it crashed so you can make it crash again. Once you can make it crash every time, you can then try to find out why it's crashing.
-3.
+3. Play computer
+4. Fix the errors (red underlines)
+5. Use `print()`
+6. Use a debugger :
+7. [https://pythontutor.com/python-compiler.html](pythontutor)
 
 
 
