@@ -686,8 +686,8 @@ So, by using functions, you effectively encapsulate variables. They only exist a
 3. Play computer
 4. Fix the errors (red underlines)
 5. Use `print()`
-6. Use a debugger :
-   [pythontutor](https://pythontutor.com/python-compiler.html).
+6. Use a debugger : <br>
+   [pythontutor](https://pythontutor.com/python-compiler.html).<br>
    Thonny app.
 
 
