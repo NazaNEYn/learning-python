@@ -656,6 +656,38 @@ That's the primary purpose of return in a function: it **fetches the value** com
 
 It's like a messenger delivering a specific piece of information from the function's internal work back to the main operation.
 
+<br><br>
+
+### when we dont use return in a function, we cant just call the function and expect to get an output but when we use return and if we call the fucntion, we'll get an output, right?
+
+Here's a slightly more precise way to put it:
+
+* **When a function does NOT use `return` (or `return` is used without an argument):**
+
+   *  You can call the function to make it perform actions (like changing variables, printing things to the console, writing to files, etc.).
+
+  * However, if you try to use the result of calling that function (e.g., assign it to a variable, or print it directly in an f-string like `print(f"Result: {my_function()}"))`, the result will be the special value `None`. This is Python's way of saying "this function completed its operations, but it didn't explicitly hand back any data."
+
+* **When a function uses return with an argument (e.g., `return 10`, `return` `"hello"`, `return my_list`):**
+
+  * You can call the function to make it perform actions.
+
+  * Crucially, the function will stop executing at the `return` statement and will hand back the specific value you put after `return`.
+
+  * You can then capture or use this returned value (e.g., `result = my_function()`, or `print(my_function()))`.
+  <br>
+
+**Analogy Recap:**
+
+* **No** return: You tell a worker (function) to "Clean the car." They clean the car (perform actions), but they don't give you anything back. If you ask "What did you give me?", the answer is "Nothing" (Python's None).
+
+* **With** return: You tell a worker (function) to "Go fetch the keys." They go get the keys (perform actions) and then they hand you the keys (return keys). Now you have the keys to use.
+
+
+
+
+
+
 
 
 -------------------------------------------------
