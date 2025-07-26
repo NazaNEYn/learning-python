@@ -732,8 +732,10 @@ Objects :
   is_holding_plate = True <br>
   tables = [4, 3 , 2]
 * Do things. Like some kinda of functionality. (Methods) <br>
-  def take_order(table, order)
+  def take_order(table, order) <br>
 
+** An object** is basically combining a peice of data (attributes) and some kinda of functionality (methods). <br>
+We can have multiple objects, generated from the same type.
 
 
 
