@@ -728,10 +728,10 @@ So, by using functions, you effectively encapsulate variables. They only exist a
 In OOP we are trying to model  real life objects. <br>
 
 Objects :
-* Have things (Arttributes/Variables) :
-  is_holding_plate = True
+* Have things (Arttributes/Variables) : <br>
+  is_holding_plate = True <br>
   tables = [4, 3 , 2]
-* Do things. Like some kinda of functionality. (Methods)
+* Do things. Like some kinda of functionality. (Methods) <br>
   def take_order(table, order)
 
 
