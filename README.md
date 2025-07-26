@@ -722,11 +722,17 @@ So, by using functions, you effectively encapsulate variables. They only exist a
    [pythontutor](https://pythontutor.com/python-compiler.html).<br>
    Thonny app.
 
+-------------------------------------------------
 
+## OOP  (Object-Oriented Programming) : 
+In OOP we are trying to model  real life objects. <br>
 
-
-
-
+Objects :
+* Have things (Arttributes/Variables) :
+  is_holding_plate = True
+  tables = [4, 3 , 2]
+* Do things. Like some kinda of functionality. (Methods)
+  def take_order(table, order)
 
 
 
