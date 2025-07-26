@@ -734,8 +734,12 @@ Objects :
 * Do things. Like some kinda of functionality. (Methods) <br>
   def take_order(table, order) <br>
 
-** An object** is basically combining a peice of data (attributes) and some kinda of functionality (methods). <br>
-We can have multiple objects, generated from the same type.
+**An object** is basically combining a peice of data (attributes) and some kinda of functionality (methods). <br>
+We can have multiple objects, generated from the same type. <br>
+
+**Class , Object :** <br>
+car = CarBlueprint() <br>
+`car` is an object that is generetad from the `CarBlueprint()` class.
 
 
 
