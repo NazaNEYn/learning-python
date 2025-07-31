@@ -742,8 +742,42 @@ car = CarBlueprint() <br>
 `car` is an object that is generetad from the `CarBlueprint()` class.
 
 
+-------------------------------------------------
+## Creating `classes`:
 
+```python
+class User:
+    def __init__(self):
+        pass
+```
 
+Example:
+
+```python
+class User:
+    def __init__(self):
+        print("New user has been created")
+```
+
+*Note:* 
+<br>
+The `__init__` method in a Python class is a special method that gets called automatically every single time you create a new object (or "instance") from that class.
+
+```python
+class User:
+    def __init__(self):
+        print("New user has been created")
+
+user_1 = User() # __init__ called (1st time)
+user_2 = User() # __init__ called (2nd time)
+user_3 = User() # __init__ called (3rd time)
+user_4 = User() # __init__ called (4th time)
+
+# New user has been created
+# New user has been created
+# New user has been created
+# New user has been created
+```
 
 
 
