@@ -783,7 +783,16 @@ user_4 = User() # __init__ called (4th time)
 This is why `__init__` is often called the constructor in other programming languages. Its main job is to initialize the attributes (the starting data) of the brand new object that's being created.
 <br>
 
-##  How To Set Attributes in the constructor :
+-------------------------------------------------
+
+## `self.`:
+
+**You need `self.` for an attribute when you want to access or change a value that is a permanent part of the object.**
+
+You **don't** need `self.` when you are talking about a temporary value, like a parameter that was just passed into the method.
+
+
+### What `self.` is For:
 
 
 
