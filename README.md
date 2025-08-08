@@ -789,10 +789,68 @@ This is why `__init__` is often called the constructor in other programming lang
 
 **You need `self.` for an attribute when you want to access or change a value that is a permanent part of the object.**
 
-You **don't** need `self.` when you are talking about a temporary value, like a parameter that was just passed into the method.
+You **don't** need `self.` when you are talking about a temporary value, like a parameter that was just passed into the method.<br>
+
+We need to use `self` for an attribute when we want to make that attribute a part of the object itself. We don't need to use `self` when the attribute is a simple variable that only exists inside a function and disappears when the function is finished.
 
 
-### What `self.` is For:
+### What is `self.`?
+
+Imagine you're building a robot. Each robot needs to have its own color, right? When you create a robot, you want to say, "This robot's color is red." The word `self` is like pointing to that specific robot and saying, "Hey, you (the robot), your color is red."
+
+When you define an attribute like `self.color = "red"`, you are attaching the `color` attribute directly to the specific object you've created. This means every time you talk about that robot, you can ask it, "What's your color?" and it will remember.
+
+
+### When to Use `self.`?
+You should use `self` for an attribute when you want that attribute to be saved and remembered by the object. This is usually done inside the `__init__` function (the special function that runs when you create a new object).
+
+For example, let's say you're building a Car class. Each `car` has a `brand` and a `color`. You want each car object to remember its own brand and color.
+
+```python
+class Car:
+    def __init__(self, brand, color):
+        # We use self here so that the object remembers its brand and color.
+        self.brand = brand
+        self.color = color
+
+# Now we can create a car object.
+my_car = Car("Honda", "blue")
+
+# We can access the attributes we saved.
+print(my_car.brand)  # Output: Honda
+print(my_car.color)  # Output: blue
+```
+
+In this example, `my_car` is an object, and its `brand` is "Honda". If you create another car, `your_car`, its brand can be something different, like "Toyota". The `self` makes sure each car has its own brand and color.
+
+### When to NOT Use `self.`:
+
+You don't need to use `self` for an attribute if the attribute is just a temporary variable that's only needed for a little while, inside a specific function. Once the function is done, the variable is forgotten.<br>
+
+Let's say you have a function inside your Car class that calculates a special code for the car, but you don't need the `car` to remember this code forever.
+
+```python
+class Car:
+    def __init__(self, brand, color):
+        self.brand = brand
+        self.color = color
+
+    def calculate_code(self):
+        # 'temporary_code' is a simple variable, not an attribute of the object.
+        # It's only needed inside this function and is forgotten afterwards.
+        temporary_code = "XYZ-" + self.brand
+        return temporary_code
+
+my_car = Car("Honda", "blue")
+car_code = my_car.calculate_code()
+
+print(car_code)  # Output: XYZ-Honda
+```
+
+Here, `temporary_code` is not part of `self`. It's just a variable that's used to hold a value for a moment while the function is running. Once `calculate_code` is finished, `temporary_code` is gone. You can't say `my_car.temporary_code` because it doesn't belong to the car object.
+
+
+
 
 
 
