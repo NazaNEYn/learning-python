@@ -849,6 +849,25 @@ print(car_code)  # Output: XYZ-Honda
 Here, `temporary_code` is not part of `self`. It's just a variable that's used to hold a value for a moment while the function is running. Once `calculate_code` is finished, `temporary_code` is gone. You can't say `my_car.temporary_code` because it doesn't belong to the car object.
 
 
+-------------------------------------
+## What Goes in the Main File?
+
+**Import Statements:** All import statements, like from character import Character, belong here.
+
+**Object Creation:** This is where you create all the objects from your classes, like player = Character(...) and enemy = Character(...).
+
+**Game Logic:** This includes everything that controls the game's flow, like the while True game loop, the input() commands, and the if/else statements that decide what happens next.
+
+**Calling Methods:** The main file's job is to call the methods of your objects, like player.attack(enemy).
+
+Think of it like a movie: The classes are the actors—they know how to perform specific actions. The main file is the script and director—it tells the actors when to perform their actions and in what order.
+
+
+
+
+
+
+
 
 
 
