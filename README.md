@@ -625,6 +625,11 @@ for fruit in color_box:
 
 ```
 
+
+
+I wrote an *article* wite more details about looping through a dictionary.<br>
+You can check it out **[HERE](https://nazanin-ashrafi.hashnode.dev/looping-through-dictionaries-in-python)**
+
 ----------------------------------------------
 
 ## `return` keyword :
