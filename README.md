@@ -633,7 +633,7 @@ You can check it out **[HERE](https://nazanin-ashrafi.hashnode.dev/looping-throu
 ----------------------------------------------
 ## Ways to import modules:
 
-1. **`import`**
+1. **`import`** <br>
  First we have to import the module by using the `import` keyword and the module name. <br>
 
 For example:
@@ -655,15 +655,26 @@ turtle.Turtle()
 # Turtle() is the name of the class
 ```
 
-2. **`from...import..`**
+2. **`from...import..`**<br>
+
 
 ```
 from turtle import Turtle
+# from is the keyword
+# turtle is the module name
+# import is the keyword
+# Turtle the class name
 
 turtle = Turtle()
 ```
 
+3. **Importing everything:**<br>
 
+`from turtle import *`
+
+The asterisk (`*`) will let you import everything from the module.<br>
+
+*NOTE:* It's not a good practice to use this type of importing.
 
 ----------------------------------------------
 
