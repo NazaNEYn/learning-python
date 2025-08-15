@@ -648,7 +648,7 @@ Example:
 turtle = turtle.Turtle()
 ```
 
-```
+```python
 turtle.Turtle()
 # turtle is the module name
 #and
@@ -658,7 +658,7 @@ turtle.Turtle()
 2. **`from...import..`**<br>
 
 
-```
+```python
 from turtle import Turtle
 # from is the keyword
 # turtle is the module name
@@ -677,7 +677,22 @@ The asterisk (`*`) will let you import everything from the module.<br>
 *NOTE:* It's not a good practice to use this type of importing.
 
 ----------------------------------------------
+## Aliasing Modules:
 
+Example:
+
+```python
+import turtle as t
+```
+
+`turtle = t.Turtle()`
+
+*NOTE:* This is useful for when the module name is really long.
+
+
+
+
+----------------------------------------------
 ## `return` keyword :
 In Python, if a function doesn't have a `return` statement, or if the return statement is reached without an explicit value (like just `return`), the function implicitly returns `None`. <br>
 
