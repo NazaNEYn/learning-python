@@ -631,6 +631,41 @@ I wrote an *article* wite more details about looping through a dictionary.<br>
 You can check it out **[HERE](https://nazanin-ashrafi.hashnode.dev/looping-through-dictionaries-in-python)**
 
 ----------------------------------------------
+## Ways to import modules:
+
+1. **`import`**
+ First we have to import the module by using the `import` keyword and the module name. <br>
+
+For example:
+`import random`
+or
+`import turtle`
+
+### Now how to use it:
+
+Example:
+```
+turtle = turtle.Turtle()
+```
+
+```
+turtle.Turtle()
+# turtle is the module name
+#and
+# Turtle() is the name of the class
+```
+
+2. **`from...import..`**
+
+```
+from turtle import Turtle
+
+turtle = Turtle()
+```
+
+
+
+----------------------------------------------
 
 ## `return` keyword :
 In Python, if a function doesn't have a `return` statement, or if the return statement is reached without an explicit value (like just `return`), the function implicitly returns `None`. <br>
