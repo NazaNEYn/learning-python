@@ -433,6 +433,29 @@ print(fruits)
 ```
 
 ----------------------------------------------
+## Tuple :
+
+Tuple is similar to a list<br>
+
+Tuple:
+`(1, 2, 3)`
+Lits:
+`[1, 2, 3]`
+
+The difference between a `tuple` and a `list` is that you can't change the value in a `tuple` like you can in a `list`.<br>
+You can't change the values in any way in a `tuple`. It is `immutable`.
+
+
+**Convertin a tuple into a list**:
+
+```python
+my_tuple = (1, 2, 3)
+list(my_tuple)
+#[1, 2, 3]
+```
+
+
+----------------------------------------------
 
 
 ## For Loop
