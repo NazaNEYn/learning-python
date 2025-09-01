@@ -454,6 +454,14 @@ list(my_tuple)
 #[1, 2, 3]
 ```
 
+----------------------------------------------
+
+
+## constant :
+
+In Python, the naming convention of using all capital letters (e.g., `STARTING_POSITION`, `PI`, `MAX_SPEED`) is a way for programmers to signal that a variable should be treated as a constant. However, unlike in some other programming languages, Python does not enforce this. You can technically change the value of STARTING_POSITION later in your code.<br>
+
+The main purpose of this naming convention is to improve code readability and inform other programmers that they should not modify the value. It's a way of saying, "Hey, this value is meant to stay the same throughout the program's execution, so please don't change it!"
 
 ----------------------------------------------
 
