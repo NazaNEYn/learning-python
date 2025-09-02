@@ -962,7 +962,18 @@ class Fish(Animal):
         super().__init__()
 ```
 
+This is our `Fish` class
+```python
+class Fish:
+    def __init__(self):
+```
 
+For a class to inherit from another class, all we have to do is:
+```python
+class Fish(Animal):
+    def __init__(self):
+        super().__init__()
+```
 
 
 
