@@ -945,6 +945,26 @@ print(car_code)  # Output: XYZ-Honda
 
 Here, `temporary_code` is not part of `self`. It's just a variable that's used to hold a value for a moment while the function is running. Once `calculate_code` is finished, `temporary_code` is gone. You can't say `my_car.temporary_code` because it doesn't belong to the car object.
 
+-------------------------------------
+
+
+## class inheritance
+
+it's a way for a new class to inherit or "borrow" properties (attributes) and behaviors (methods) from an existing class. <br>
+
+Think of it like a family tree. A **parent class** (or **base class** or **superclass**) is like a parent. It has certain traits, like a last name or eye color. A **child class** (or **derived class** or **subclass**) is like a child. It can inherit those traits from the parent. <br>
+
+
+Syntax :
+```python
+class Fish(Animal):
+    def __init__(self):
+        super().__init__()
+```
+
+
+
+
 
 -------------------------------------
 ## What Goes in the Main File?
