@@ -948,7 +948,7 @@ Here, `temporary_code` is not part of `self`. It's just a variable that's used t
 -------------------------------------
 
 
-## class inheritance
+## Class inheritance
 
 it's a way for a new class to inherit or "borrow" properties (attributes) and behaviors (methods) from an existing class. <br>
 
@@ -974,6 +974,14 @@ class Fish(Animal):
     def __init__(self):
         super().__init__()
 ```
+
+**What `super()` does**
+
+The `super()` function is a special tool in Python that allows a child class to call a method from its parent class.<br>
+
+*Note:* If you don't call `super().__init__()`, the child class's `__init__` method will completely override the parent's `__init__` method.
+
+
 
 
 
