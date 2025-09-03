@@ -983,7 +983,68 @@ The `super()` function is a special tool in Python that allows a child class to 
 
 
 
+### Modifying a Method:
 
+```python
+class Animal:
+    def __init__(self, name, animal_type):
+        self.name = name
+        self.animal_type = animal_type
+        print(f"Say hello to {self.name}!")
+        print(f"{self.name} is a {self.animal_type}")
+
+    def sleep(self):
+        print(f"{self.name} is currently sleeping")
+
+
+dog = Animal("Rex", "dog")
+
+print("---------------------------------------")
+
+class Cat(Animal):
+    def __init__(self, name, animal_type):
+        super().__init__(name, animal_type)
+
+    # Modifying the method
+    def sleep(self):
+        super().sleep()
+        print(f"Wake {self.name} up!")
+
+
+cat = Cat("Alex", "cat")
+cat.sleep()
+```
+
+### Overriding a Method:
+
+```python
+class Animal:
+    def __init__(self, name, animal_type):
+        self.name = name
+        self.animal_type = animal_type
+        print(f"Say hello to {self.name}!")
+        print(f"{self.name} is a {self.animal_type}")
+
+    def sleep(self):
+        print(f"{self.name} is currently sleeping")
+
+
+dog = Animal("Rex", "dog")
+
+print("---------------------------------------")
+
+class Cat(Animal):
+    def __init__(self, name, animal_type):
+        super().__init__(name, animal_type)
+
+    # Overriding a Method
+    def sleep(self):
+        print(f"Wake {self.name} up!")
+
+
+cat = Cat("Alex", "cat")
+cat.sleep()
+```
 
 -------------------------------------
 ## What Goes in the Main File?
