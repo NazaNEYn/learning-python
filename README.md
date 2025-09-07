@@ -990,6 +990,145 @@ logging.warning('Something unexpected happened.')
 After you run this script, you'll find a new file called app.log in the same directory as your script, containing the two log messages. Nothing will show up in your terminal because the messages are being written to the file.
 
 
+### Standard `LogRecord` Attributes
+
+* **`asctime`**: Human-readable time of the log creation (e.g., `'YYYY-MM-DD HH:MM:SS,sss'`).
+* **`created`**: The time of creation as a Unix epoch timestamp (float).
+* **`filename`**: The basename of the file where the logging call originated (e.g., `'my_module.py'`).
+* **`funcName`**: The name of the function or method that made the log call.
+* **`levelname`**: The text name of the logging level (e.g., `'INFO'`, `'WARNING'`).
+* **`levelno`**: The numeric value of the logging level (e.g., `20` for `INFO`, `40` for `ERROR`).
+* **`lineno`**: The line number in the source file where the logging call was made.
+* **`module`**: The module name from the filename (e.g., `'my_module'`).
+* **`msecs`**: The milliseconds component of the creation time.
+* **`message`**: The final, formatted log message string.
+* **`name`**: The name of the logger instance.
+* **`pathname`**: The full path to the source file.
+* **`process`**: The Process ID (PID).
+* **`processName`**: The name of the current process.
+* **`relativeCreated`**: The time in milliseconds since the logging system was initialized.
+* **`thread`**: The thread ID.
+* **`threadName`**: The name of the thread.
+
+
+### 1. General Information
+
+* **`name`**: The name of the logger instance (from `logging.getLogger()`).
+    * **Description**: A string identifying the logger.
+    * **Example**: `logging.getLogger('my_app')` sets this to `'my_app'`.
+* **`levelno`**: The numeric value of the log level.
+    * **Description**: An integer representing the log level (e.g., `20` for INFO, `40` for ERROR).
+    * **Example**: `logging.INFO` corresponds to `20`.
+* **`levelname`**: The textual name of the log level.
+    * **Description**: A string representation of the log level (e.g., `'INFO'`, `'WARNING'`).
+    * **Example**: `logging.INFO` sets this to `'INFO'`.
+* **`pathname`**: The full path to the source file.
+    * **Description**: The complete file path where the logging call was made.
+    * **Example**: `'/path/to/your_project/module.py'`
+* **`filename`**: The basename of the source file.
+    * **Description**: A shortened version of `pathname` containing only the filename.
+    * **Example**: `'module.py'`
+* **`lineno`**: The line number in the source file.
+    * **Description**: The exact line number of the code that triggered the log.
+    * **Example**: `15`
+* **`funcName`**: The name of the function or method.
+    * **Description**: Identifies the specific function or method that made the log call.
+    * **Example**: `'my_function'`
+* **`module`**: The module name.
+    * **Description**: The file name without the `.py` extension.
+    * **Example**: `'module'`
+
+---
+
+### 2. Time and Process Information
+
+* **`created`**: The creation time as a Unix timestamp.
+    * **Description**: A floating-point number representing seconds since the epoch.
+    * **Example**: `1631234567.890123`
+* **`asctime`**: The human-readable creation time.
+    * **Description**: Formatted time based on the `Formatter`'s `datefmt` (default is `YYYY-MM-DD HH:MM:SS,sss`).
+    * **Example**: `'2025-09-07 21:20:06,123'`
+* **`msecs`**: The millisecond portion of the creation time.
+    * **Description**: The fractional part of the `created` attribute, in milliseconds.
+    * **Example**: `123.456`
+* **`relativeCreated`**: Time in milliseconds since the logging module was loaded.
+    * **Description**: Useful for timing and performance analysis within an application run.
+    * **Example**: `567.89` (milliseconds since startup)
+* **`process`**: The ID of the current process.
+    * **Description**: The Process ID (PID) of the Python process.
+    * **Example**: `12345`
+* **`processName`**: The name of the current process.
+    * **Description**: The name of the process, if available.
+    * **Example**: `'MainProcess'`
+* **`thread`**: The ID of the current thread.
+    * **Description**: The unique ID for the thread that made the log call.
+    * **Example**: `987654321`
+* **`threadName`**: The name of the current thread.
+    * **Description**: The name given to the thread.
+    * **Example**: `'MainThread'`
+
+---
+
+### 3. Message and Exception Information
+
+* **`message`**: The formatted log message.
+    * **Description**: The final string ready for output, with `msg` and `args` combined.
+    * **Example**: `'User 'john' logged in.'`
+* **`msg`**: The unformatted log message string.
+    * **Description**: The original message string passed to the logger.
+    * **Example**: `'User %s logged in.'`
+* **`args`**: The arguments for message formatting.
+    * **Description**: The tuple or dictionary of arguments passed with the log message.
+    * **Example**: `('john',)` or `{'user': 'john'}`
+* **`exc_info`**: A tuple of exception information.
+    * **Description**: Contains `(type, value, traceback)` if an exception was logged.
+    * **Example**: `(<class 'ZeroDivisionError'>, ZeroDivisionError('division by zero'), <traceback object at ...>)`
+* **`exc_text`**: The formatted exception traceback string.
+    * **Description**: The traceback formatted into a multi-line string.
+    * **Example**: `Traceback (most recent call last):\n  File "...", line 10, in ...`
+* **`stack_info`**: The formatted stack trace.
+    * **Description**: Stack information if a stack trace was requested.
+    * **Example**: `'Stack (most recent call last):\n  File "...", line 10, in ...'`
+
+
+Example:
+
+```python
+import logging
+import sys
+
+# 1. Create a custom format string using the attributes listed above.
+# We'll include the timestamp, log level, logger name,
+# the file and line number, and the message itself.
+log_format = "%(asctime)s - %(levelname)s - %(name)s - (%(filename)s:%(lineno)d) - %(message)s"
+
+# 2. Create a Formatter object with the custom format.
+formatter = logging.Formatter(log_format)
+
+# 3. Create a StreamHandler to direct logs to the console (stdout).
+stream_handler = logging.StreamHandler(sys.stdout)
+
+# 4. Set the formatter for the handler.
+stream_handler.setFormatter(formatter)
+
+# 5. Get a logger instance.
+logger = logging.getLogger("MyCustomApp")
+
+# 6. Set the logging level for the logger.
+logger.setLevel(logging.DEBUG)
+
+# 7. Add the handler to the logger.
+logger.addHandler(stream_handler)
+
+# 8. Log some messages to see the custom format in action.
+def my_function():
+    """A sample function to demonstrate logging."""
+    logger.info("This is an informational message.")
+    logger.warning("This is a warning message.")
+    logger.error("This is an error message!")
+
+my_function()
+```
 
 
 
