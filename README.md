@@ -38,6 +38,7 @@
 - [return keyword](#return-keyword)
 - [Q: So one of the use case for function is to make some variable local and make them stop being global?](#q-so-one-of-the-use-case-for-function-is-to-make-some-variable-local-and-make-them-stop-being-global)
 - [Debugging](#debugging)
+- [Logging](#logging)
 - [OOP (Object-Oriented Programming)](#oop-object-oriented-programming-)
 - [Creating classes](#creating-classes)
 - [self.](#self-)
@@ -907,6 +908,71 @@ So, by using functions, you effectively encapsulate variables. They only exist a
    Thonny app.
 
 -------------------------------------------------
+
+
+## Logging
+
+### What is it?
+
+**Logging** is a way for a computer program to record events as they happen. It's a structured way of keeping a history of what the program is doing, when it's doing it, and what the results are. These records are called **logs**.
+
+### Levels of Logging
+
+[Python Tutorial: Logging Basics](https://www.youtube.com/watch?v=-ARI4Cz-awo)
+
+
+The `logging` module has different levels of severity, so you can decide how important a particular message is. This is a bit like having different colored sticky notes for different levels of urgency. The standard levels, in order from least to most severe, are:
+
+* **DEBUG:** Detailed information, typically only of interest when diagnosing problems. Think of this as the most "chatty" level, for developers only. <br>
+* **INFO:** Confirmation that things are working as expected. "The program started." <br>
+* **WARNING:** An indication that something unexpected happened, or a potential problem in the near future. The software is still working as expected. "The file could not be found, but we'll create a new one." <br>
+* **ERROR:** Due to a more serious problem, the software has not been able to perform some function. "Failed to connect to the database." <br>
+* **CRITICAL:** A serious error, indicating that the program itself may be unable to continue running. "The server is shutting down." <br>
+
+**Example:**
+```python
+import logging
+
+# Configure the basic settings
+logging.basicConfig(level=logging.INFO)
+
+# Now you can use the logger
+logging.debug('This is a debug message')
+logging.info('This is an info message')
+logging.warning('This is a warning message')
+```
+
+
+The **"default level for logging is set to WARNING,"**. it means that Python will only show you messages that are at the `WARNING` level or higher. <br>
+
+So, if you write a log message with `logging.info("Everything is fine.")`, you won't see it on the screen because the default setting is to ignore "info" messages. But if you write `logging.warning("Something looks a bit off.")`, you will see that message because it's at the "warning" level. You'll also see `logging.error` and `logging.critical` messages.  <br>
+
+Think of it as a filter. By default, the filter is set to "WARNING," so anything less important than a warning gets filtered out and you don't see it. This is useful because it keeps your program from showing you a huge wall of text with all the minor details, and it only shows you the things you should probably pay attention to.  <br>
+
+
+## Understanding "WARNING level or higher"
+
+The phrase **"WARNING level or higher"** means the logging system is configured to display messages with a severity of **`WARNING`**, **`ERROR`**, and **`CRITICAL`**. The term "higher" refers to the position on a hierarchy of logging levels, where each step up signifies a more serious issue.
+
+
+### The Hierarchy of Logging Levels
+
+Think of logging levels as a ladder 🪜. The higher a message is on the ladder, the more severe the issue it reports:<br>
+
+
+* **`DEBUG`**: The lowest level, used for detailed information to help developers diagnose problems.<br>
+* **`INFO`**: A general level for program progress updates.<br>
+* **`WARNING`**: A step up, indicating an unexpected event or a potential problem. The program can usually still continue running.<br>
+* **`ERROR`**: A serious problem has occurred, and the program could not perform a specific function.<br>
+* **`CRITICAL`**: The highest and most severe level, indicating a serious error that may cause the program to shut down.<br>
+
+When the logging level is set to `WARNING`, it acts like a filter. It allows all messages at the `WARNING` level and above to pass through, while blocking less severe messages like `INFO` and `DEBUG`. This helps you focus on important issues without being flooded with less critical information.
+
+
+
+
+-------------------------------------------------
+
 
 ## OOP  (Object-Oriented Programming) : 
 In OOP we are trying to model  real life objects. <br>
