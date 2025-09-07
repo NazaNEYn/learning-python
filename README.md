@@ -1,4 +1,3 @@
-# Learnin Python
 
 # Table of Contents
 ---
