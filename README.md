@@ -975,6 +975,24 @@ When the logging level is set to `WARNING`, it acts like a filter. It allows all
 logging.basicConfig(level=logging.DEBUG)
 ```
 
+### Basic File Logging
+```python
+import logging
+
+# Configure logging to save to a file named 'app.log'
+logging.basicConfig(filename='app.log', level=logging.INFO)
+
+# These messages will be written to the 'app.log' file
+logging.info('Application started.')
+logging.warning('Something unexpected happened.')
+```
+
+After you run this script, you'll find a new file called app.log in the same directory as your script, containing the two log messages. Nothing will show up in your terminal because the messages are being written to the file.
+
+
+
+
+
 -------------------------------------------------
 
 
