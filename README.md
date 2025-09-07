@@ -969,7 +969,11 @@ Think of logging levels as a ladder 🪜. The higher a message is on the ladder,
 When the logging level is set to `WARNING`, it acts like a filter. It allows all messages at the `WARNING` level and above to pass through, while blocking less severe messages like `INFO` and `DEBUG`. This helps you focus on important issues without being flooded with less critical information.
 
 
+### How To Change The Default Level For Logging: 
 
+```python
+logging.basicConfig(level=logging.DEBUG)
+```
 
 -------------------------------------------------
 
