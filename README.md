@@ -1090,7 +1090,24 @@ After you run this script, you'll find a new file called app.log in the same dir
     * **Example**: `'Stack (most recent call last):\n  File "...", line 10, in ...'`
 
 
-Example:
+Example 1:
+
+```python
+import logging
+
+logging.basicConfig(
+    filename='my_app.log', 
+    level=logging.INFO, 
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+
+# Your logging messages from the last exercise
+logging.info("Application started.")
+logging.error("An error has occurred!")
+```
+
+Example 2:
+
 
 ```python
 import logging
