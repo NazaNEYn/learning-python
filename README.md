@@ -38,7 +38,7 @@
 - [Q: So one of the use case for function is to make some variable local and make them stop being global?](#q-so-one-of-the-use-case-for-function-is-to-make-some-variable-local-and-make-them-stop-being-global)
 - [Debugging](#debugging)
 - [Logging](#logging)
-- [if __name__ == '__main__](#if __name__ == '__main__)
+- [if __name__ == '__main__'](#if __name__ == '__main__')
 - [OOP (Object-Oriented Programming)](#oop-object-oriented-programming-)
 - [Creating classes](#creating-classes)
 - [self.](#self-)
@@ -1186,6 +1186,37 @@ app_logger = logging.getLogger('my_app')
 # This message is sent through the 'my_app' logger
 app_logger.info("This is a log message from my_app.")
 ```
+
+
+### Why Do We Get a Logger?
+
+Instead of just using `logging.info()` and `logging.warning()` everywhere, which all use the same default "root" logger, `getLogger()` allows you to create your own specific logger. This is great for a couple of reasons:
+
+* **Organization:** You can name your loggers to match the different parts of your program. For example, if you have a file that handles a database, you could get a logger named `'database_handler'`.
+* **Control:** This lets you configure each part of your program's logging differently. Maybe you want to see detailed `DEBUG` messages from your database code, but only `WARNING` messages from the rest of your app. You can do this by getting a specific logger and setting its level. <br>
+
+
+Example:
+```python
+import logging
+
+# This gets a logger specifically for the "payment" part of your code
+payment_logger = logging.getLogger('payment')
+
+# This gets a logger for the "shipping" part
+shipping_logger = logging.getLogger('shipping')
+
+# Now you can use them to send messages
+payment_logger.info("Processing payment for order 123.")
+shipping_logger.warning("Shipping address is missing zip code.")
+```
+
+If you call `logging.getLogger('payment')` in another file, you'll still get the exact same logger object. This means all log messages for the `'payment'` logger, no matter where they come from in your code, will go through the same configured logger. This is why it's a powerful way to manage your logs.
+
+
+
+
+
 
 
 -------------------------------------------------
