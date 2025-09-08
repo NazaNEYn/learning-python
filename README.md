@@ -38,6 +38,7 @@
 - [Q: So one of the use case for function is to make some variable local and make them stop being global?](#q-so-one-of-the-use-case-for-function-is-to-make-some-variable-local-and-make-them-stop-being-global)
 - [Debugging](#debugging)
 - [Logging](#logging)
+- [if __name__ == '__main__](#if __name__ == '__main__)
 - [OOP (Object-Oriented Programming)](#oop-object-oriented-programming-)
 - [Creating classes](#creating-classes)
 - [self.](#self-)
@@ -911,13 +912,17 @@ So, by using functions, you effectively encapsulate variables. They only exist a
 
 ## Logging
 
+[Python Tutorial: Logging Basics](https://www.youtube.com/watch?v=-ARI4Cz-awo)
+[Python Tutorial: Logging Advanced](https://www.youtube.com/watch?v=jxmzY9soFXg)
+
+
 ### What is it?
 
 **Logging** is a way for a computer program to record events as they happen. It's a structured way of keeping a history of what the program is doing, when it's doing it, and what the results are. These records are called **logs**.
 
 ### Levels of Logging
 
-[Python Tutorial: Logging Basics](https://www.youtube.com/watch?v=-ARI4Cz-awo)
+
 
 
 The `logging` module has different levels of severity, so you can decide how important a particular message is. This is a bit like having different colored sticky notes for different levels of urgency. The standard levels, in order from least to most severe, are:
@@ -1145,6 +1150,47 @@ def my_function():
 
 my_function()
 ```
+
+
+### Logger
+
+In Python's logging system, the root logger is the main, default logger, while a logger is a custom, named instance. All loggers, unless you specify otherwise, are children of the root logger, inheriting its settings like the logging level and handlers.
+
+### What is a Logger?
+
+A **logger** is the main object used to send log messages from an application. You typically create one for a specific part of your code, such as a module or class, and give it a descriptive name.
+
+### How to Get a Logger
+
+You get a logger instance by calling `logging.getLogger()`. It's a common practice to name your loggers after the module they are in, like `logging.getLogger(__name__)`. This allows you to configure specific loggers later on. <br>
+
+The `getLogger()` function is designed to be idempotent. If you call it with the same name multiple times, it will always return the exact same logger object, preventing you from accidentally creating duplicate loggers.<br>
+
+
+*Note 1:* The special variable `__name__` is a built-in Python variable that holds the name of the current module. Python automatically sets its value based on how you run your code.<br>
+*Note 2:* It's best practice for naming logger is to use `__name__` instead of hardcoding a name.
+
+
+### Logger Hierarchy
+
+By default, a logger inherits its settings from its parent. All loggers ultimately inherit from the **root logger**, which is the top-level parent.<br>
+
+
+Example:
+```python
+import logging
+
+# This creates a custom logger named 'my_app'
+app_logger = logging.getLogger('my_app')
+
+# This message is sent through the 'my_app' logger
+app_logger.info("This is a log message from my_app.")
+```
+
+
+-------------------------------------------------
+
+## `if __name__ == '__main__'`
 
 
 
