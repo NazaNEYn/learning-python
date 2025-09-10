@@ -454,3 +454,10 @@ def divide(num_1, num_2):
 <br>
 [Python Tutorial: Logging Advanced](https://www.youtube.com/watch?v=jxmzY9soFXg)
 
+
+<hr>
+
+Article link: <br>
+[Python Logging](https://nazanin-ashrafi.hashnode.dev/python-logging)
+
+
