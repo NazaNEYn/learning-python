@@ -972,6 +972,68 @@ Think of logging levels as a ladder 🪜. The higher a message is on the ladder,
 
 When the logging level is set to `WARNING`, it acts like a filter. It allows all messages at the `WARNING` level and above to pass through, while blocking less severe messages like `INFO` and `DEBUG`. This helps you focus on important issues without being flooded with less critical information.
 
+### When to Use Each Logging Level
+
+Deciding which logging level to use depends on the type of event that is happening in your program. Think of each level as a different kind of note you would take for your own records or for another developer.
+
+Here’s a simple guide for when to use each level:
+
+---
+
+#### `INFO`
+
+Use `logging.info()` for routine operations and milestones. These are events that confirm your code is running as expected and are helpful for tracking its progress. They are not errors, but you want to know they happened.
+
+* **Example:**
+  * A user successfully logs in.
+  * A database connection is established.
+  * A query completes successfully. ⬅️ This is why info was used in the statistics code. The messages confirm that the connection and queries worked as they should.
+
+---
+
+#### `DEBUG`
+
+Use `logging.debug()` for detailed, low-level events that are only useful for debugging. These messages are typically too verbose to be shown during normal operation but are invaluable when trying to pinpoint exactly where a problem is occurring.
+
+* **Example:**
+  * The value of a variable at a specific point in a function.
+  * The exact parameters being passed to a function.
+  * A step-by-step breakdown of a complex algorithm.
+
+---
+
+#### `WARNING`
+
+Use `logging.warning()` for unexpected but non-critical events. These messages alert you to potential problems that don't stop the program from running but might cause issues later.
+
+* **Example:**
+  * A file is not found, so the program falls back to a default setting.
+  * A function receives an invalid input, but it can still produce a reasonable output.
+  * A network request takes longer than expected.
+
+---
+
+#### `ERROR`
+
+Use `logging.error()` for serious errors where the program fails to perform a function. The program may continue to run, but the specific task could not be completed.
+
+* **Example:**
+  * A database query fails due to a syntax error.
+  * An API request returns an error.
+  * A critical file cannot be written to or read from.
+
+---
+
+#### `CRITICAL`
+
+Use `logging.critical()` for severe errors that are likely to cause the program to crash or become unusable. This level is for emergencies that require immediate attention.
+
+* **Example:**
+  * A database connection cannot be established, and the entire application depends on it.
+  * An essential dependency fails to load, preventing the program from starting.
+
+---
+
 
 ### How To Change The Default Level For Logging: 
 
@@ -1150,6 +1212,13 @@ def my_function():
 
 my_function()
 ```
+
+### What is the Root Logger?
+
+The **root logger** is a special logger at the top of the logging hierarchy. All other loggers you create are children of the root logger and inherit its settings by default.<br>
+
+Think of it like the main folder on your computer. If you set a security policy on the main folder (e.g., only "read-only" access), all the subfolders inside it will inherit that policy unless you specifically change their individual settings. In logging, the root logger's settings—such as the logging level or where the output goes—are the "policy" that gets passed down.
+
 
 
 ### Logger
