@@ -1282,11 +1282,81 @@ shipping_logger.warning("Shipping address is missing zip code.")
 
 If you call `logging.getLogger('payment')` in another file, you'll still get the exact same logger object. This means all log messages for the `'payment'` logger, no matter where they come from in your code, will go through the same configured logger. This is why it's a powerful way to manage your logs.
 
+### Loggers, Handlers, and Formatters
+
+Example: 
+
+```python
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
+
+log_format = logging.Formatter("%(levelname)s - %(asctime)s - %(name)s - %(message)s")
+
+file_handler = logging.FileHandler("test.log")
+file_handler.setFormatter(log_format)
+
+logger.addHandler(file_handler)
+
+
+def divide(num_1, num_2):
+    logger.info(f"Dividing numbers: {num_1} / {num_2}")
+    return num_1 / num_2
+```
+
+Let's analyze the code: <br>
+
+**1. Creating the Logger**
+```python
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
+```
+First, you create a custom logger. The `logging.getLogger(__name__)` line creates a new logger that is named after the current module (the file it's in). This is a best practice because it helps you identify where log messages are coming from in a large application.<br>
+
+Next, you set the logger's level to `DEBUG`. This is the most important part of this section. It means the logger will process all messages at the `DEBUG` level and higher. Without this line, the logger would default to `WARNING` and ignore any `INFO` or `DEBUG` messages.<br>
 
 
 
+**2. Creating the Formatter**
+```python
+log_format = logging.Formatter("%(levelname)s - %(asctime)s - %(name)s - %(message)s")
+```
+
+This line creates a `Formatter` object. A formatter is like a template for your log messages. The string inside the parentheses defines the exact layout for each log entry.
+
+* `%(levelname)s`: The log message level (e.g., `DEBUG`, `INFO`).
+* `%(asctime)s`: The timestamp of the log message.
+* `%(name)s`: The name of the logger (in this case, the name of your file).
+* `%(message)s`: The actual message text.
 
 
+
+**3. Creating and Configuring the Handler**
+```python
+file_handler = logging.FileHandler("test.log")
+file_handler.setFormatter(log_format)
+```
+
+Here, you create a `FileHandler`, which is an object that tells the logger to send messages to a specific file. The `FileHandler("test.log")` part creates a handler that'll write messages to a file named `test.log`. <br>
+
+The next line, `file_handler.setFormatter(log_format)`, links the handler to the formatter you created. This ensures that every log message written to the `test.log` file will follow the specific format you defined. <br>
+
+
+
+**4. Adding the Handler to the Logger**
+```python
+logger.addHandler(file_handler)
+```
+
+Finally, you **connect the handler to the logger**. By using `logger.addHandler()`, you are telling your custom logger to start sending all the messages it receives to the `file_handler`.<br>
+
+
+After these steps, any logging call made through this `logger` object will now be written to the `test.log file with the custom format.
+
+```python
+def divide(num_1, num_2):
+    logger.info(f"Dividing numbers: {num_1} / {num_2}")
+    return num_1 / num_2
+```
 
 -------------------------------------------------
 
