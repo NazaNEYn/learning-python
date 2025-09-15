@@ -1154,6 +1154,34 @@ cat.sleep()
 
 Think of it like a movie: The classes are the actors—they know how to perform specific actions. The main file is the script and director—it tells the actors when to perform their actions and in what order.
 
+--------
+
+## `async` and `await`
+
+`async` is short for **asynchronous**. It tells Python that a function can be run alongside other code, instead of having to wait for it to finish. <br>
+
+Imagine you're at a coffee shop. When you place your order, you don't just stand there staring at the barista until your coffee is done, right? You might go find a table, check your phone, or chat with a friend. `async` is like that. It lets your program place a "request" (like an API call that takes time) and then move on to do other things while it waits for the result. When the result is ready, the program comes back and continues from where it left off. This makes your program much more efficient. The `await` keyword is used to tell the program to wait for the result of an asynchronous task before moving on. <br>
+
+You can think of the `async function` as politely stepping aside to let other functions run, and then it picks up where it left off once the task it was waiting for is complete. This is the core of what makes your code efficient and responsive. <br>
+
+`async` and `await` work together. You can't use one without the other. <br>
+
+Think of it like this:
+
+* `async` is the label you put on a function to tell Python, "This function might have a part that needs to wait for something. It can step aside to let other code run while it waits."
+* `await` is the specific instruction inside an `async` function that tells the program, "Okay, pause right here and wait for this one thing to finish. While you're waiting, go do something else."
+<br>
+
+You must define a function as `async` to be able to use the `await` keyword inside it. If you try to use `await in a regular function, you'll get an error. They are a team! 
+
+-----------------------
+
+
+
+
+
+
+
 
 
 
