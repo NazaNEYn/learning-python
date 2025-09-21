@@ -1177,6 +1177,29 @@ You must define a function as `async` to be able to use the `await` keyword insi
 -----------------------
 
 
+## The `splat` or `unpacking` operator (`*`):
+
+Let's say you have list of tuples and want to create a random shape size for turtle module:
+```python
+SHAPE_SIZE = [(1,4),(1,5),(1,6)]
+random_size = random.choice(SHAPE_SIZE)
+```
+
+You can't just use the `random_size` for `shapesize()` because it accept a tuple.
+```python
+self.shapesize(random_size)
+```
+
+So we need to use the  `*` (splat) operator.
+```pyhon
+self.shapesize(*random_size)
+```
+
+The asterisk `*` operator is the key to solving this. When you place a `*` in front of an iterable (like your `random_size` tuple), it unpacks the elements of that iterable and passes them to the function as separate, individual arguments. <br>
+
+By adding the `*` before `random_size`, you're telling Python to take the chosen tuple (e.g., `(1, 4)`) and pass its elements as `shapesize(1, 4)`. This is what the `shapesize()` method expects and will allow your code to work correctly.
+
+
 
 
 
