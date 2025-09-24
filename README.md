@@ -1200,8 +1200,31 @@ The asterisk `*` operator is the key to solving this. When you place a `*` in fr
 By adding the `*` before `random_size`, you're telling Python to take the chosen tuple (e.g., `(1, 4)`) and pass its elements as `shapesize(1, 4)`. This is what the `shapesize()` method expects and will allow your code to work correctly.
 
 
+---------------------------
 
+## Ternary Operator
 
+**Ternary Syntax**
+The general format is:
+```python
+value_if_true if condition else value_if_false
+```
+
+Example:
+```python
+if self.ycor() > FINISH_LINE_Y:
+            return True
+        else:
+            return False
+```
+
+```python
+# Ternary Form
+        return True if self.ycor() > FINISH_LINE_Y else False
+    
+        # a simpler and more Pythonic way
+        return self.ycor() > FINISH_LINE_Y
+```
 
 
 
