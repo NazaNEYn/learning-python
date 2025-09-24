@@ -1204,7 +1204,7 @@ By adding the `*` before `random_size`, you're telling Python to take the chosen
 
 ## Ternary Operator
 
-**Ternary Syntax**
+**Ternary Syntax** <br>
 The general format is:
 ```python
 value_if_true if condition else value_if_false
@@ -1219,7 +1219,7 @@ if self.ycor() > FINISH_LINE_Y:
 ```
 
 ```python
-# Ternary Form
+       # Ternary Form
         return True if self.ycor() > FINISH_LINE_Y else False
     
         # a simpler and more Pythonic way
