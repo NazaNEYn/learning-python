@@ -1227,14 +1227,96 @@ if self.ycor() > FINISH_LINE_Y:
 ```
 
 
+--------------------------
+## Dealing with files:
+
+
+* Opening a File: The `open()` Function <br>
+
+```python
+file = open("text.txt")
+```
+
+**File Modes (The 'How-To'):**
+
+The most common modes you'll use are:
+
+| Mode | Meaning | What it Does |
+| :---: | :---: | :--- |
+| **"r"** | Read | Opens the file **only for reading**. If the file doesn't exist, Python will give you an error. |
+| **"w"** | Write | Opens the file for writing. **CAUTION:** If the file already exists, it will **delete all its content and start fresh!** If the file doesn't exist, Python will create a new one. |
+| **"a"** | Append | Opens the file for writing, but **adds new content to the end** of whatever is already in the file. It's like flipping to the last blank page of the notebook. If the file doesn't exist, Python will create a new one. |
+
+
+
+* Reading and Writing a File: 
+
+```python
+file = open("text.txt")
+content = file.read()
+print(content)
+```
+
+| Action | Python Method | Description |
+| :--- | :--- | :--- |
+| Read Everything | `file_handle.read()` | Reads the entire contents of the file as one big string. |
+| Read Line by Line | `file_handle.readlines()` | Reads all lines and returns them as a **list of strings**, where each string is one line from the file. |
+| Write Data | `file_handle.write(data)` | Writes the string contained in the `data` variable to the file. |
 
 
 
 
+* Closing a File:
+
+```python
+file = open("text.txt")
+content = file.read()
+print(content)
+file.close()
+```
+
+Why is closing so important?
+
+| Action | Description |
+| :--- | :--- |
+| **Saving Data** 💾 | When you write to a file, Python sometimes holds the data temporarily (**buffering**) until it has enough to write efficiently. `close()` forces Python to take any unsaved changes and actually **write them to the file on your disk**. |
+| **Freeing Resources** 🔓 | It tells your computer, "I'm done with this file," which **frees up the file** so other programs (or other parts of your own program) can open and use it. |
 
 
+### The Better Way: The `with` Statement
+
+Because closing a file is so essential and easy to forget, Python has a much safer and cleaner way to handle files called the `with` statement. <br>
 
 
+```python
+with open("text.txt") as file:
+    content = file.read()
+    print(content)
+
+# You don't need to call .close()
+```
+
+
+* Writing to a File:
+
+*Note:* <br>
+The default mode is set to`read-only ("r")` <br>
+
+| Mode | Meaning | What it Does |
+| :---: | :---: | :--- |
+| **"r"** | Read | Opens the file **only for reading**. If the file doesn't exist, Python will give you an error. |
+| **"w"** | Write | Opens the file for writing. **CAUTION:** If the file already exists, it will **delete all its content and start fresh!** If the file doesn't exist, Python will create a new one. |
+| **"a"** | Append | Opens the file for writing, but **adds new content to the end** of whatever is already in the file. It's like flipping to the last blank page of the notebook. If the file doesn't exist, Python will create a new one. |
+
+
+```python
+with open("text.txt", "a") as file:
+    content = file.write("\nHiiiii")
+    print(content)
+```
+
+*Note:* <br>
+When you try to open a file in a `write` mode and that file doens't exist, then it's going to actually creat it fro you from scratch.
 
 
 
