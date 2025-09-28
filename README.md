@@ -1231,7 +1231,7 @@ if self.ycor() > FINISH_LINE_Y:
 ## Dealing with files:
 
 
-* Opening a File: The `open()` Function <br>
+### Opening a File: The `open()` Function <br>
 
 ```python
 file = open("text.txt")
@@ -1249,7 +1249,7 @@ The most common modes you'll use are:
 
 
 
-* Reading and Writing a File: 
+### Reading and Writing a File: 
 
 ```python
 file = open("text.txt")
@@ -1266,7 +1266,7 @@ print(content)
 
 
 
-* Closing a File:
+### Closing a File:
 
 ```python
 file = open("text.txt")
@@ -1297,7 +1297,7 @@ with open("text.txt") as file:
 ```
 
 
-* Writing to a File:
+### Writing to a File:
 
 *Note:* <br>
 The default mode is set to`read-only ("r")` <br>
@@ -1318,9 +1318,7 @@ with open("text.txt", "a") as file:
 *Note:* <br>
 When you try to open a file in a `write` mode and that file doens't exist, then it's going to actually creat it fro you from scratch.
 
-
-
-
+-------------------------------
 
 
 
