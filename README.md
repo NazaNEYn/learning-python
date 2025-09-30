@@ -1324,13 +1324,15 @@ When you try to open a file in a `write` mode and that file doens't exist, then 
 
 1. **Read and Convert Separately:**
    ```python
-   with open("highscore.txt") as file:
+       def __init__(self):
+        with open("highscore.txt") as file:
             highscore = file.read()
         self.high_score = int(highscore)
    ```
 
 
-2. **Read and Convert Inline:**
+
+3. **Read and Convert Inline:**
    ```python
        def __init__(self):
         with open("highscore.txt") as file:
