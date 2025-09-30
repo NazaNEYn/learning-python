@@ -1335,16 +1335,15 @@ When you try to open a file in a `write` mode and that file doens't exist, then 
        def __init__(self):
         with open("highscore.txt") as file:
             self.high_score = int(file.read())
-  ```
+   ```
+
+### 💡 The Difference and Which is Better
 
 | Feature | Read and Convert Separately (Your first option) | Read and Convert Inline (My suggestion) |
 | :--- | :--- | :--- |
 | **Code** | `highscore = file.read()` followed by `self.high_score = int(highscore)` | `self.high_score = int(file.read())` |
-| **Readability** | Slightly higher. Breaking it into two steps (read, then convert) is often clearer for beginners to trace. | Slightly lower. It's a bit more compact but requires understanding that `int()` is working on the result of `file.read()`. |
-| **Efficiency** | Technically the same. The Python interpreter handles them nearly identically. | Technically the same. |
-| **Better for You** | **Recommended.** Since you are a beginner, this approach is easier to follow and helps you clearly see the two necessary steps: reading the string and then converting it to an integer. | This is the "Pythonic" way once you are more comfortable, as it's more concise. |
-
-
-
+| **Readability** | Slightly **higher**. Breaking it into two steps (**read**, then **convert**) is often clearer for beginners to trace. | Slightly **lower**. It's a bit more compact but requires understanding that `int()` is working on the result of `file.read()`. |
+| **Efficiency** | Technically the **same**. The Python interpreter handles them nearly identically. | Technically the **same**. |
+| **Better for You** | **Recommended.** Since you are a beginner, this approach is easier to follow and helps you clearly see the two necessary steps: **reading the string** and then **converting it to an integer.** | This is the **"Pythonic"** way once you are more comfortable, as it's more **concise**. |
 
 
