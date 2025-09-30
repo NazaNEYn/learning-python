@@ -1299,6 +1299,33 @@ with open("text.txt") as file:
 
 ### Writing to a File:
 
+The `write()` method saves the content you give it as a string to the file and returns an integer to your Python program.<br>
+It doesn't matter what you put isnide the `write()` method, It should be saved as a `string` in the file, even if it's a number.<br>
+
+
+Example:<br>
+
+We have a `highscore.txt` file and the content is `0`.
+
+* To read the content:
+  ```python
+  with open("highscore.txt") as file:
+    content = file.read()
+    print(content)
+  ```
+
+* To change the data from this file, let's say `55` for example:
+  ```python
+  with open("highscore.txt", "w") as file:
+    content = file.write("55")
+    print(content)
+  ```
+As you can see we used `string` for the `write()` method : `file.write("55")` <br>
+If you write your data for the `write()` method with the `string like : `file.write(55)`, you'll run into an error: `TypeError: write() argument must be str, not int`
+  
+
+
+
 *Note:* <br>
 The default mode is set to`read-only ("r")` <br>
 
