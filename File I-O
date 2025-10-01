@@ -175,3 +175,20 @@ Here's why:
 | **`str()` function** | Clear, explicit, good for beginners. | A little more verbose (more characters to type). | When you are performing a complex, single conversion. |
 | **f-string (`f"{}"`)** | Concise, modern, highly readable (**Pythonic**). | Requires placing the variable inside curly braces `{}`. | **General file writing and string formatting.** |
 
+------------------
+
+# File Path:
+
+**1. Absolute File Path**
+**2. Relative File Path**
+
+
+## Absolute File Path:
+The root is `/`. <br>
+
+Absolute file paths always start off relative to the `root`. It basically just starts from the origin (the root of the computer).
+
+Example: <br>
+`/work/report.doc`
+
+## Relative File Path
