@@ -1376,3 +1376,32 @@ When you try to open a file in a `write` mode and that file doens't exist, then 
 | **Better for You** | **Recommended.** Since you are a beginner, this approach is easier to follow and helps you clearly see the two necessary steps: **reading the string** and then **converting it to an integer.** | This is the **"Pythonic"** way once you are more comfortable, as it's more **concise**. |
 
 
+**`integer` into a `string` in `file.write()`**
+
+| Method | Code | How it Works |
+| :--- | :--- | :--- |
+| **Your Method** | `file.write(str(self.highscore))` | Explicitly calls the built-in `str()` function to convert the integer to a string. |
+| **Course Method** | `file.write(f"{self.highscore}")` | Uses an **f-string** (Formatted String Literal). When you place a variable inside the curly braces `{}` within an f-string, Python automatically converts that variable to its string representation. |
+
+
+
+**Which is Best Practice?**
+
+In modern Python, the course's method (using **f-strings**) is generally considered **best practice** for converting non-string values into strings, especially when dealing with output or file writing. <br>
+
+Here's why:
+
+* **Readability:** It's very clear what the purpose is: embedding a variable directly into a string.
+* **Conciseness:** It's often the most concise way to perform the conversion.
+* **Versatility:** While you only have one variable here, f-strings are designed to handle multiple variables and pieces of text at once, making them highly versatile for complex output strings.
+
+
+
+
+**Summary**
+
+| Method | Pros | Cons | Best for... |
+| :--- | :--- | :--- | :--- |
+| **`str()` function** | Clear, explicit, good for beginners. | A little more verbose (more characters to type). | When you are performing a complex, single conversion. |
+| **f-string (`f"{}"`)** | Concise, modern, highly readable (**Pythonic**). | Requires placing the variable inside curly braces `{}`. | **General file writing and string formatting.** |
+
