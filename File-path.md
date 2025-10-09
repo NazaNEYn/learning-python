@@ -35,4 +35,14 @@ For example:<br>
 We can write the relative path without `./`, like `project/main.py`
 
 
+---------------
 
+# Jumping back to the previous directory :
+
+For each jump you need to use `../` <br>
+
+For example if you are in :
+* **Windows** : `F:\python\new-folder`
+* **Unix/Linux/macOS** : `/F/python/new-folder` (if 'F' were a folder name)
+and your `text.txt` file is in the `F` directory :
+`../../test.txt"``
