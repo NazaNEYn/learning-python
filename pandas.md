@@ -9,7 +9,7 @@ print(data)
 
 ![Gemini_Generated_Image_43y35h43y35h43y3](https://github.com/user-attachments/assets/06d8560b-16a5-4a23-aa7e-0683238e2cfd)
 
-<hr>
+
 # How to check the type:
 ```python
 data = pandas.read_csv("weather_data.csv")
@@ -17,6 +17,7 @@ print(type(data))
 ```
 
 
+<hr>
 
 
 | Statistical Term | Calculation / Meaning | When to Use It |
