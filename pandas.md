@@ -149,3 +149,27 @@ print(data["temp"].mean())
 <hr>
 
 # How to get a row:
+
+First get a hold of the entired data table:
+`data[]`
+
+Then, inside the data table, get hold of the column that we want to search through:
+`data[data.day]`
+
+Then inside that column we can get the row we want:
+`data[data.day == "Monday"]`
+
+```python
+print(data[data.day == "Monday"])
+# 0  Monday    12     Sunny
+```
+
+
+<hr>
+
+# Create a DataFrame from scratch:
+
+
+
+
+
