@@ -169,7 +169,45 @@ print(data[data.day == "Monday"])
 
 # Create a DataFrame from scratch:
 
+```python
+data = {
+    "name": "Pilk",
+    "formula": ["Pepsi", "Milk"],
+}
+
+print(pandas.DataFrame([data]))
+
+#    name        formula
+# 0  Pilk  [Pepsi, Milk]
+```
 
 
+```python
+data = {
+    "name": ["Amy", "Ashley"],
+    "age": ["32", "35"],
+}
 
+print(pandas.DataFrame(data))
+
+#      name age
+# 0     Amy  32
+# 1  Ashley  35
+```
+
+<hr>
+
+# Converting to a `csv` file:
+
+```python
+data = {
+    "name": ["Amy", "Ashley"],
+    "age": ["32", "35"],
+}
+
+data = pandas.DataFrame(data)
+data.to_csv("data.csv")
+```
+
+<hr>
 
