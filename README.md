@@ -597,7 +597,52 @@ The double colon `::` is not a different part of the syntax; it's just Python's 
 When you leave those fields blank, Python uses its default values: **start** becomes 0 and **end** becomes the end of the sequence. <br>
 So, the double colon `::` is just a concise way to signal that you want to use the default start and end, but still specify a **step**.
 
+----------------------------------------------
 
+## List Comprehension
+
+**`for loop`**
+```python
+numbers = [1, 2, 3]
+new_list = []
+
+for n in numbers:
+    add_1 = n + 1
+    new_list.append(add_1)
+```
+
+
+**`List comprehension`**
+```python
+new_list = [new_item for item in list]
+```
+
+```python
+numbers = [1, 2, 3]
+new_list = [n + 1 for n in numbers]
+# list ==> numbers
+# item ==> n
+# new_item ==> n + 1
+```
+
+```python
+new_list = [number * 2 for number in range(1, 5)]
+```
+---------------------------------------------
+
+## Conditionnel List Comprehension:
+
+```python
+new_list = [new_item for item in list if test]
+```
+
+```python
+names = ["Max", "Ashley", "lexa", "Alex", "Roxy", "Alison"]
+
+new_list = [name for name in names if name[0] == "A"]
+print(new_list)
+# ['Ashley', 'Alex', 'Alison']
+```
 ----------------------------------------------
 
 
