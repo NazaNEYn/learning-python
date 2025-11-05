@@ -1,3 +1,11 @@
+# Basic data structures in pandas
+
+![Gemini_Generated_Image_43y35h43y35h43y3](https://github.com/user-attachments/assets/06d8560b-16a5-4a23-aa7e-0683238e2cfd)
+
+
+----------------------------------------------
+
+
 # How to create a `DataFrame`:
 
 ```python
@@ -85,12 +93,6 @@ Sunday,24,Sunny
 
 <hr>
 
-# Basic data structures in pandas
-
-![Gemini_Generated_Image_43y35h43y35h43y3](https://github.com/user-attachments/assets/06d8560b-16a5-4a23-aa7e-0683238e2cfd)
-
-
-<hr>
 
 
 # How to get a column:
