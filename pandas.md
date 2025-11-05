@@ -1,3 +1,71 @@
+# How to create a `DataFrame`:
+
+```python
+data = pd.DataFrame([[1, 2, 3], [4, 5, 6], [7, 8, 9]], columns=["A", "B", "C"])
+```
+
+## Get the rows:
+`head()`
+
+```python
+data = pd.DataFrame([[1, 2, 3], [4, 5, 6], [7, 8, 9]], columns=["A", "B", "C"])
+print(data.head())
+
+#    A  B  C
+# 0  1  2  3
+# 1  4  5  6
+# 2  7  8  9
+```
+
+You can specify the number of the rows:
+`head(2)`, `head(5)` etc
+
+## Get the bottom rows:
+`data.tail()`
+
+```python
+data = pd.DataFrame([[1, 2, 3], [4, 5, 6], [7, 8, 9]], columns=["A", "B", "C"])
+print(data.tail(1))
+
+#    A  B  C
+# 2  7  8  9
+```
+
+## Getting the header:
+`columns`
+
+```python
+data = pd.DataFrame([[1, 2, 3], [4, 5, 6], [7, 8, 9]], columns=["A", "B", "C"])
+print(data.columns)
+
+# Index(['A', 'B', 'C'], dtype='object')
+```
+
+# Specifying the `index`:
+
+```python
+data = pd.DataFrame(
+    [[1, 2, 3], [4, 5, 6], [7, 8, 9]], columns=["A", "B", "C"], index=["x", "y", "z"]
+)
+print(data)
+
+#    A  B  C
+# x  1  2  3
+# y  4  5  6
+# z  7  8  9
+```
+
+```python
+data = pd.DataFrame(
+    [[1, 2, 3], [4, 5, 6], [7, 8, 9]], columns=["A", "B", "C"], index=["x", "y", "z"]
+)
+print(data.index)
+
+# Index(['x', 'y', 'z'], dtype='object')
+```
+
+------------------------------------------------------------------------
+
 # How to open a csv file:
 ```python
 data = pandas.read_csv("weather_data.csv")
