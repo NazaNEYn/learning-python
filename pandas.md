@@ -72,6 +72,27 @@ print(data.index)
 # Index(['x', 'y', 'z'], dtype='object')
 ```
 
+
+## `describe()`
+
+```python
+data = pd.DataFrame(
+    [[1, 2, 3], [4, 5, 6], [7, 8, 9]], columns=["A", "B", "C"], index=["x", "y", "z"]
+)
+print(data.describe())
+
+#          A    B    C
+# count  3.0  3.0  3.0
+# mean   4.0  5.0  6.0
+# std    3.0  3.0  3.0
+# min    1.0  2.0  3.0
+# 25%    2.5  3.5  4.5
+# 50%    4.0  5.0  6.0
+# 75%    5.5  6.5  7.5
+# max    7.0  8.0  9.0
+```
+
+
 ------------------------------------------------------------------------
 
 # How to open a csv file:
