@@ -645,6 +645,44 @@ print(new_list)
 ```
 ----------------------------------------------
 
+## Dictionary Comprehension
+
+```python
+new_dict = {new_key:new_value for item in list}
+
+new_dict = {new_key:new_value for (key, value) in dict.items()}
+
+new_dict = {new_key:new_value for (key, value) in dict.items() if test}
+```
+
+```python
+students = ["Alex", "Max", "Ashley", "Rachel", "Chad"]
+
+scores = {name: random.randint(1, 100) for name in students}
+
+print(scores)
+
+# {'Alex': 85, 'Max': 44, 'Ashley': 88, 'Rachel': 11, 'Chad': 11}
+```
+
+```python
+students = ["Alex", "Max", "Ashley", "Rachel", "Chad"]
+
+scores = {
+    name: random.randint(1, 100) for name in students if random.randint(1, 100) > 80
+}
+print(scores)
+
+passed_students = {name: score for (name, score) in scores.items() if score >= 60}
+print(passed_students)
+
+# {'Max': 39, 'Ashley': 25, 'Rachel': 18, 'Chad': 88}
+# {'Chad': 88}
+```
+
+
+
+---------------------------------------------
 
 ## `return` keyword :
 In Python, if a function doesn't have a `return` statement, or if the return statement is reached without an explicit value (like just `return`), the function implicitly returns `None`. <br>
