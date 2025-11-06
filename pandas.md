@@ -302,3 +302,79 @@ data.to_csv("data.csv")
 
 <hr>
 
+# Looping throw rows:
+`iterrows()`
+
+```python
+import pandas as pd
+
+students = {
+    "name": ["Alex", "Max", "Ashley"],
+    "score": [55, 62, 84],
+}
+
+
+df = pd.DataFrame(students)
+
+for index, row in df.iterrows():
+    print(index)
+
+# 0
+# 1
+# 2
+```
+
+```python
+import pandas as pd
+
+students = {
+    "name": ["Alex", "Max", "Ashley"],
+    "score": [55, 62, 84],
+}
+
+
+df = pd.DataFrame(students)
+
+for index, row in df.iterrows():
+    print(row)
+
+# name     Alex
+# score      55
+# Name: 0, dtype: object
+# name     Max
+# score     62
+# Name: 1, dtype: object
+# name     Ashley
+# score        84
+# Name: 2, dtype: object
+```
+
+```python
+import pandas as pd
+
+students = {
+    "name": ["Alex", "Max", "Ashley"],
+    "score": [55, 62, 84],
+}
+
+
+df = pd.DataFrame(students)
+
+for index, row in df.iterrows():
+    print(row["name"])
+
+# Alex
+# Max
+# Ashley
+```
+
+**NOTE:**
+If you say `print(row.name)`, the result would be `0 1 2`. <br>
+Because your column is also called "name", using row.name gets confused with the built-in Pandas Series property name, which holds the index.<br>
+So you need to say `print(row["name"])` instead.
+
+
+
+
+
+
