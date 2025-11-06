@@ -373,7 +373,24 @@ If you say `print(row.name)`, the result would be `0 1 2`. <br>
 Because your column is also called "name", using row.name gets confused with the built-in Pandas Series property name, which holds the index.<br>
 So you need to say `print(row["name"])` instead.
 
+```python
+import pandas as pd
 
+students = {
+    "name": ["Alex", "Max", "Ashley"],
+    "score": [55, 62, 84],
+}
+
+
+df = pd.DataFrame(students)
+
+for index, row in df.iterrows():
+    print(row.score)
+
+# 55
+# 62
+# 84
+```
 
 
 
