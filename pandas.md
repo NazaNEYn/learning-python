@@ -73,7 +73,7 @@ print(data.index)
 ```
 
 
-## `describe()`
+# `describe()`
 
 ```python
 data = pd.DataFrame(
@@ -91,6 +91,76 @@ print(data.describe())
 # 75%    5.5  6.5  7.5
 # max    7.0  8.0  9.0
 ```
+
+# `sample()`
+
+Getting random data.
+
+
+
+```python
+print(df.sample(4))
+
+#    letter   code
+# 6       G   Golf
+# 4       E   Echo
+# 12      M   Mike
+# 19      T  Tango
+```
+
+# Access specific rows and columns, `loc[rows, columns]`
+
+```python
+# 5th row
+print(df.loc[5])
+
+# letter          F
+# code      Foxtrot
+# Name: 5, dtype: object
+
+# 1st, 2nd, 3rd row
+print(df.loc[[0, 1, 2]])
+
+#   letter     code
+# 0      A     Alfa
+# 1      B    Bravo
+# 2      C  Charlie
+
+
+# 1st to 5th row
+print(df.loc[0:5])
+
+#   letter     code
+# 0      A     Alfa
+# 1      B    Bravo
+# 2      C  Charlie
+# 3      D    Delta
+# 4      E     Echo
+# 5      F  Foxtrot
+
+
+# every 5th row
+print(df.loc[::5])
+
+#    letter     code
+# 0       A     Alfa
+# 5       F  Foxtrot
+# 10      K     Kilo
+# 15      P     Papa
+# 20      U  Uniform
+# 25      Z     Zulu
+
+# 1st to 4th rows and the `code` column
+print(df.loc[0:4, "code"])
+
+# 0       Alfa
+# 1      Bravo
+# 2    Charlie
+# 3      Delta
+# 4       Echo
+# Name: code, dtype: object
+```
+
 
 
 ------------------------------------------------------------------------
