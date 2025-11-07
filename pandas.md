@@ -166,6 +166,21 @@ print(df.loc[0:4, "code"])
 # Name: code, dtype: object
 ```
 
+# `iloc[]`
+
+Instead of writing the name of the column, like `(df.loc[0:4, "code"]`, we'll use the `index` number of the column
+
+```python
+print(df.iloc[0:4, 1])
+
+# 0       Alfa
+# 1      Bravo
+# 2    Charlie
+# 3      Delta
+# Name: code, dtype: object
+```
+
+
 
 
 ------------------------------------------------------------------------
