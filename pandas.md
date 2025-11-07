@@ -117,7 +117,9 @@ print(df.loc[5])
 # letter          F
 # code      Foxtrot
 # Name: 5, dtype: object
+```
 
+```python
 # 1st, 2nd, 3rd row
 print(df.loc[[0, 1, 2]])
 
@@ -125,8 +127,9 @@ print(df.loc[[0, 1, 2]])
 # 0      A     Alfa
 # 1      B    Bravo
 # 2      C  Charlie
+```
 
-
+```python
 # 1st to 5th row
 print(df.loc[0:5])
 
@@ -137,8 +140,9 @@ print(df.loc[0:5])
 # 3      D    Delta
 # 4      E     Echo
 # 5      F  Foxtrot
+```
 
-
+```python
 # every 5th row
 print(df.loc[::5])
 
@@ -149,7 +153,8 @@ print(df.loc[::5])
 # 15      P     Papa
 # 20      U  Uniform
 # 25      Z     Zulu
-
+```
+```python
 # 1st to 4th rows and the `code` column
 print(df.loc[0:4, "code"])
 
