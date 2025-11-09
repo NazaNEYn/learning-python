@@ -507,6 +507,60 @@ print(df["year"])
 
 
 
+<hr>
+<hr>
+<hr>
+<hr>
+
+## *NOTES:*
 
 
+```python
+# required_columns = [
+#     "title",
+#     "authors",
+#     "average_rating",
+#     "num_pages",
+#     "publication_date",
+# ]
 
+# df = df[required_columns]
+
+df = df.loc[:, ["title", "authors", "average_rating", "num_pages", "publication_date"]]
+```
+
+Both methods achieve the exact same result, but one is generally considered better and safer for professional Python/Pandas coding.<br>
+
+The bracket notation `(df[required_columns])` is generally considered the most Pythonic and simplest choice for selecting columns only.<br>
+
+However, if you want to be as clear and safe as possible, the `.loc[]` method is often preferred because it's explicit about its intent.
+
+* Method 1: Simple Bracket Notation `(df[list])`
+
+```python
+df = df[required_columns]
+```
+
+**Pros:** <br>
+Simple and Pythonic: This is the most straightforward way to subset a DataFrame by columns. It looks like dictionary key look-up, which is very common in Python.<br>
+
+Concise: Less to type and easier to read at a glance.
+
+**Cons:** <br>
+Ambiguous: It only works for column selection. If you try to use this method to select rows, Pandas treats it differently, which can be confusing for beginners
+
+* Method 2: Explicit Label Indexing `(df.loc[:, list])`
+
+```python
+df = df.loc[:, ["title", "authors", "average_rating", "num_pages", "publication_date"]]
+```
+
+**Pros:** <br>
+Explicit: By using `.loc[:, ...]`, you are clearly telling Pandas: "I am selecting based on labels (the column names), and I want all rows `(:)`." This leaves no doubt about your intention.
+
+Scalable: You can easily add row-filtering conditions later `(e.g., df.loc[df['num_pages'] > 100, required_columns])` without changing the fundamental structure. This makes it a great habit to build.<br>
+
+Safer: You will never accidentally confuse it with integer-based selection `(.iloc[])`.
+
+**Cons:** <br>
+More Verbose: It requires the extra .loc[:, ...] syntax, making it slightly longer to type.
