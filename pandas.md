@@ -240,6 +240,11 @@ data["tempt"] # --> it's almost like you're treating it as a dict and you pul ou
 data.tempt    # --> it's almost like you're treating like an `object.`
 ```
 
+
+*NOTE:* <br>
+For consistency and safety, it's always better to use the bracket notation `(df["column_name"])` even for an existing column, especially when you are modifying it.
+
+
 <hr>
 
 
@@ -481,6 +486,26 @@ for index, row in df.iterrows():
 # 62
 # 84
 ```
+
+
+----------------------------- 
+
+# Adding/Removing Columns
+
+```python
+# adding a new column with dot notation  won't work
+df.year = 1990
+
+# we add a new column by using the bracket notation
+df["year"] = 1990
+
+
+# but we can get an existing column by using both dot notation and bracket notation
+print(df.year)
+print(df["year"])
+```
+
+
 
 
 
