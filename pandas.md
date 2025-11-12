@@ -512,7 +512,7 @@ print(df["year"])
 <hr>
 <hr>
 
-## *NOTES:*
+## *NOTE 1:*
 
 
 ```python
@@ -564,3 +564,14 @@ Safer: You will never accidentally confuse it with integer-based selection `(.il
 
 **Cons:** <br>
 More Verbose: It requires the extra .loc[:, ...] syntax, making it slightly longer to type.
+
+## *NOTE 2:*
+General workflow:
+
+1. **Load Data** `(pd.read_csv())`
+
+2. **Select Columns** `(df = df[required_columns])`
+
+3. **Clean Data** (Handling `NaNs`, `pd.to_numeric`, type conversion, etc.)
+
+4. **Filter/Analyze** (Filtering based on user input, grouping, sorting)
