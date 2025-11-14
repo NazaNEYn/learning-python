@@ -110,6 +110,53 @@ label4 = tk.Label(root, text="Expands & Fills Both", bg="orange")
 label4.pack(expand=True, fill='both', padx=5, pady=5)
 
 root.mainloop()
+```
+
+
+## Advanced Options
+
+### 5. Stacking Order (`before` and `after`) 
+
+These options allow you to explicitly control the packing order relative to another widget object, overriding the default order of creation.
+
+* **`after=other_widget`**: Places the current widget immediately **after** the specified widget in the packing order.
+* **`before=other_widget`**: Places the current widget immediately **before** the specified widget in the packing order.
+
+### 6. Anchor (`anchor`)
+
+Specifies where the widget should be placed within its allocated space when the widget's requested size is **smaller** than the available space (e.g., when padding or `expand` is used without `fill`).
+
+| Value | Location | Value | Location |
+| :---: | :---: | :---: | :---: |
+| **`'n'`** | North (Top) | **`'s'`** | South (Bottom) |
+| **`'e'`** | East (Right) | **`'w'`** | West (Left) |
+| **`'ne'`** | Northeast | **`'nw'`** | Northwest |
+| **`'se'`** | Southeast | **`'sw'`** | Southwest |
+| **`'center'`** (Default) | Center | | |
+
+---
+
+## Example Code Snippet
+
+```python
+import tkinter as tk
+
+root = tk.Tk()
+
+# 1. Simple 'top' placement with internal padding
+label1 = tk.Label(root, text="Basic", bg="lightblue")
+label1.pack(ipady=5)
+
+# 2. Packed left, filling vertical space, expanding horizontally
+label2 = tk.Label(root, text="Fill Y, Expand", bg="lightgreen")
+label2.pack(side='left', fill='y', expand=True)
+
+# 3. Packed right, anchored to the bottom-right corner of its space
+label3 = tk.Label(root, text="Anchor SE", bg="yellow")
+label3.pack(side='right', anchor='se', padx=10, pady=10) 
+
+root.mainloop()
+```
 
 -----
 
