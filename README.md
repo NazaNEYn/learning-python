@@ -674,6 +674,7 @@ So, the double colon `::` is just a concise way to signal that you want to use t
 ----------------------------------------------
 
 ## List Comprehension
+It is designed to build a brand new list.
 
 **`for loop`**
 ```python
