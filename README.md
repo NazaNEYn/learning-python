@@ -564,6 +564,15 @@ print(add(5, 4, 3, 2, 8, 1, 11))
 # 34
 ```
 
+```python
+def display_name(*args):
+    for arg in args:
+        print(arg, end=" ")
+
+
+display_name("Naz", "Ash", "III")
+# Naz Ash III
+```
 
 ## `kwargs`: Keyword Arguments:
 
@@ -591,6 +600,49 @@ calculate(add=3, multiply=6)
 
 
 ```python
+def address(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+
+address(
+    street="123 Fake St.", pobox="P.O Box 777", city="Detroit", state="MI", zip="54321"
+)
+
+# street: 123 Fake St.
+# pobox: P.O Box 777
+# city: Detroit
+# state: MI
+# zip: 54321
+```
+
+```python
+def address(*args, **kwargs):
+    for arg in args:
+        print(arg, end=" ")
+    print()
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+address(
+    "Naz",
+    "Ashrafi",
+    street="123 Fake St.",
+    pobox="P.O Box 777",
+    city="Detroit",
+    state="MI",
+    zip="54321",
+)
+
+# Naz Ashrafi 
+# street: 123 Fake St.
+# pobox: P.O Box 777
+# city: Detroit
+# state: MI
+# zip: 54321
+```
+
+```python
 def calculate(**kwargs):
     print(kwargs["add"])
     print(kwargs["multiply"])
@@ -614,6 +666,34 @@ def calculate(n, **kwargs):
 calculate(2, add=3, multiply=6)
 
 # 30
+```
+
+### Using `.get()` for Specific Values
+
+
+```python
+def address(*args, **kwargs):
+    for arg in args:
+        print(arg, end=" ")
+
+    print()
+
+    print(f"{kwargs.get("street")}")
+    print(f"{kwargs.get("city")}, {kwargs.get("state")}, {kwargs.get("zip")}")
+
+
+address(
+    "Naz",
+    "Ashrafi",
+    street="123 Fake St.",
+    city="Detroit",
+    state="MI",
+    zip="54321",
+)
+
+# Naz Ashrafi 
+# 123 Fake St.
+# Detroit, MI, 54321
 ```
 
 ----------------------------------------------
