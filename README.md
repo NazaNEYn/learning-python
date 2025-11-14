@@ -542,6 +542,80 @@ my_function()
 # Hello
 # Bye
 ```
+
+
+## Unlimited Positioal Arguments
+```python
+def add(*args):
+    for n in args:
+        print(n)
+```
+
+
+```python
+def add(*args):
+    sum = 0
+    for n in args:
+        sum += n
+    return sum
+
+
+print(add(5, 4, 3, 2, 8, 1, 11))
+# 34
+```
+
+
+## `kwargs`: Keyword Arguments:
+
+```python
+def calculate(**kwargs):
+    print(type(kwargs))
+
+
+calculate(add=3, multiply=6)
+# <class 'dict'>
+```
+
+```python
+def calculate(**kwargs):
+    for key, value in kwargs.items():
+        print(key, value)
+
+
+calculate(add=3, multiply=6)
+
+
+# add 3
+# multiply 6
+```
+
+
+```python
+def calculate(**kwargs):
+    print(kwargs["add"])
+    print(kwargs["multiply"])
+
+
+calculate(add=3, multiply=6)
+
+# 3
+# 6
+```
+
+
+
+```python
+def calculate(n, **kwargs):
+    n += kwargs["add"]
+    n *= kwargs["multiply"]
+    print(n)
+
+
+calculate(2, add=3, multiply=6)
+
+# 30
+```
+
 ----------------------------------------------
 ## While Loop
 
