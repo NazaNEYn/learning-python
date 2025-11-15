@@ -696,6 +696,21 @@ address(
 # Detroit, MI, 54321
 ```
 
+
+*NOTE:*<br>
+
+If we do this:
+```python
+def address(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+```
+It will get all of the arguments in kwargs but if we want to call some specific kwargs we use the `get()` method.
+
+```python
+print(f"{kwargs.get("street")}")
+```
+    
 ----------------------------------------------
 ## While Loop
 
