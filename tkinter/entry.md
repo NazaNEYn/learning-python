@@ -182,4 +182,41 @@ entry = tk.Entry(root, validate='key', validatecommand=vcmd)
 entry.pack()
 ```
 
-------
+<hr>
+<hr>
+<hr>
+
+
+# Example :
+
+```python
+import tkinter as tk
+
+
+window = tk.Tk()
+window.title("GUI Program")
+window.minsize(500, 300)
+
+# Label
+# 1. first create a label/component
+my_label = tk.Label(text="I am a label", font=("Arial", 24, "bold"))
+my_label.pack(pady=50)
+
+
+def clicked_btn():
+    my_label.config(text=input.get().title())
+
+
+button = tk.Button(text="Click Me", command=clicked_btn)
+button.pack(pady=10)
+
+
+input = tk.Entry(width=15)
+input.pack(pady=5)
+
+
+# ##############################
+# To keep the window pop up
+window.mainloop()
+```
+
