@@ -120,3 +120,66 @@ entry.config(state=tk.READONLY)
 ```
 
 To re-enable editing, set the state back to `tk.NORMAL`.
+
+-----
+
+
+# 🔒 Tkinter Entry Validation Explained
+
+Input **validation** in Tkinter involves setting up a check function (**`validatecommand`**) that runs whenever a specific event occurs, controlled by the **`validate`** option.
+
+---
+
+## 1. The `validate` Option (When to Check)
+
+This option specifies *when* your validation function should be called.
+
+| Value | When the Check Happens | Use Case Example |
+| :--- | :--- | :--- |
+| **`none`** | Never (Default). | |
+| **`key`** | Every time the user presses or releases a key that edits the text. | Best for **live filtering** (e.g., only allowing digits). |
+| **`focusin`** | When the entry widget gains keyboard focus. | Checking if the field is empty when the user clicks into it. |
+| **`focusout`** | When the entry widget loses keyboard focus (e.g., user clicks elsewhere). | Best for **final confirmation** (e.g., checking if the entered number is within an acceptable range). |
+| **`all`** | For all the above conditions. | |
+
+---
+
+## 2. The `validatecommand` (The Check Itself)
+
+This is the function (or "script") that Python evaluates to perform the validation.
+
+* This command must return a **boolean** value (**`True`** or **`False`**).
+* If it returns **`True`**, the edit/action is **allowed**.
+* If it returns **`False`**, the edit/action is **prevented**.
+
+---
+
+## 3. Percent Substitutions (%-Codes)
+
+The **`%` codes** are essential! These act like function arguments, automatically passing detailed context about the editing event to your validation function.
+
+| Code | What it Provides | Use Case Example |
+| :--- | :--- | :--- |
+| **`%P`** | The **Potential new value** of the entire entry string if the edit is allowed. | The **most useful** code. You check this string to see if it contains valid content (e.g., `isnumeric()`). |
+| **`%S`** | The **String** being inserted or deleted. | Useful if you only want to inspect the new character being typed. |
+| **`%V`** | The **Validation event type** (`key`, `focusin`, etc.) that triggered the check. | Useful if you want one function to handle all validation types differently. |
+| **`%d`** | The **type of action**: `1` for insert, `0` for delete. | |
+
+
+
+```python
+def validate_number(P):
+    """Returns True if the potential value P is empty or contains only digits."""
+    if P.isdigit() or P == "":
+        return True
+    return False
+
+root = tk.Tk()
+vcmd = (root.register(validate_number), '%P') # Register function and bind it to %P
+
+# Set the validation rule: run 'vcmd' when a 'key' is pressed
+entry = tk.Entry(root, validate='key', validatecommand=vcmd)
+entry.pack()
+```
+
+------
