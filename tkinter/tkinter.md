@@ -1,6 +1,6 @@
 # `tkinter` Module
 
-(Official Doc)[https://www.tcl-lang.org/man/tcl8.4/TkCmd/contents.htm}
+[Official Doc](https://www.tcl-lang.org/man/tcl8.4/TkCmd/contents.htm)
 
 ```python
 import tkinter
