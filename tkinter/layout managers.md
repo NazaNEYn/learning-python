@@ -33,6 +33,7 @@ The `grid()` manager is the most flexible and widely used manager for complex, o
 | `sticky` | Controls how the widget is aligned within its assigned cell. Uses compass directions (e.g., `'n'`, `'sw'`) or combined for stretch (e.g., `'ew'` to stretch horizontally). | `label.grid(sticky='w')` |
 | `padx`/`pady` | Adds external padding around the cell. | `button.grid(padx=5)` |
 
+
 ### Crucial for Resizing
 
 For a grid-based layout to resize correctly when the window changes size, you **must** configure which rows and columns should expand using the `rowconfigure()` and `columnconfigure()` methods on the master widget:
@@ -43,6 +44,7 @@ master.columnconfigure(1, weight=1)
 
 # Makes row 0 absorb extra vertical space
 master.rowconfigure(0, weight=1)
+```
 
 
 ## 📍 3. `place()` Manager (Absolute Positioning)
