@@ -81,6 +81,13 @@ text_id = canvas.create_text(
 )
 ```
 
+### How to create an image:
+```python
+canvas = Canvas(width=200, height=224)
+img = PhotoImage(file="img.png")
+canvas.create_image(100, 112, image=img)
+canvas.pack()
+```
 
 -----
 
