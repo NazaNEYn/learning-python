@@ -4,3 +4,12 @@
 | `json.load()` | JSON $\rightarrow$ Python (Decode/Deserialize) | File | To convert data read from a **JSON file** into a **Python object** (like a dict) so you can use it in your program. | Receiving a shipping box (the file) and opening it to access the data inside. |
 | `json.dump()` | Python $\rightarrow$ JSON (Encode/Serialize) | File | To convert a **Python object** (like a dict) and write it directly into an open **file** in JSON format for storage. | Writing your data down neatly onto a permanent ledger (the file). |
 | `json.loads()` | JSON $\rightarrow$ Python (Decode/Deserialize) | String | To convert a **JSON-formatted string** you received (e.g., from an API response) back into a **Python object**. | Taking a sealed shipping box (the string) and immediately opening it to access the data. |
+
+
+-------
+
+| Step/Method | Primary Action | Python Method / Concept | Data Flow | Explanation |
+| :--- | :--- | :--- | :--- | :--- |
+| 1. Reading Data | Load the JSON file data into a Python dictionary. | `json.load(file_object)` | File $\rightarrow$ Python dict | Reads the entire JSON file content and converts it into a Python object (usually a dictionary or list) so you can work with it. |
+| 2. Modifying Data | Update the data in the Python dictionary. | `dictionary.update(...)` | Python dict $\leftrightarrow$ Python dict | This is a standard Python dictionary method used to add new key-value pairs or change existing ones after you've loaded the data. |
+| 3. Writing Data | Dump the modified Python dictionary back into the JSON file. | `json.dump(data, file_object)` | Python dict $\rightarrow$ File | Takes your updated Python dictionary and writes it to the open file, converting it back into the JSON text format. |
