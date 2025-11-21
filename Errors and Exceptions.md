@@ -25,3 +25,17 @@ finally:
     # Code that always runs (e.g., resource cleanup)
     print("Execution of the try/except block is complete.")
 ```
+
+# Common Python Exceptions
+
+| Exception Name | Meaning | Common Cause |
+| :--- | :--- | :--- |
+| **NameError** | A variable, function, or module name was used but hasn't been defined (or was misspelled). | Trying to access a variable before it's been assigned a value, or calling a function with a typo. |
+| **TypeError** | An operation or function is applied to an object of an inappropriate type. | Attempting to add a string and an integer (`"hello" + 5`), or calling a method that doesn't exist on an object. |
+| **ValueError** | A function receives an argument of the correct type, but an inappropriate value. | Trying to convert a non-numeric string into an integer: `int("abc")`. |
+| **IndexError** | You tried to access an element in a sequence (like a list or tuple) using an index that is out of range. | Accessing `my_list[5]` when `my_list` only has 3 elements (indices 0, 1, 2). |
+| **KeyError** | You tried to access a dictionary element using a key that doesn't exist in the dictionary. | Accessing `my_dict['age']` when the dictionary only contains the key `'name'`. |
+| **ZeroDivisionError** | The second operand in a division or modulo operation is zero. | Trying to calculate `10 / 0`. |
+| **FileNotFoundError** | An attempt to open a file or directory failed because it doesn't exist. | Using `open('missing_file.txt', 'r')` when the file isn't in the expected path. |
+| **IndentationError** | Code is improperly indented, which violates Python's syntax rules. (While often treated like a syntax error by the parser, it specifically relates to runtime structure.) | Mixing spaces and tabs, or using incorrect indentation after a colon (`:`). |
+| **AttributeError** | An attempt was made to access an attribute (property or method) that doesn't exist on an object. | Trying to call `my_list.add(1)` when the correct method is `my_list.append(1)`. |
