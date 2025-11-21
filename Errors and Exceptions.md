@@ -1,31 +1,27 @@
 | Keyword | Purpose |
 | :--- | :--- |
-| **try** (or **TRY**) | Encloses the code that might cause an exception. |
-| **except** (or **catch**) | Specifies the code to be executed when a particular exception type is raised in the try block. |
-| **finally** (or **FINALLY**) | Specifies code that will always be executed, regardless of whether an exception occurred or was handled. Useful for cleanup actions (e.g., closing files or releasing resources). |
-| **raise** (or **throw**) | Used to manually trigger an exception if a certain condition is met in your code. |
+| **try** | The block of code following `try` is the critical operation. Python attempts to execute this code. If an exception occurs here, the execution immediately stops, and Python looks for a matching `except` block. |
+| **except** | The block of code following `except` is the exception handler. It executes only if an exception occurs in the preceding `try` block. You can specify which type of exception you want to catch (e.g., `except ZeroDivisionError:`). |
+| **else** | The code block following `else` executes only if the `try` block completes without any exceptions. |
+| **finally** | The code block following `finally` will **always** execute, regardless of whether an exception occurred in the `try` block or not, and whether it was handled or not. It's often used for cleanup actions, like closing a file or network connection. |
 
 ```python
 try:
-    # 1. Code that might raise an exception
-    numerator = 10
-    denominator = 0
-    result = numerator / denominator  # This will raise a ZeroDivisionError
-    
-except ZeroDivisionError:
-    # 2. Code to run ONLY if a ZeroDivisionError occurs
-    print("Error: Cannot divide by zero. Please check the input.")
-    
+    # Code that might cause an exception
+    result = 10 / num
+except ZeroDivisionError as e:
+    # Code to handle a specific exception (ZeroDivisionError)
+    print(f"Error: Cannot divide by zero. Details: {e}")
+except (TypeError, ValueError):
+    # Code to handle multiple specific exceptions
+    print("Error: Invalid type or value provided.")
 except Exception as e:
-    # 3. Code to run for any OTHER exception (catches all)
+    # Code to handle any other unexpected exceptions (broad catch)
     print(f"An unexpected error occurred: {e}")
-    
 else:
-    # 4. Code to run ONLY IF the 'try' block completes without an exception
-    print("Division was successful!")
-    print(f"Result: {result}")
-    
+    # Code to run IF the 'try' block was successful
+    print(f"Division successful. Result: {result}")
 finally:
-    # 5. Code that ALWAYS runs, no matter what
-    print("Execution attempt finished.")
+    # Code that always runs (e.g., resource cleanup)
+    print("Execution of the try/except block is complete.")
 ```
