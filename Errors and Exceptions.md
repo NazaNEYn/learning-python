@@ -39,3 +39,91 @@ finally:
 | **FileNotFoundError** | An attempt to open a file or directory failed because it doesn't exist. | Using `open('missing_file.txt', 'r')` when the file isn't in the expected path. |
 | **IndentationError** | Code is improperly indented, which violates Python's syntax rules. (While often treated like a syntax error by the parser, it specifically relates to runtime structure.) | Mixing spaces and tabs, or using incorrect indentation after a colon (`:`). |
 | **AttributeError** | An attempt was made to access an attribute (property or method) that doesn't exist on an object. | Trying to call `my_list.add(1)` when the correct method is `my_list.append(1)`. |
+
+
+**1. `NameError`**:
+
+```python
+try:
+    first_name = "Naz"
+    print(last_name)
+except NameError as e:
+    print(f"{e}")
+
+# name 'last_name' is not defined
+```
+
+**2. `TypeError`**:
+
+```python
+try:
+    num1 = 5
+    num2 = "5"
+    total = num1 + num2
+    print(total)
+except TypeError as e:
+    print(f"Error: {e}")
+
+# Error: unsupported operand type(s) for +: 'int' and 'str'
+```
+
+**3. `TypeError`**:
+
+```python
+try:
+    user_input = int(input("What is your name?\n"))
+    print(user_input)
+except ValueError as e:
+    print(f"{e}")
+
+# If you dont enter a number as an input, you'll get an error
+#  invalid literal for int() with base 10: 'ss'
+```
+
+
+**4. `IndexError`**:
+
+```python
+try:
+    my_list = [1, 2, 3]
+    print(my_list[3])
+except IndexError as e:
+    print(f"{e}")
+# list index out of range
+```
+
+
+
+**5. `KeyError`**:
+
+```python
+dict = {
+    "name": "Naz",
+    "age": 32,
+}
+
+try:
+    print(dict["naaame"])
+except KeyError as e:
+    print(f"{e} doesn't exist in the dictionary")
+
+# 'naaame' doesn't exist in the dictionary
+```
+
+**6. `FileNotFoundError`**:
+
+```python
+filename = "non_existent_file.log"
+try:
+    with open(filename, 'r') as file:
+        content = file.read()
+except FileNotFoundError:
+    print(f"Caught a FileNotFoundError! The file '{filename}' could not be found.")
+    # A common recovery action is to create the file or use a default
+    with open(filename, 'w') as file:
+        file.write("Log file created.")
+    print("New log file created successfully.")
+```
+
+
+
