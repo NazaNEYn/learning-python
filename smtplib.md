@@ -41,3 +41,14 @@ These methods are used to deliver the email content and close the session.
 | | - **`msg`**: A string containing the entire formatted email content (including headers like Subject, To, From, and the body). |
 | `quit()` | Sends the proper **`QUIT`** command to the SMTP server and gracefully closes the connection. | **Best practice** to call this when finished sending emails, or use a `with` statement. |
 | `close()` | Terminates the socket connection without sending the SMTP `QUIT` command. | Generally, `quit()` is preferred for a clean server transaction. |
+
+
+# Common SMTP server addresses
+
+| Provider | Host Address (Server) | Port 587 (Recommended) | Port 465 (SSL) | Notes |
+| :--- | :--- | :--- | :--- | :--- |
+| **Gmail (Google)** | `smtp.gmail.com` | 587 (STARTTLS) | 465 (SSL) | Requires App Password for Python scripts. |
+| **Outlook/Hotmail (Microsoft)** | `smtp-mail.outlook.com` | 587 (STARTTLS) | 465 (SSL) | |
+| **Yahoo Mail** | `smtp.mail.yahoo.com` | 587 (STARTTLS) | 465 (SSL) | |
+| **AOL** | `smtp.aol.com` | 587 (STARTTLS) | 465 (SSL) | |
+| **AT&T** | `smpt.mail.att.net` | | 465 (SSL) | Sometimes defaults to SSL. |
