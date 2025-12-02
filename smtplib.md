@@ -52,3 +52,27 @@ These methods are used to deliver the email content and close the session.
 | **Yahoo Mail** | `smtp.mail.yahoo.com` | 587 (STARTTLS) | 465 (SSL) | |
 | **AOL** | `smtp.aol.com` | 587 (STARTTLS) | 465 (SSL) | |
 | **AT&T** | `smpt.mail.att.net` | | 465 (SSL) | Sometimes defaults to SSL. |
+
+
+------
+
+
+```python
+import smtplib
+
+# type your emailhere
+my_email = "fake@gmail.com"
+
+# type your password here
+password = "fakepassword"
+
+# SMTP server addresses
+with smtplib.SMTP("smtp.gmail.com") as connection:
+    connection.starttls()
+    connection.login(user=my_email, password=password)
+    connection.sendmail(
+        from_addr=my_email,
+        to_addrs="anotherfake@gamail.com",
+        msg="Subject:Hey there\n\nThis is just a text",
+    )
+```
