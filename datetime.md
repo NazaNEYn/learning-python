@@ -12,3 +12,17 @@ This table summarizes the core classes, their attributes, and common methods wit
 | **`timezone`** | `utcoffset`, `tzname`, `dst` | `fromutc(dt)`, `utcoffset(dt)`, `tzname(dt)`, `dst(dt)` | Implements fixed offset time zones derived from `tzinfo`. |
 | `datetime.MINYEAR` | Constant = 1 | N/A | Smallest year allowed in `date` or `datetime`. |
 | `datetime.MAXYEAR` | Constant = 9999 | N/A | Largest year allowed in `date` or `datetime`. |
+
+------
+
+
+## Common `strftime` Formatting Codes
+
+| Directive | Meaning |
+| :--- | :--- |
+| **`%Y`** | Year with century (e.g., **2025**) |
+| **`%m`** | Month as zero-padded decimal (01-12) |
+| **`%d`** | Day of the month (01-31) |
+| **`%H`** | Hour (00-23) |
+| **`%M`** | Minute (00-59) |
+| **`%S`** | Second (00-59) |
