@@ -26,3 +26,43 @@ This table summarizes the core classes, their attributes, and common methods wit
 | **`%H`** | Hour (00-23) |
 | **`%M`** | Minute (00-59) |
 | **`%S`** | Second (00-59) |
+
+-----
+
+## `datetime.now()` Attributes and Methods
+
+## ⚙️ Core Attributes and Methods of the `datetime` Object
+
+This table details the common attributes and methods available on a `datetime` object (often referenced here as `now`).
+
+| Attribute / Method | Type / Return | Description |
+| :--- | :--- | :--- |
+| **`now.year`** | `int` | Year (e.g., **2025**) |
+| **`now.month`** | `int` | Month (**1–12**) |
+| **`now.day`** | `int` | Day of the month (**1–31**) |
+| **`now.hour`** | `int` | Hour of the day (**0–23**) |
+| **`now.minute`** | `int` | Minute of the hour (**0–59**) |
+| **`now.second`** | `int` | Second of the minute (**0–59**) |
+| **`now.microsecond`** | `int` | Microsecond of the second (**0–999999**) |
+| `now.tzinfo` | `tzinfo` or `None` | **Timezone info** (`None` if naive datetime) |
+| `now.fold` | `int` (0 or 1) | Helps disambiguate during **DST transitions** (Python 3.6+) |
+| --- | --- | --- |
+| `now.date()` | `date` object | Returns the **date** part of the datetime |
+| `now.time()` | `time` object | Returns the **time** part of the datetime |
+| `now.timetz()` | `time` object | Returns the time with `tzinfo` |
+| `now.replace(**kwargs)` | `datetime` object | Return a new datetime with **replaced components** |
+| `now.timetuple()` | `time.struct_time` | Returns a **`struct_time` tuple** for use with `time` module |
+| `now.utctimetuple()` | `time.struct_time` | Returns **UTC `struct_time`** |
+| `now.toordinal()` | `int` | Returns the **proleptic Gregorian ordinal** (days since 1 Jan 1) |
+| `now.timestamp()` | `float` | Returns **POSIX timestamp** (seconds since epoch) |
+| `now.weekday()` | `int` | Day of the week (**Monday = 0 … Sunday = 6**) |
+| `now.isoweekday()` | `int` | Day of the week (**Monday = 1 … Sunday = 7**) |
+| `now.isoformat()` | `str` | Returns **ISO 8601** formatted string (YYYY-MM-DDTHH:MM:SS.mmmmmm) |
+| `now.ctime()` | `str` | Returns a string like `Tue Dec 2 20:45:00 2025` |
+| `now.strftime(format)` | `str` | **Format datetime as string** according to format codes |
+| `now.strptime(date_string, format)` | `datetime` object | **Parse string to datetime** (class method) |
+| `now.astimezone(tz=None)` | `datetime` object | **Convert to given timezone**; if `tz=None`, convert to local timezone |
+| --- | --- | --- |
+| `datetime.fromtimestamp(timestamp, tz=None)` | `datetime` object | **Class method**: create datetime from POSIX timestamp |
+| `datetime.utcnow()` | `datetime` object | **Class method**: current UTC datetime (**naive**) |
+| `datetime.now(tz=None)` | `datetime` object | **Class method**: current local datetime, optionally with `tzinfo` |
