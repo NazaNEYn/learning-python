@@ -66,3 +66,21 @@ This table details the common attributes and methods available on a `datetime` o
 | `datetime.fromtimestamp(timestamp, tz=None)` | `datetime` object | **Class method**: create datetime from POSIX timestamp |
 | `datetime.utcnow()` | `datetime` object | **Class method**: current UTC datetime (**naive**) |
 | `datetime.now(tz=None)` | `datetime` object | **Class method**: current local datetime, optionally with `tzinfo` |
+
+
+```python
+import datetime as dt
+
+# First get the `now` class and then you can get the year, month etc
+now = dt.datetime.now()
+year = now.year
+month = now.month
+day = now.day
+
+print(day)
+
+
+date_of_birth = dt.datetime(year=1990, month=1, day=5)
+print(date_of_birth)
+# 1990-01-05 00:00:00
+```
