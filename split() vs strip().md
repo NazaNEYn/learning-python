@@ -85,8 +85,9 @@ print(words)
 ```
 
 
-<br><br>
-**(Learn later)**
+------------------------
+
+## (Learn later)
 ###  splitting with multiple separators:
 `re.split()` method 
 
