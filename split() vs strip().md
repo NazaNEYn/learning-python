@@ -1,5 +1,6 @@
 # `strip()`: CLEAN the ends
-`strip()` removes **only whitespace** from the beginning and end of a string (not the middle).
+`strip()` removes **only whitespace** from the beginning and end of a string (not the middle).<br>
+It's the most commonly used to remove spaces and newline characters.
 
 ```python
 text = "         Hello Wordl jhdfjhsdfg"
