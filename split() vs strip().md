@@ -84,6 +84,11 @@ print(words)
 # ['apple banana', 'orange']
 ```
 
+------------------------
+
+**Here are some more example from my notebook:**
+
+[LINK](https://static.marimo.app/static/split-vs-strip-8xs1)
 
 ------------------------
 
