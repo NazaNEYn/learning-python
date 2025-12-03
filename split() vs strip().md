@@ -27,8 +27,67 @@ print(clean_text)
 ------
 
 # `split()`: 
-`split()` takes a string and cuts it into a list based on a separator you choose.
 
-### What `split()` does:
-* Breaks the string wherever it finds the separator.
-* Returns a list
+## What `split()` does:
+
+### 1. Splitting by space (default behavior):
+By default, `split()` splits a string at spaces.
+
+```python
+text = "apple banana orange"
+words = text.split()
+print(words)
+
+# ['apple', 'banana', 'orange']
+```
+
+### 2. Splitting by a specific character:
+You can tell `split()` to break the string at a specific character, like a comma `,`, hyphen `-`, or any character you choose.
+
+```python
+text = "apple,banana,orange"
+words = text.split(",")
+print(words)
+
+# ['apple', 'banana', 'orange']
+```
+
+```python
+text = "apple-banana-orange"
+words = text.split("-")
+print(words)
+
+# ['apple', 'banana', 'orange']
+```
+
+### 3. splitting with newlines (`\n`)
+
+```python
+text = """apple
+banana
+orange
+grape"""
+lines = text.split("\n")
+print(lines)
+
+# ['apple', 'banana', 'orange']
+```
+
+
+### 4. splitting in reverse order (`rsplit()`)
+
+```python
+text = "apple banana orange"
+words = text.rsplit(" ", 1)
+print(words)
+
+# ['apple banana', 'orange']
+```
+
+
+<br><br>
+**(Learn later)**
+###  splitting with multiple separators:
+`re.split()` method 
+
+###  splitting with a limit (`maxsplit`)
