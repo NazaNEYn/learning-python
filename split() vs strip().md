@@ -86,9 +86,9 @@ print(words)
 
 ------------------------
 
-**Here are some more example from my notebook:**
+**Here are some more examples from my notebook:**
 
-[LINK](https://static.marimo.app/static/split-vs-strip-8xs1)
+[LINK](https://static.marimo.app/static/split-vs-strip-ylc3)
 
 ------------------------
 
