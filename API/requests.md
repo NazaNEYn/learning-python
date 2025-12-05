@@ -237,6 +237,10 @@ print(response.headers)
 * If the response is successful (2xx) or a redirect (3xx), it does nothing.
 
 
+
+![ChatGPT Image Dec 5, 2025, 04_04_34 PM](https://github.com/user-attachments/assets/a330bec0-14a4-4f74-926d-6047ada0e038)
+
+
 ```python
 import requests
 
