@@ -231,7 +231,7 @@ print(response.headers)
 
 `response.raise_for_status()`:<br>
 
-*It’s a built-in method of the response object.
+* It’s a built-in method of the response object.
 * It checks the HTTP response code of your request.
 * If the response indicates an error (status codes 4xx or 5xx), it raises an exception.
 * If the response is successful (2xx) or a redirect (3xx), it does nothing.
