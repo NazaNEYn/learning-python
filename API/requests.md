@@ -1,9 +1,6 @@
-# Python Requests Library Documentation
+# Python Requests Library 
 
-## Overview
-`requests` is a popular Python library that allows you to send HTTP requests easily. It abstracts the complexities of making HTTP requests, handling headers, query parameters, and responses, making it simple to interact with APIs or web services.
 
----
 
 ## Installation
 
@@ -15,7 +12,7 @@ pip install requests
 ### Using uv:
 If you have `uv` installed:
 ```bash
-uv install requests
+uv pip install requests
 ```
 
 ---
