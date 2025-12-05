@@ -228,6 +228,29 @@ print(response.headers)
 ---
 
 ## Error Handling
+
+`response.raise_for_status()`:<br>
+
+*It’s a built-in method of the response object.
+* It checks the HTTP response code of your request.
+* If the response indicates an error (status codes 4xx or 5xx), it raises an exception.
+* If the response is successful (2xx) or a redirect (3xx), it does nothing.
+
+
+```python
+import requests
+
+response = requests.get("https://api.example.com/data")
+
+# Raise an error if the request failed
+response.raise_for_status()
+
+# If no error, continue
+data = response.json()
+print(data)
+```
+
+
 ```python
 try:
     response = requests.get('https://api.example.com/data', timeout=5)
