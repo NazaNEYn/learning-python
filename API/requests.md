@@ -238,7 +238,7 @@ print(response.headers)
 
 
 
-![ChatGPT Image Dec 5, 2025, 04_04_34 PM](https://github.com/user-attachments/assets/a330bec0-14a4-4f74-926d-6047ada0e038)
+![ChatGPT Image Dec 5, 2025, 04_04_34 PM](https://github.com/user-attachments/assets/bee05aea-ba04-43e3-8e21-ac48a2544cd8)
 
 
 ```python
