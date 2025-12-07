@@ -18,7 +18,7 @@ This table summarizes the core classes, their attributes, and common methods wit
 
 ## Common `strftime` Formatting Codes
 
-| Directive | Meaning |
+| Code | Meaning |
 | :--- | :--- |
 | **`%Y`** | Year with century (e.g., **2025**) |
 | **`%m`** | Month as zero-padded decimal (01-12) |
@@ -26,6 +26,11 @@ This table summarizes the core classes, their attributes, and common methods wit
 | **`%H`** | Hour (00-23) |
 | **`%M`** | Minute (00-59) |
 | **`%S`** | Second (00-59) |
+| **`%I`** | Hour (**12-hour clock**, 01–12) |
+| **`%H`** | Hour (**24-hour clock**, 00–23) |
+| **`%M`** | Minute (00–59) |
+| **`%S`** | Second (00–59) |
+| **`%p`** | **AM or PM** (Locale's equivalent) |
 
 -----
 
