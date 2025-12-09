@@ -5,3 +5,34 @@ By web scraping we look through the unerlying `HTML` code of a website to get ho
 
 # BeautifulSoup
 `BeautifulSoup` is a module that helps developers to make sense of websites. It helps you read, search, and extract information from HTML or XML webpages.
+
+## Examples:
+
+### How to get the texts from a anchor tag
+
+```html
+  <a href="https://x.com/nazanin_ashrafi">My Hobbies</a>
+  <a href="https://x.com/nazanin_ashrafi">Contact Me</a>
+```
+
+```python
+all_anchors = soup.find_all(name="a")
+
+for tag in all_anchors:
+    print(tag.getText())
+```
+
+### How to get the links from a anchor tag
+
+```html
+  <a href="https://x.com/nazanin_ashrafi">My Hobbies</a>
+  <a href="https://x.com/nazanin_ashrafi">Contact Me</a>
+```
+
+```python
+all_anchors = soup.find_all(name="a")
+
+for tag in all_anchors:
+    print(tag.get("href"))
+```
+
