@@ -150,14 +150,10 @@ BeautifulSoup provides both `snake_case` (modern/Pythonic) and `CamelCase` (lega
 | `snake_case` (modern) | `CamelCase` (legacy) | Same? | Notes |
 | :--- | :--- | :--- | :--- |
 | **`find_all()`** | `findAll()` | **✔️ Same** | Returns a list of matching tags. |
-| **`find()`** | `find()` | **✔️ Same** | No CamelCase version because the name is simple. |
 | **`get_text()`** | `getText()` | **✔️ Same** | Extracts all text content from the element. |
-| **`clear()`** | `clear()` | **✔️ Same** | No CamelCase version. Removes all children from the tag. |
 | **`replace_with()`** | `replaceWith()` | **✔️ Same** | Replaces a tag with another element or string. |
 | **`insert_before()`** | `insertBefore()` | **✔️ Same** | Inserts a tag or string immediately before the current tag. |
 | **`insert_after()`** | `insertAfter()` | **✔️ Same** | Inserts a tag or string immediately after the current tag. |
-| **`wrap()`** | `wrap()` | **✔️ Same** | No CamelCase version. Wraps the tag with a new tag. |
-| **`unwrap()`** | `unwrap()` | **✔️ Same** | No CamelCase version. Removes the tag but keeps its children. |
 | **`find_parents()`** | `findParents()` | **✔️ Same** | Returns all matching ancestor elements. |
 | **`find_parent()`** | `findParent()` | **✔️ Same** | Returns the first matching ancestor element. |
 | **`find_next_siblings()`** | `findNextSiblings()` | **✔️ Same** | Get all matching siblings that follow the current tag. |
