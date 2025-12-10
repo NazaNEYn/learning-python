@@ -138,8 +138,9 @@ Common Ways to Search:
 | **`soup.decode()`** | Converts a bytes object back into a **string**, using the specified or detected encoding. |
 
 
+----------------
 
-## Methods With Identical `snake_case` & `CamelCase` Versions (BeautifulSoup)
+# Methods With Identical `snake_case` & `CamelCase` Versions (BeautifulSoup)
 `BeautifulSoup` has several pairs of methods where the CamelCase and snake_case versions are exactly the same.
 This exists for backward compatibility with older BeautifulSoup versions.
 
