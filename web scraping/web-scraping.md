@@ -114,10 +114,8 @@ print(soup.find_all(name="p"))
 all_anchors = soup.find_all(name="a")
 
 for tag in all_anchors:
-    print(tag.getText())
+    print(tag.get_text())
 ```
-
-
 
 
 ## How to get the links from a anchor tag
@@ -134,3 +132,33 @@ for tag in all_anchors:
     print(tag.get("href"))
 ```
 
+## How to find first matching child tag
+
+**By an`id`:**
+
+```html
+  <h1>Hellooooo</h1>
+  <h1 id="name">Naz Ashrafi</h1>
+```
+
+```python
+heading = soup.find(name="h1", id="name")
+print(heading)
+# <h1 id="name">Naz Ashrafi</h1>
+```
+
+**By a`class`:**
+
+*Note:* <br>
+Make sure you use `class_`
+
+```html
+  <h3 class="book">Books</h3>
+  <h3 class="heading">Books and Teaching</h3>
+```
+
+```python
+heading = soup.find(name="h3", class_="heading")
+print(heading)
+# <h3 class="heading">Books and Teaching</h3>
+```
