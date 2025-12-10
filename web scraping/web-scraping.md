@@ -93,7 +93,17 @@ print(head,title,paragraph)
 ```
 
 
-## How to get the texts from a anchor tag
+## How to get all tags (`find_all()`)
+`find_all()` returns a `list`.
+
+```python
+print(soup.find_all(name="li"))
+print(soup.find_all(name="a"))
+print(soup.find_all(name="p"))
+```
+
+
+## How to get the texts from an anchor tag
 
 ```html
   <a href="https://x.com/nazanin_ashrafi">My Hobbies</a>
@@ -106,6 +116,9 @@ all_anchors = soup.find_all(name="a")
 for tag in all_anchors:
     print(tag.getText())
 ```
+
+
+
 
 ## How to get the links from a anchor tag
 
