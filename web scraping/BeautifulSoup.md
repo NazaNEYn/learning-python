@@ -136,3 +136,35 @@ Common Ways to Search:
 | **`str(soup)`** | Returns the **raw HTML string** of the document or the specific tag. |
 | **`soup.encode()`** | Converts the BeautifulSoup object (document or tag) into a **bytes object**, typically using UTF-8 encoding by default. |
 | **`soup.decode()`** | Converts a bytes object back into a **string**, using the specified or detected encoding. |
+
+
+
+## Methods With Identical `snake_case` & `CamelCase` Versions (BeautifulSoup)
+`BeautifulSoup` has several pairs of methods where the CamelCase and snake_case versions are exactly the same.
+This exists for backward compatibility with older BeautifulSoup versions.
+
+
+
+BeautifulSoup provides both `snake_case` (modern/Pythonic) and `CamelCase` (legacy) versions for many of its methods. It is recommended to use the `snake_case` versions.
+
+| `snake_case` (modern) | `CamelCase` (legacy) | Same? | Notes |
+| :--- | :--- | :--- | :--- |
+| **`find_all()`** | `findAll()` | **✔️ Same** | Returns a list of matching tags. |
+| **`find()`** | `find()` | **✔️ Same** | No CamelCase version because the name is simple. |
+| **`get_text()`** | `getText()` | **✔️ Same** | Extracts all text content from the element. |
+| **`clear()`** | `clear()` | **✔️ Same** | No CamelCase version. Removes all children from the tag. |
+| **`replace_with()`** | `replaceWith()` | **✔️ Same** | Replaces a tag with another element or string. |
+| **`insert_before()`** | `insertBefore()` | **✔️ Same** | Inserts a tag or string immediately before the current tag. |
+| **`insert_after()`** | `insertAfter()` | **✔️ Same** | Inserts a tag or string immediately after the current tag. |
+| **`wrap()`** | `wrap()` | **✔️ Same** | No CamelCase version. Wraps the tag with a new tag. |
+| **`unwrap()`** | `unwrap()` | **✔️ Same** | No CamelCase version. Removes the tag but keeps its children. |
+| **`find_parents()`** | `findParents()` | **✔️ Same** | Returns all matching ancestor elements. |
+| **`find_parent()`** | `findParent()` | **✔️ Same** | Returns the first matching ancestor element. |
+| **`find_next_siblings()`** | `findNextSiblings()` | **✔️ Same** | Get all matching siblings that follow the current tag. |
+| **`find_next_sibling()`** | `findNextSibling()` | **✔️ Same** | Get the first matching sibling that follows the current tag. |
+| **`find_previous_siblings()`** | `findPreviousSiblings()` | **✔️ Same** | Get all matching siblings that precede the current tag. |
+| **`find_previous_sibling()`** | `findPreviousSibling()` | **✔️ Same** | Get the first matching sibling that precedes the current tag. |
+| **`find_all_next()`** | `findAllNext()` | **✔️ Same** | All elements that appear after this one in the document's parse order. |
+| **`find_next()`** | `findNext()` | **✔️ Same** | The first element that appears after this one in the document's parse order. |
+| **`find_all_previous()`** | `findAllPrevious()` | **✔️ Same** | All elements that appear before this one in the document's parse order. |
+| **`find_previous()`** | `findPrevious()` | **✔️ Same** | The first element that appears before this one in the document's parse order. |
