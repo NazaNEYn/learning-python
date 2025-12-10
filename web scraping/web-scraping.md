@@ -162,3 +162,51 @@ heading = soup.find(name="h3", class_="heading")
 print(heading)
 # <h3 class="heading">Books and Teaching</h3>
 ```
+
+## CSS selector
+
+* `select_one()` gives you the **first** matching item in a list.
+* `select()` gives you **all** of the matching items in a list.
+
+```html
+  <p>
+    <em>Founder of 
+      <strong>
+        <a href="https://x.com/nazanin_ashrafi">Hello world</a>
+      </strong>.
+    </em>
+  </p>
+```
+
+```python
+url = soup.select_one(selector="p a")
+print(url)
+
+# <a href="https://x.com/nazanin_ashrafi">Hello world</a>
+```
+
+## CSS selector by `id`
+
+```html
+  <h1 id="name">Naz Ashrafi</h1>
+```
+
+```python
+heading = soup.select_one(selector="#name")
+print(heading)
+
+# <h1 id="name">Naz Ashrafi</h1>
+```
+
+## CSS selector by `classes`
+
+```html
+  <h3 class="heading">Books and Teaching</h3>
+```
+
+```python
+heading = soup.select_one(selector=".heading")
+print(heading)
+
+# <h3 class="heading">Books and Teaching</h3>
+```
