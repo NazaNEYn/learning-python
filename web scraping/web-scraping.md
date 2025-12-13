@@ -210,3 +210,65 @@ print(heading)
 
 # <h3 class="heading">Books and Teaching</h3>
 ```
+
+
+----------------------------------
+
+
+# Web scraping a live website:
+
+### What does “A Live Website” Mean for Web Scraping?
+
+In the context of web scraping, the term "live website" generally refers to a site that presents challenges beyond simple static HTML retrieval. It usually implies one or more of the following characteristics:
+
+* **Dynamic Content Changes:** A website that is constantly updated with new content, requiring your scraper to check frequently for fresh data (e.g., a news feed or stock ticker).
+* **Dynamic Data Loading (JavaScript):** A website that loads its main content *after* the initial HTML document has loaded, relying on client-side JavaScript to fetch data asynchronously (e.g., using AJAX or API calls). If you use a standard library like **Requests**, you will only get the initial, empty HTML shell.
+* **Bot Protection:** A website that actively employs technologies to detect and block automated access, such as:
+    * Checking for expected browser **headers** (like `User-Agent`).
+    * Verifying and setting **cookies**.
+    * Implementing advanced challenge/response systems like **Cloudflare** or **reCAPTCHA**.
+
+Web scraping a "live website" requires choosing the right tools based on how the site loads its data. For example, sites heavily reliant on JavaScript often require a tool like **Selenium** to run the JavaScript and render the full page before scraping.
+
+## Web Scraping Strategy: Static vs. Dynamic Sites
+
+The strategy and tools you choose for web scraping depend entirely on the nature of the target website's content rendering.
+
+| Feature | Static Website | Dynamic Website (JavaScript) |
+| :--- | :--- | :--- |
+| **Data Source** | Data is present directly in the **initial HTML source code**. | Data is fetched via **JavaScript** (AJAX/API calls) *after* the initial page load. |
+| **Tool Used** | **Requests** + **BeautifulSoup** (or `lxml`). | **Selenium** or **Playwright** (Headless browser) + **BeautifulSoup**. |
+| **Complexity** | Low to Moderate. | Moderate to High. |
+| **Speed/Resources** | Very fast and low resource usage. | Slower and higher resource usage (must load a full browser instance). |
+| **How to Check** | View page source (Ctrl+U or Cmd+Option+U). If the content is there, it's static. | View page source. If the content is missing, check the Network tab in Dev Tools for API calls. |
+
+<br> <br>
+
+* **1: Live site with static HTML**
+
+```python
+import requests
+from bs4 import BeautifulSoup
+
+url = "https://example.com"
+
+response = requests.get(url, headers=headers)
+web_page = response.text
+soup = BeautifulSoup(web_page, "html.parser")
+```
+
+* **2: Live site that blocks bots (403 errors)**
+
+```python
+import requests
+from bs4 import BeautifulSoup
+
+url = "https://www.imdb.com/chart/top"
+
+headers = {"User-Agent": "Mozilla/5.0", "Accept-Language": "en-US,en;q=0.9"}
+
+response = requests.get(url, headers=headers)
+soup = BeautifulSoup(response.text, "html.parser")
+```
+
+* **3: JavaScript-rendered live websites**
