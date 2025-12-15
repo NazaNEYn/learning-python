@@ -191,3 +191,25 @@ The updated `movies.json` file:
     }
 ]
 ```
+
+* **Updating an existing key or add a new key**
+
+```python
+movies = [
+    {"title": "Movie A", "year": 2010, "rating": 7.0, "gross": "1.000.000"},
+    {"title": "Movie B", "year": 2015, "rating": 6.5, "gross": "500.000"},
+    {"title": "Movie C", "year": 2020, "rating": 8.0, "gross": "2.000.000"},
+]
+
+# Step 2: Update the rating of "Movie B"
+for movie in movies:
+    if movie["title"] == "Movie B":
+        movie.update({"rating": 7.2})  # this changes the rating
+
+for movie in movies:
+    print(f"{movie['title']} → Rating: {movie['rating']}")
+
+with open("movies.json", "w") as file:
+    json.dump(movies, file, indent=4)
+```
+
