@@ -161,7 +161,7 @@ for movie in movies:
     print(movie["title"])
 ```
 
-The updated `movie.json` file:
+The updated `movies.json` file:
 
 ```json
 [
