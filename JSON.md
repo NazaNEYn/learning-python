@@ -106,3 +106,88 @@ Inception (2010) → $829,895,144
 Avatar (2009) → $2,923,706,026
 Titanic (1997) → $2,257,844,554
 ```
+
+* **Update JSON File**
+
+`movies.json`
+```json
+[
+    {
+        "title": "movie_01",
+        "year": 1993,
+        "rating": 5.6,
+        "gross": "5.439.247"
+    },
+    {
+        "title": "movie_02",
+        "year": 1793,
+        "rating": 1.6,
+        "gross": "4.222.247"
+    },
+    {
+        "title": "movie_03",
+        "year": 2020,
+        "rating": 3.6,
+        "gross": "1.419.888"
+    }
+]
+```
+
+
+```python
+import json
+
+# Step 1: Load the existing movies from `movies.json`
+with open("movies.json") as file:
+    movies = json.load(file)
+
+# Step 2: Create a new movie dictionary
+new_movie = {
+    "title": "movie_04",
+    "year": 2025,
+    "rating": 7.8,
+    "gross": "6.500.000",
+}
+
+# Step 3: Add the new movie to the list
+movies.append(new_movie)
+
+# Step 5: Save the updated list back to `movies.json`
+with open("movies.json", "w") as file:
+    json.dump(movies, file, indent=4)
+
+# Step 6: Print all movie titles to verify
+for movie in movies:
+    print(movie["title"])
+```
+
+The updated `movie.json` file:
+
+```json
+[
+    {
+        "title": "movie_01",
+        "year": 1993,
+        "rating": 5.6,
+        "gross": "5.439.247"
+    },
+    {
+        "title": "movie_02",
+        "year": 1793,
+        "rating": 1.6,
+        "gross": "4.222.247"
+    },
+    {
+        "title": "movie_03",
+        "year": 2020,
+        "rating": 3.6,
+        "gross": "1.419.888"
+    },
+    {
+        "title": "movie_04",
+        "year": 2025,
+        "rating": 7.8,
+        "gross": "6.500.000"
+    }
+]
+```
