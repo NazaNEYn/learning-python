@@ -17,12 +17,13 @@
 
 -----
 
-Examples
+## Examples
+
+* **Save a single dictionary to JSON**
 
 ```python
 import json
 
-# Example data
 movie = {
     "title": "Inception",
     "year": 2010,
@@ -35,4 +36,73 @@ with open("movie.json", "w") as f:
     json.dump(movie, f, indent=4)
 
 print("Saved single movie to movie.json")
+```
+```json
+{
+    "title": "Inception",
+    "year": 2010,
+    "rating": "PG-13",
+    "gross": "$829,895,144"
+}
+```
+
+* **Save a list of dictionaries to JSON**
+
+```python
+import json
+
+movies = [
+    {"title": "Inception", "year": 2010, "rating": "PG-13", "gross": "$829,895,144"},
+    {"title": "Avatar", "year": 2009, "rating": "PG-13", "gross": "$2,923,706,026"},
+    {"title": "Titanic", "year": 1997, "rating": "PG-13", "gross": "$2,257,844,554"}
+]
+
+# Save to JSON file
+with open("movies.json", "w") as f:
+    json.dump(movies, f, indent=4)
+
+print("Saved list of movies to movies.json")
+```
+
+```json
+[
+    {
+        "title": "Inception",
+        "year": 2010,
+        "rating": "PG-13",
+        "gross": "$829,895,144"
+    },
+    {
+        "title": "Avatar",
+        "year": 2009,
+        "rating": "PG-13",
+        "gross": "$2,923,706,026"
+    },
+    {
+        "title": "Titanic",
+        "year": 1997,
+        "rating": "PG-13",
+        "gross": "$2,257,844,554"
+    }
+]
+```
+
+
+* **Reading the JSON back into Python**
+
+```python
+import json
+
+# Load movies from JSON
+with open("movies.json", "r") as f:
+    movies = json.load(f)
+
+for movie in movies:
+    print(f"{movie['title']} ({movie['year']}) → {movie['gross']}")
+```
+
+```json
+Inception (2010) → $829,895,144
+Avatar (2009) → $2,923,706,026
+Titanic (1997) → $2,257,844,554
 ```
