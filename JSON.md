@@ -13,3 +13,26 @@
 | 1. Reading Data | Load the JSON file data into a Python dictionary. | `json.load(file_object)` | File $\rightarrow$ Python dict | Reads the entire JSON file content and converts it into a Python object (usually a dictionary or list) so you can work with it. |
 | 2. Modifying Data | Update the data in the Python dictionary. | `dictionary.update(...)` | Python dict $\leftrightarrow$ Python dict | This is a standard Python dictionary method used to add new key-value pairs or change existing ones after you've loaded the data. |
 | 3. Writing Data | Dump the modified Python dictionary back into the JSON file. | `json.dump(data, file_object)` | Python dict $\rightarrow$ File | Takes your updated Python dictionary and writes it to the open file, converting it back into the JSON text format. |
+
+
+-----
+
+Examples
+
+```python
+import json
+
+# Example data
+movie = {
+    "title": "Inception",
+    "year": 2010,
+    "rating": "PG-13",
+    "gross": "$829,895,144"
+}
+
+# Save to JSON file
+with open("movie.json", "w") as f:
+    json.dump(movie, f, indent=4)
+
+print("Saved single movie to movie.json")
+```
