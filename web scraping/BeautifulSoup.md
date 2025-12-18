@@ -225,3 +225,22 @@ soup.find_all("a", href=True)
 | **Find all links containing `"login"` in `href`** | `soup.find_all("a", href=lambda x: x and "login" in x)` | `soup.select('a[href*="login"]')` |
 | **Find `<span>` inside a class `"container"`** | `soup.find("div", class_="container").find_all("span")` | `soup.select(".container span")` |
 | **Find siblings of an element** | `tag.find_next_siblings()` | `tag.select("~ *")` (CSS sibling) |
+
+
+
+# Scraping tables
+
+```python
+table = soup.find("table")
+
+rows = table.find_all("tr")[1:]
+
+for row in rows:
+    cols = row.find_all("td")
+
+    rank = cols[0].text.strip()
+    title = cols[1].text.strip()
+    worldwide_gross = cols[2].text.strip()
+    domestic_gross = cols[2].text.strip()
+    year = cols[-1].text.strip()
+```
