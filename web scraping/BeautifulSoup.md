@@ -241,6 +241,6 @@ for row in rows:
     rank = cols[0].text.strip()
     title = cols[1].text.strip()
     worldwide_gross = cols[2].text.strip()
-    domestic_gross = cols[2].text.strip()
+    domestic_gross = cols[3].text.strip()
     year = cols[-1].text.strip()
 ```
