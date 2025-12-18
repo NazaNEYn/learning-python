@@ -28,6 +28,7 @@ Program memory is like:
 * Notes written on a whiteboard
 * When you leave the room, they’re erased
 
+----------
 
 # Persistent Storage (Disk)
 Persistent storage is anything saved to disk.<br>
@@ -56,3 +57,39 @@ Nothing. The file stays.
 Persistent storage is like:
 * Writing in a notebook
 * Closing the notebook doesn’t erase it
+
+# Simple demonstration
+
+## Program Memory
+
+**Run 1**
+```python
+x = 10
+print(x)
+```
+
+**Output**
+```python
+10
+```
+
+**Run 2**
+```python
+print(x)
+```
+Error. `x` is gone.
+
+
+## Persistent Storage
+
+```python
+with open("data.txt", "w") as f:
+    f.write("10")
+```
+
+**Next run:**
+```python
+with open("data.txt") as f:
+    print(f.read())
+```
+Still there.
