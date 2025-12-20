@@ -1,6 +1,12 @@
 ## How a Beginner Should Start Any New Project
 
 The most crucial skill in starting a project is **problem decomposition**—breaking a big, scary task into small, solvable steps.
+<br>
+
+![ChatGPT Image Dec 20, 2025, 07_13_42 PM](https://github.com/user-attachments/assets/9da68f84-bc41-4136-aa9b-2fa7495d4299)
+
+-------
+
 
 ### The Core Mindset Shift (Very Important)
 
@@ -128,3 +134,7 @@ This approach works for any type of development—automation scripts, GUIs, APIs
 ### The Most Important Truth (Read This Twice)
 
 You don’t define all problems first. **You define the next smallest problem.**
+
+
+-----
+
