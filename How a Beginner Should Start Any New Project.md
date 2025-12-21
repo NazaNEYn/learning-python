@@ -125,7 +125,6 @@ After solving a tiny problem, take a moment to ask:
 
 This reflection is how beginners become strong developers.
 
----
 
 ### How This Applies Beyond This Project
 
@@ -242,7 +241,6 @@ Focusing on a step-by-step approach instead of a large learning checklist is the
 
 3.  **This is How Real Developers Work:** Experienced developers rarely say, "I'll learn everything first." They always ask, **"What’s the next thing I need for this step?"** You are adopting a professional mindset.
 
----
 
 ### The Right Way to Do Step-by-Step (Important)
 
@@ -266,7 +264,7 @@ We will follow the actual execution flow of your program—the chronological ord
 
 We will focus on only one item at a time.
 
----
+
 
 
 ### Important Reassurance
@@ -280,3 +278,95 @@ You’re also doing something crucial:
 * Learning how to **think**, not just code.
 
 That matters more than speed.
+
+
+<hr>
+<hr>
+<hr>
+
+## How to Identify Which Part to Implement First
+
+Starting a project requires prioritizing tasks effectively. You should avoid getting stuck on difficult, peripheral, or overwhelming steps.
+
+### The Golden Rule (Use This Every Time)
+
+Implement the part that **unlocks the next parts.**
+
+You should implement the part that makes everything else possible, not:
+* The hardest part.
+* The most interesting part.
+* The part you already know.
+
+### A Second Rule (Just as Important)
+
+Implement the part with the **fewest unknowns first.** Early wins equal confidence and clarity.
+
+### Combine Both Rules → This Strategy
+
+You want something that:
+1.  Everything else depends on.
+2.  Is easy to understand.
+3.  Gives you immediate feedback.
+
+### Apply This to Your Project (Concrete Example)
+
+Your program flow is:
+
+1.  Get folder path
+2.  Access folder
+3.  List files
+4.  Handle subfolders
+5.  Compare files
+6.  Group duplicates
+7.  Show results
+
+Now ask: "If this part didn’t exist, could the next parts work?"
+
+| Step | Evaluation | Priority |
+| :--- | :--- | :--- |
+| **Comparing files** | Useless if you don’t have files yet. | Low |
+| **Grouping duplicates** | Depends on comparison. | Low |
+| **Showing results** | Depends on grouping. | Low |
+| **Getting folder path** | Everything depends on this. It is simple and provides immediate feedback. | **High** |
+
+Therefore, **Getting the folder path** should be first.
+
+
+### The Natural Implementation Order
+
+The problem itself dictates the implementation order. Without calling it a checklist, the sequence becomes:
+
+1.  **Ask user for folder path** (The necessary input).
+2.  **Validate the path exists** (Checks access).
+3.  **List files in that folder** (Produces output).
+4.  **Extend to include subfolders** (Enhances file listing).
+5.  **Compare file contents** (The core logic).
+6.  **Group duplicates** (The organization).
+7.  **Print results** (The final output).
+
+### Why This Removes Overwhelm
+
+By focusing on the most critical, dependent, and simplest step first, you are no longer thinking:
+
+* "I need to build a duplicate file finder."
+
+You are thinking:
+
+* "I need to read a path."
+
+That is manageable.
+
+### Another Helpful Rule (Use This When Stuck)
+
+If you're unsure what to implement next, ask: **“What’s the smallest thing I can build that produces output?”**
+
+Output could be:
+* Printing a path.
+* Printing file names.
+* Printing groups.
+
+Visible output keeps you grounded and verifies progress.
+
+### One Last Mindset Shift (Very Important)
+
+You're not committing to an order forever. If later you realize: **"Oh, this should’ve come earlier,"** that is normal—you just adjust. The plan is a roadmap, not a contract.
