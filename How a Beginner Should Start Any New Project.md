@@ -1,11 +1,3 @@
-## How a Beginner Should Start Any New Project
-
-The most crucial skill in starting a project is **problem decomposition**—breaking a big, scary task into small, solvable steps.
-<br>
-
-![ChatGPT Image Dec 20, 2025, 07_13_42 PM](https://github.com/user-attachments/assets/9da68f84-bc41-4136-aa9b-2fa7495d4299)
-
-
 ## Table of Contents
 
 - [How a Beginner Should Start Any New Project](#how-a-beginner-should-start-any-new-project)
@@ -59,6 +51,12 @@ The most crucial skill in starting a project is **problem decomposition**—brea
   - [Final Takeaway (Remember This)](#final-takeaway-remember-this)
 
 
+## How a Beginner Should Start Any New Project
+
+The most crucial skill in starting a project is **problem decomposition**—breaking a big, scary task into small, solvable steps.
+<br>
+
+![ChatGPT Image Dec 20, 2025, 07_13_42 PM](https://github.com/user-attachments/assets/9da68f84-bc41-4136-aa9b-2fa7495d4299)
 
 
 -------
