@@ -1,3 +1,53 @@
+# Table of Contents
+
+## 1. Slicing
+
+* [The Simple Slice `[start:end]`](#the-simple-slice-startend)
+* [The Full Slice `[start:end:step]`](#the-full-slice-startendstep)
+* [Slicing Syntax Comparison](#slicing-syntax-comparison)
+* [The Role of `[:]`](#the-role-of)
+
+## 2. `[:]`
+
+* [Assignment vs. Slicing/Shallow Copy](#assignment-vs-slicingshallow-copy)
+* [Slicing/Shallow Copy](#slicingshallow-copy)
+* [Assignment](#assignment)
+* [The REAL difference](#the-real-difference)
+
+## 3. When to Create a Shallow Copy
+
+* [The Core Rule (Memorize This)](#the-core-rule-memorize-this)
+* [Why This Rule Exists](#why-this-rule-exists)
+* [Comparison: Original List vs Shallow Copy](#comparison-original-list-vs-shallow-copy)
+    * [Case 1: Iterating Without Modifying (Safe)](#case-1-iterating-without-modifying-safe)
+    * [Case 2: Modifying While Iterating (Danger)](#case-2-modifying-while-iterating-danger)
+    * [Case 3: Modifying While Iterating (Correct Way)](#case-3-modifying-while-iterating-correct-way)
+* [When You NEED a Shallow Copy](#when-you-need-a-shallow-copy)
+* [When You Do NOT Need a Copy](#when-you-do-not-need-a-copy)
+* [`os.walk()` Is a Special Case](#oswalk-is-a-special-case)
+* [Mental Checklist (Use This)](#mental-checklist-use-this)
+* [Summary Table](#summary-table)
+
+## 4. Memory Location Control
+
+* [1. Simple Assignment vs. Slicing Assignment (`[:]` on the Left)](#1-simple-assignment-vs-slicing-assignment--on-the-left)
+    * [Simple Assignment: Used for Reassignment](#simple-assignment-used-for-reassignment)
+    * [Slicing Assignment](#slicing-assignment)
+* [2. Simple Assignment vs. Shallow Copy (`[:]` on the Right)](#2-simple-assignment-vs-shallow-copy--on-the-right)
+    * [Simple Assignment: Used for Aliasing](#simple-assignment-used-for-aliasing)
+    * [Shallow Copy](#shallow-copy)
+* [Simplified Memory Action Table](#simplified-memory-action-table)
+
+## 5. Memory Operations Comparison Table
+
+* [Feature Comparison Table](#feature-comparison-table)
+* [1. Simple Assignment vs. Shallow Copy (`[:]` on the Right)](#1-simple-assignment-vs-shallow-copy--on-the-right)
+* [2. Simple Assignment vs. Slicing Assignment (`[:]` on the Left)](#2-simple-assignment-vs-slicing-assignment--on-the-left)
+
+
+--------
+
+
 # Slicing:
 
 **The Simple Slice** `[start:end]` <br>
