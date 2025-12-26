@@ -38,8 +38,11 @@ The double colon `::` is not a different part of the syntax; it's just Python's 
 | **Step** | 2 | 2 |
 
 When you leave those fields blank, Python uses its default values: **start** becomes 0 and **end** becomes the end of the sequence. <br>
-So, the double colon `::` is just a concise way to signal that you want to use the default start and end, but still specify a **step**.
+So, the double colon `::` is just a concise way to signal that you want to use the default start and end, but still specify a **step**. <br><br>
 
+
+*Note:* `[:]` can act differently, based on the context.<br>
+It depends on how it’s used.
 
 ---------------------------------
 
