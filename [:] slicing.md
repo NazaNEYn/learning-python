@@ -115,3 +115,43 @@ Think of it like:
 
 > Two labels stuck on the same piece of paper.
 
+
+## The REAL difference
+Let's try to modify them and see what happens
+
+**Slicing/Shallow Copy**
+
+```python
+test = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+copy_num = test[:]
+
+copy_num.append(10)
+print(f"Slicing: {copy_num}")
+print(f"Slicing: {test}")
+```
+
+Output:
+
+```
+Slicing: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Slicing: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+
+**Assignment**
+
+```python
+test1 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+copy_num1 = test1
+copy_num1.append(10)
+print(f"Assignment: {copy_num1}")
+print(f"Assignment: {test1}")
+```
+
+Output:
+
+```
+Assignment: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Assignment: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+```
