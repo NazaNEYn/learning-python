@@ -751,25 +751,20 @@ If you follow even 70% of this plan, you’ll:
 * Know if you want it as a career
 * Have real projects to show
 
-* <hr><hr>
+<hr><hr>
+
 
 
 # Your 8-Week Computer Vision–First Learning Plan
 
-| ⏱ 3 hours/day | 📅 5 days/week | **Beginner-friendly** |
+| ⏱ 3 hours/day | 5 days/week | Beginner-friendly |
 | :--- | :--- | :--- |
-
-This plan prioritizes practical building and conceptual understanding of Computer Vision (CV) over deep mathematical theory.
-
----
 
 ## DAILY STRUCTURE (Fixed)
 
-| Time Slot | Activity | Focus |
-| :--- | :--- | :--- |
-| **45 min** | CV concept | What problem we’re solving |
-| **75 min** | Coding | OpenCV / PyTorch |
-| **60 min** | Mini build / experiment | Application |
+* **45 min** – CV concept (what problem we’re solving)
+* **75 min** – Coding (OpenCV / PyTorch)
+* **60 min** – Mini build / experiment
 
 > If something doesn’t click → move on anyway.
 
@@ -777,128 +772,257 @@ This plan prioritizes practical building and conceptual understanding of Compute
 
 ## WEEK 1 — Images = Numbers (CV Foundations)
 
-| CV Goal | CV Skills Gained |
-| :--- | :--- |
-| Understand how computers “see” images. | Image I/O, Pixel manipulation, Coordinate system |
+**CV Goal**
+Understand how computers “see” images.
 
-| Day | CV Concept | Needed Concepts | Build / Project |
-| :--- | :--- | :--- | :--- |
-| **Day 1** | **What an Image Really Is** | NumPy arrays, Shape (H, W, C), `uint8` | Load image, Print pixel values, Modify a small region. **🎯 Project: Pixel modifier** |
-| **Day 2** | **Colors in CV** | RGB color model, Channel splitting, Array slicing | Remove one color channel, Visualize R/G/B separately . **🎯 Project: RGB explorer** |
-| **Day 3** | **Grayscale Vision** | Why grayscale is used, Weighted pixel sums, Value ranges | Convert image to grayscale, Compare RGB vs gray. **🎯 Project: Grayscale filter** |
-| **Day 4** | **Image Geometry** | Image coordinates, Coordinate system, Rectangles | Draw boxes & circles, Mark objects manually. **🎯 Project: Image annotator** |
-| **Day 5** | **Week Project** | **🎯 Mini Image Editor:** Load image, Grayscale, Brightness adjust, Draw shapes. |
+**CV Skills Gained**
+* Image I/O
+* Pixel manipulation
+* Coordinate system
+
+**Day 1: What an Image Really Is**
+* **CV concept:** Image as a grid of pixels
+* **Needed concepts:** NumPy arrays, Shape (H, W, C), `uint8`
+* **Build:** Load image, Print pixel values, Modify a small region
+* **🎯 Project:** Pixel modifier
+
+**Day 2: Colors in CV**
+* **CV concept:** RGB color model 
+* **Needed concepts:** Channel splitting, Array slicing
+* **Build:** Remove one color channel, Visualize R/G/B separately
+* **🎯 Project:** RGB explorer
+
+**Day 3: Grayscale Vision**
+* **CV concept:** Why grayscale is used
+* **Needed concepts:** Weighted pixel sums, Value ranges
+* **Build:** Convert image to grayscale, Compare RGB vs gray
+* **🎯 Project:** Grayscale filter
+
+**Day 4: Image Geometry**
+* **CV concept:** Image coordinates
+* **Needed concepts:** Coordinate system, Rectangles
+* **Build:** Draw boxes & circles, Mark objects manually
+* **🎯 Project:** Image annotator
+
+**Day 5: Week Project**
+* **🎯 Mini Image Editor:** Load image, Grayscale, Brightness adjust, Draw shapes
 
 ---
 
 ## WEEK 2 — Seeing Edges & Shapes
 
-| CV Goal |
-| :--- |
-| Detect structure in images. |
+**CV Goal**
+Detect structure in images.
 
-| Day | CV Concept | Needed Concepts | Build / Project |
-| :--- | :--- | :--- | :--- |
-| **Day 1** | **Noise & Smoothing** | Noise hurts detection, Convolution (intuition only), Kernels | Blur images, Compare kernel sizes. **🎯 Blur playground** |
-| **Day 2** | **Edge Detection** | Edges = intensity change, Differences, Gradients | Sobel filter, Canny edges . **🎯 Edge highlighter** |
-| **Day 3** | **Binary Vision** | Separating foreground/background, Thresholding, Binary logic | Create binary images, Tune thresholds. **🎯 Document scanner** |
-| **Day 4** | **Shapes & Contours** | Object boundaries, Contours, Area & perimeter | Detect shapes, Filter by size . **🎯 Shape counter** |
-| **Day 5** | **Week Project** | **🎯 Shape Detection System:** Detect, Label, Count shapes. |
+**Day 1: Noise & Smoothing**
+* **CV concept:** Noise hurts detection
+* **Needed concepts:** Convolution (intuition only), Kernels
+* **Build:** Blur images, Compare kernel sizes
+* **🎯 Project:** Blur playground
+
+**Day 2: Edge Detection**
+* **CV concept:** Edges = intensity change
+* **Needed concepts:** Differences, Gradients
+* **Build:** Sobel filter, Canny edges 
+* **🎯 Project:** Edge highlighter
+
+**Day 3: Binary Vision**
+* **CV concept:** Separating foreground/background
+* **Needed concepts:** Thresholding, Binary logic
+* **Build:** Create binary images, Tune thresholds
+* **🎯 Project:** Document scanner
+
+**Day 4: Shapes & Contours**
+* **CV concept:** Object boundaries
+* **Needed concepts:** Contours, Area & perimeter
+* **Build:** Detect shapes, Filter by size
+* **🎯 Project:** Shape counter
+
+**Day 5: Week Project**
+* **🎯 Shape Detection System:** Detect, Label, Count shapes
 
 ---
 
 ## WEEK 3 — Color, Video & Motion
 
-| CV Goal |
-| :--- |
-| Process real-time video data. |
+**CV Goal**
+Process real-time video data.
 
-| Day | CV Concept | Needed Concepts | Build / Project |
-| :--- | :--- | :--- | :--- |
-| **Day 1** | **Color Spaces** | RGB fails under lighting, HSV space, Value ranges | Color masking. **🎯 Color isolator** |
-| **Day 2** | **Masking Objects** | Extract objects by color, Bitwise ops, Boolean masks | Remove background. **🎯 Color-based segmentation** |
-| **Day 3** | **Video as Images** | Video = frames, Loops, Frame processing | Webcam capture, Real-time filters. **🎯 Live CV filter** |
-| **Day 4** | **Motion Detection** | Detect movement, Frame differencing, Absolute difference | Motion bounding boxes. **🎯 Motion detector** |
-| **Day 5** | **Week Project** | **🎯 Color Object Tracker:** Track object movement live. |
+**Day 1: Color Spaces**
+* **CV concept:** RGB fails under lighting
+* **Needed concepts:** HSV space, Value ranges
+* **Build:** Color masking
+* **🎯 Project:** Color isolator
+
+**Day 2: Masking Objects**
+* **CV concept:** Extract objects by color
+* **Needed concepts:** Bitwise ops, Boolean masks
+* **Build:** Remove background
+* **🎯 Project:** Color-based segmentation
+
+**Day 3: Video as Images**
+* **CV concept:** Video = frames
+* **Needed concepts:** Loops, Frame processing
+* **Build:** Webcam capture, Real-time filters
+* **🎯 Project:** Live CV filter
+
+**Day 4: Motion Detection**
+* **CV concept:** Detect movement
+* **Needed concepts:** Frame differencing, Absolute difference
+* **Build:** Motion bounding boxes
+* **🎯 Project:** Motion detector
+
+**Day 5: Week Project**
+* **🎯 Color Object Tracker:** Track object movement live
 
 ---
 
 ## WEEK 4 — Face Detection (Classic CV)
 
-| CV Goal |
-| :--- |
-| Build impressive detection systems without deep learning. |
+**CV Goal**
+Build impressive detection systems without deep learning.
 
-| Day | CV Concept | Needed Concepts | Build / Project |
-| :--- | :--- | :--- | :--- |
-| **Day 1** | **Object Detection Basics** | Sliding windows, Feature comparison | Load Haar model, Detect faces in images . |
-| **Day 2** | **Real-Time Face Detection** | Speed vs accuracy, Frame scaling | Webcam face detection. |
-| **Day 3** | **Improving Detection** | False positives, Confidence thresholds | Tune detection parameters. |
-| **Day 4** | **Multi-face Logic** | Multiple detections, Looping & counting | Face counter. |
-| **Day 5** | **Week Project** | **🎯 Smart Face Detection App:** Detect, Count, Label faces. |
+**Day 1: Object Detection Basics**
+* **CV concept:** Sliding windows
+* **Needed concepts:** Feature comparison
+* **Build:** Load Haar model, Detect faces in images 
+* **🎯 Project:**
+
+**Day 2: Real-Time Face Detection**
+* **CV concept:** Speed vs accuracy
+* **Needed concepts:** Frame scaling
+* **Build:** Webcam face detection
+* **🎯 Project:**
+
+**Day 3: Improving Detection**
+* **CV concept:** False positives
+* **Needed concepts:** Confidence thresholds
+* **Build:** Tune detection parameters
+* **🎯 Project:**
+
+**Day 4: Multi-face Logic**
+* **CV concept:** Multiple detections
+* **Needed concepts:** Looping & counting
+* **Build:** Face counter
+* **🎯 Project:**
+
+**Day 5: Week Project**
+* **🎯 Smart Face Detection App:** Detect, Count, Label faces
 
 ---
 
 ## WEEK 5 — Why Machine Learning Exists
 
-| CV Goal |
-| :--- |
-| Understand when rule-based CV breaks. |
+**CV Goal**
+Understand when rule-based CV breaks.
 
-| Day | CV Concept | Needed Concepts | Build / Project |
-| :--- | :--- | :--- | :--- |
-| **Day 1** | **ML in CV** | Pattern recognition, Features vs labels | |
-| **Day 2** | **Image Classification** | Classify images, Flattening, Scaling | Digit classifier (MNIST). |
-| **Day 3** | **Model Evaluation** | Accuracy & errors, Confusion matrix (intuition) | |
-| **Day 4** | **Improving Models** | Overfitting, Data splitting | |
-| **Day 5** | **Week Project** | **🎯 Digit Recognition App** |
+**Day 1: ML in CV**
+* **CV concept:** Pattern recognition
+* **Needed concepts:** Features vs labels
+* **Build:**
+* **🎯 Project:**
+
+**Day 2: Image Classification**
+* **CV concept:** Classify images
+* **Needed concepts:** Flattening, Scaling
+* **Build:** Digit classifier (MNIST)
+* **🎯 Project:**
+
+**Day 3: Model Evaluation**
+* **CV concept:** Accuracy & errors
+* **Needed concepts:** Confusion matrix (intuition)
+* **Build:**
+* **🎯 Project:**
+
+**Day 4: Improving Models**
+* **CV concept:** Overfitting
+* **Needed concepts:** Data splitting
+* **Build:**
+* **🎯 Project:**
+
+**Day 5: Week Project**
+* **🎯 Digit Recognition App**
 
 ---
 
 ## WEEK 6 — Deep Learning for Vision
 
-| CV Goal |
-| :--- |
-| Use CNNs without drowning in theory. |
+**CV Goal**
+Use CNNs without drowning in theory.
 
-| Day | CV Concept | Needed Concepts | Build / Project |
-| :--- | :--- | :--- | :--- |
-| **Day 1** | **CNN Intuition** | Learn patterns automatically, Filters, Feature maps  | |
-| **Day 2** | **PyTorch Basics** | Tensors instead of arrays | |
-| **Day 3** | **Pretrained CNNs** | Transfer learning | Image classifier. |
-| **Day 4** | **Fine-Tuning** | Improve accuracy | |
-| **Day 5** | **Week Project** | **🎯 CNN Image Classifier** |
+**Day 1: CNN Intuition**
+* **CV concept:** Learn patterns automatically
+* **Needed concepts:** Filters, Feature maps 
+* **Build:**
+* **🎯 Project:**
+
+**Day 2: PyTorch Basics**
+* **CV concept:** Tensors instead of arrays
+* **Needed concepts:**
+* **Build:**
+* **🎯 Project:**
+
+**Day 3: Pretrained CNNs**
+* **CV concept:** Transfer learning
+* **Needed concepts:**
+* **Build:** Image classifier
+* **🎯 Project:**
+
+**Day 4: Fine-Tuning**
+* **CV concept:** Improve accuracy
+* **Needed concepts:**
+* **Build:**
+* **🎯 Project:**
+
+**Day 5: Week Project**
+* **🎯 CNN Image Classifier**
 
 ---
 
 ## WEEK 7 — Object Detection (Modern CV)
 
-| CV Goal |
-| :--- |
-| Detect multiple objects in real time. |
+**CV Goal**
+Detect multiple objects in real time.
 
-| Day | CV Concept | Build / Project |
-| :--- | :--- | :--- |
-| **Day 1** | Detection vs Classification | |
-| **Day 2** | YOLO Intuition | |
-| **Day 3** | Image Object Detection | |
-| **Day 4** | Video Object Detection | |
-| **Day 5** | **Week Project** | **🎯 Real-Time Object Detector** |
+**Day 1: Detection vs Classification**
+* **CV concept:**
+* **Needed concepts:**
+* **Build:**
+* **🎯 Project:**
+
+**Day 2: YOLO Intuition**
+* **CV concept:**
+* **Needed concepts:**
+* **Build:**
+* **🎯 Project:**
+
+**Day 3: Image Object Detection**
+* **CV concept:**
+* **Needed concepts:**
+* **Build:**
+* **🎯 Project:**
+
+**Day 4: Video Object Detection**
+* **CV concept:**
+* **Needed concepts:**
+* **Build:**
+* **🎯 Project:**
+
+**Day 5: Week Project**
+* **🎯 Real-Time Object Detector**
 
 ---
 
 ## WEEK 8 — Portfolio Project
 
-| CV Goal |
-| :--- |
-| Build something complete. |
+**CV Goal**
+Build something complete.
 
-| Choose ONE |
-| :--- |
-| Face mask detector |
-| Gesture recognition |
-| Smart surveillance |
-| Object counter |
+* **Choose ONE:**
+    * Face mask detector
+    * Gesture recognition
+    * Smart surveillance
+    * Object counter
 
 ---
 
@@ -910,16 +1034,15 @@ This plan prioritizes practical building and conceptual understanding of Compute
 * ✔ Boolean logic
 * ✔ Coordinate geometry
 
-* ❌ No calculus
-* ❌ No proofs
-* ❌ No unnecessary theory
+> ❌ No calculus
+> ❌ No proofs
+> ❌ No unnecessary theory
 
 ---
 
 ## Final Reality Check
 
-This is exactly how CV engineers learn:
-> Problem → tool → concept → build
+This is exactly how CV engineers learn: **Problem → tool → concept → build**
 
 If you finish this:
 * CV will make sense
