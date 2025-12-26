@@ -43,4 +43,75 @@ So, the double colon `::` is just a concise way to signal that you want to use t
 
 ---------------------------------
 
+# Assignment vs. Slicing/Shallow Copy
+
+**Slicing/Shallow Copy**
+
+```python
+test = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+copy_num = test[:]
+print(copy_num)
+
+# [1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+
+VS
+
+**Assignment**
+
+```python
+test = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+copy_num = test
+print(copy_num)
+
+# [1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+
+If you print the result, the result is the same because you’re printing the **contents**, not the memory
+
+## Slicing/Shallow Copy
+
+```python
+test = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+copy_num = test[:]
+print(copy_num)
+```
+
+### What this means:
+
+When you execute an operation like `test[:]` to create a new list:
+
+* `test[:]` creates a **new list** in memory.
+* The **values** from the original list are copied into that new list.
+* `test` and the new list (e.g., `copy_num`) are two **different lists in memory**.
+
+Think of it like:
+
+> Writing the same numbers on two separate pieces of paper.
+
+
+
+## Assignment
+
+```python
+test = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+copy_num = test
+print(copy_num)
+```
+
+### What this means:
+
+When you assign a list using simple assignment (e.g., `copy_num = test`):
+
+* **No new list is created.**
+* `copy_num` just becomes another **name** for the original list (`test`).
+* `test` and `copy_num` both **point to the same list in memory.**
+
+Think of it like:
+
+> Two labels stuck on the same piece of paper.
 
