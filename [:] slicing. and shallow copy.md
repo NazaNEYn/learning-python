@@ -305,7 +305,7 @@ If yes to all → copy first
 `[:]` on the left is about Slicing Assignment and modifying an existing object in place.<br>
 Simple Assignment vs Slicing Assignment location: Simple Assignment creates a new location but Slicing Assignment uses the same location
 
-### Simple Assignment
+### Simple Assignment: Used for Reassignment
 ```python
 list_Y = [40, 50, 60] 
 print(f"ID START: {id(list_Y)}")
@@ -339,7 +339,7 @@ ID END: 2480121598272
 `[:]` on the right is about shallow copy and creating a safe copy.<br>
 Simple Assignment creates a new location but shallow copy creates a new location. (Simple Assignment creates a new location because it performs reassignment on the variable, meaning the variable drops its pointer to the old object and points to a new object.)
 
-### Simple Assignment
+### Simple Assignment: Used for Aliasing
 ```python
 list_A = [1,2,3]
 print(f"List A, ID START: {id(list_A)}")
@@ -373,6 +373,21 @@ List C, ID END: 2480113799808
 List D, ID END: 2480130017280
 ```
 
+
+
+| Operation Type | Syntax | Action on Memory Location (ID) | Aliasing |
+| :--- | :--- | :--- | :--- |
+| Aliasing | `new_list = old_list` | SAME | YES |
+| Shallow Copy | `new_list = old_list[:]` | NEW | NO |
+| Reassignment | `old_list = [new_data]` | NEW | NO |
+| Slicing Assignment | `old_list[:] = new_data` | SAME | YES |
+
+
+
+---------
+
+
+
 | Feature | 1. Simple Assignment (`list_B = list_A`) | 2. Shallow Copy (`list_B = list_A[:]`) | 3. Slicing Assignment (`list_B[:] = list_A`) |
 | :--- | :--- | :--- | :--- |
 | **Technical Term** | Aliasing / Reassignment | Shallow Copy | In-Place Content Replacement |
@@ -382,6 +397,7 @@ List D, ID END: 2480130017280
 | **Action on Simple Contents (e.g., numbers)** | Shared, but changing one creates a **NEW** number object (safe). | Copied into the new container (independent). | Replaced with new values (independent). |
 | **Action on Mutable Contents (e.g., nested lists)** | Shared (They are all aliases, so they see the change). | **SHARED REFERENCE.** Both lists point to the **SAME** inner object. (**UNSAFE** for mutable data) | The contents of the inner list in `list_A` are copied into `list_B`. (If `list_A` contained mutable objects, those inner references are still copied, similar to shallow copy.) |
 | **Summary of Dependence** | **FULLY DEPENDENT** (Everything is linked). | **PARTIALLY DEPENDENT** (Outer list is safe, inner mutable objects are linked). | **INDEPENDENT** (The resulting `list_B` is independent of the source `list_A`). |
+
 
 
 
