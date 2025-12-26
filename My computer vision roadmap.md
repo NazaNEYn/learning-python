@@ -387,3 +387,146 @@ At a time.
 * You’re not “bad at math”.
 
 You’re early in a field that rewards curiosity and patience.
+
+<hr><hr>
+
+
+# 🧭 8-Week Beginner Computer Vision Plan (3h/day)
+
+This plan provides a structured, step-by-step approach to learning Computer Vision, focusing on consistency and practical application over speed.
+
+---
+
+## Daily structure (important)
+
+Each day follows the same calm structure:
+
+* 🧠 **30 min** → Learn (video/article)
+* 👨‍💻 **1h 45 min** → Code & experiment
+* ✍️ **15 min** → Notes / reflect / commit code
+* ☕ **Breaks** whenever needed
+
+> If something takes longer, stop anyway. **Consistency > speed.**
+
+---
+
+## WEEK 1 — Images are Data (Foundation Week)
+
+**Goal**
+Understand what an image really is and get comfortable with OpenCV.
+
+| Day | Topic | Build |
+| :--- | :--- | :--- |
+| **Day 1** | Install: `opencv-python`, `numpy`, `matplotlib`. Load and display an image. Print image shape and data type. | Program that loads an image and displays: Original, Grayscale version. |
+| **Day 2** | Learn RGB vs Grayscale. Access pixel values. Change individual pixels. | Program that: Draws a colored square, Writes text on an image. |
+| **Day 3** | Resize, crop, rotate images. Understand image dimensions. | Image editor script: Resize, Crop center, Rotate. |
+| **Day 4** | Learn image channels (R, G, B). Split and merge channels. | Display each color channel separately . |
+| **Day 5** | 🎯 **Mini Project 1: Simple Image Playground** | Load any image. Apply: Grayscale, Resize, Draw shapes. Switch effects using keyboard keys. |
+
+> **🧠 This week is slow on purpose.**
+
+---
+
+## WEEK 2 — Image Processing Basics
+
+**Goal**
+Learn how computers detect edges and shapes.
+
+| Day | Topic | Build |
+| :--- | :--- | :--- |
+| **Day 1** | Blurring (Gaussian blur). Why smoothing matters. | Compare original vs blurred image. |
+| **Day 2** | Edge detection (Canny). | Edge detector app with adjustable thresholds . |
+| **Day 3** | Thresholding (binary images). | Convert image to black & white. Try different threshold values. |
+| **Day 4** | Contours and shapes. | Detect rectangles and circles in images . |
+| **Day 5** | 🎯 **Mini Project 2: Shape Detector** | Input image. Detect and label: Circles, Rectangles, Other shapes. |
+
+---
+
+## WEEK 3 — Color & Motion
+
+**Goal**
+Track objects by color and detect motion.
+
+| Day | Topic | Build |
+| :--- | :--- | :--- |
+| **Day 1** | HSV color space. Why RGB fails sometimes. | Detect a red object in an image . |
+| **Day 2** | Webcam basics. Read live frames. | Show webcam feed with FPS counter. |
+| **Day 3** | Color tracking using webcam. | Track a colored object in real time. |
+| **Day 4** | Background subtraction. Motion detection. | Motion detector with bounding boxes. |
+| **Day 5** | 🎯 **Mini Project 3: Color-Based Object Tracker** | Track any colored object via webcam. Draw bounding box + center point. |
+
+> This is where CV starts feeling magical ✨
+
+---
+
+## WEEK 4 — Face Detection & Real-Time CV
+
+**Goal**
+Work with classical CV models (no ML yet).
+
+| Day | Topic | Build |
+| :--- | :--- | :--- |
+| **Day 1** | What Haar cascades are. Face detection basics. | Face detector on images . |
+| **Day 2** | Face detection on webcam. | Real-time face detector. |
+| **Day 3** | Eye detection. Multiple object detection. | Face + eye detection app. |
+| **Day 4** | Performance optimization. Resize frames for speed. | |
+| **Day 5** | 🎯 **Mini Project 4: Smart Camera** | Face detection, Motion detection, FPS display, Keyboard controls (on/off). |
+
+> **At this point you’re already doing CV.**
+
+---
+
+## WEEK 5 — Intro to ML (Gentle Entry)
+
+**Goal**
+Understand why deep learning exists.
+
+| Day | Topic | Build |
+| :--- | :--- | :--- |
+| **Day 1** | What is a model? Training vs prediction. | |
+| **Day 2** | Image classification idea. Feature vectors (high level). | |
+| **Day 3** | MNIST dataset (digits). | Digit classifier (using `sklearn`). |
+| **Day 4** | Evaluate accuracy. Understand mistakes. | |
+| **Day 5** | 🎯 **Mini Project 5: Handwritten Digit Recognizer** | |
+
+---
+
+## WEEK 6–7 — Deep Learning for CV (Carefully)
+
+**Goal**
+Use powerful models without drowning.
+
+| Learn | Build |
+| :--- | :--- |
+| CNN intuition  | Image classifier using pre-trained model |
+| Pre-trained models | Webcam object detection (YOLO) |
+| Transfer learning | |
+
+---
+
+## WEEK 8 — Portfolio Project
+
+**🎯 Choose ONE:**
+* Face mask detector
+* Gesture recognition
+* Object detection app
+* Smart surveillance camera
+
+---
+
+## 🔑 Important rules (please follow)
+
+* If you feel stuck **> 30 minutes** → Google
+* If still stuck → **simplify**
+* If exhausted → **stop**
+* Code > videos
+* One project at a time
+
+---
+
+## Final truth (very important)
+
+* If you complete Weeks 1–4, you are no longer a beginner in CV.
+* If you complete Weeks 1–8, you can confidently say: **“I build computer vision systems with Python.”**
+
+<hr><hr>
