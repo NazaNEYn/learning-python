@@ -301,6 +301,78 @@ If yes to all → copy first
 
 # Memory Operations Comparison Table
 
+## 1. Simple Assignment vs. Slicing Assignment (`[:]` on the Left)
+`[:]` on the left is about Slicing Assignment and modifying an existing object in place.<br>
+Simple Assignment vs Slicing Assignment location: Simple Assignment creates a new location but Slicing Assignment uses the same location
+
+### Simple Assignment
+```python
+list_Y = [40, 50, 60] 
+print(f"ID START: {id(list_Y)}")
+
+list_Y = [10, 20, 30]
+print(f"ID END: {id(list_Y)}")
+```
+
+Output:
+```
+ID START: 2480118056512
+ID END: 2480118070528
+```
+
+### Slicing Assignment
+```python
+list_x = [40, 50, 60] 
+print(f"ID START: {id(list_x)}")
+
+list_x[:] = [10, 20, 30]
+print(f"ID END: {id(list_x)}")
+```
+Output:
+```
+ID START: 2480121598272
+ID END: 2480121598272
+```
+
+
+## 2. Simple Assignment vs. Shallow Copy (`[:]` on the Right)
+`[:]` on the right is about shallow copy and creating a safe copy.<br>
+Simple Assignment creates a new location but shallow copy creates a new location. (Simple Assignment creates a new location because it performs reassignment on the variable, meaning the variable drops its pointer to the old object and points to a new object.)
+
+### Simple Assignment
+```python
+list_A = [1,2,3]
+print(f"List A, ID START: {id(list_A)}")
+
+list_B = list_A
+print(f"List A, ID END: {id(list_A)}")
+print(f"List B, ID END: {id(list_B)}")
+```
+
+Output:
+```
+List A, ID START: 2480130787392
+List A, ID END: 2480130787392
+List B, ID END: 2480130787392
+```
+
+### Shallow Copy
+```python
+list_C = [1,2,3]
+print(f"List C, ID START: {id(list_C)}")
+
+list_D = list_C[:]
+print(f"List C, ID END: {id(list_C)}")
+print(f"List D, ID END: {id(list_D)}")
+```
+
+Output:
+```python
+List C, ID START: 2480113799808
+List C, ID END: 2480113799808
+List D, ID END: 2480130017280
+```
+
 | Feature | 1. Simple Assignment (`list_B = list_A`) | 2. Shallow Copy (`list_B = list_A[:]`) | 3. Slicing Assignment (`list_B[:] = list_A`) |
 | :--- | :--- | :--- | :--- |
 | **Technical Term** | Aliasing / Reassignment | Shallow Copy | In-Place Content Replacement |
