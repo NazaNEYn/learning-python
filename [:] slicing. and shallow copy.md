@@ -158,3 +158,130 @@ Output:
 Assignment: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 Assignment: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
+
+-------------------
+
+# when to create a shallow copy
+
+
+## The Core Rule (Memorize This)
+
+> **If you change a list while looping over it → do NOT loop over the original list.**
+
+That’s it. Everything else is details.
+
+
+## Why This Rule Exists
+When Python loops over a list, it uses indexes internally.
+If you:
+
+* remove items
+* insert items
+* reorder items
+
+the indexes shift, and Python gets confused about “what comes next”.
+This causes:
+
+* skipped items
+* unexpected behavior
+* bugs that don’t crash but give wrong results (worst kind)
+
+
+# Comparison: Original List vs Shallow Copy
+
+## Case 1: Iterating Without Modifying (Safe)
+**Scenario**
+You only read items.
+```python
+for x in my_list:
+    print(x)
+```
+*  Safe
+*  No copy needed
+*  Most common case
+Use this by default.
+
+
+## Case 2: Modifying While Iterating (Danger)
+**Scenario**
+You remove items:
+```python
+for x in my_list:
+    if x == "bad":
+        my_list.remove(x)
+```
+*  Dangerous
+*  Skips elements
+*  Unpredictable behavior
+You should never do this.
+
+
+## Case 3: Modifying While Iterating (Correct Way)
+**Scenario**
+You remove items, but safely:
+```python
+for x in my_list[:]:
+    if x == "bad":
+        my_list.remove(x)
+```
+*  Safe
+*  Loop is stable
+*  Original list changes
+This is where shallow copies are needed.
+
+## When You NEED a Shallow Copy
+You need `list[:]` when **ALL** of these are true:
+
+| Condition | Yes / No |
+| :--- | :--- |
+| Looping over a list | ✅ |
+| Modifying the same list | ✅ |
+| Order/index matters | ✅ |
+
+If all three are **YES** → make a copy
+
+
+## When You Do NOT Need a Copy
+
+| Situation | Copy Needed? |
+| :--- | :--- |
+| Only reading values | ❌ |
+| Building a new list | ❌ |
+| Appending to a different list | ❌ |
+| Using `append()` on another list | ❌ |
+| Looping over dict keys | ❌ |
+
+**Example (no copy needed):**
+```python
+result = []
+for x in my_list:
+    if x > 0:
+        result.append(x)
+```
+
+
+## `os.walk()` Is a Special Case
+You **MUST**:
+
+* modify subfolders
+* while looping
+* without breaking traversal
+
+## Mental Checklist (Use This)
+Before modifying a list in a loop, ask:
+
+* **Am I changing this list?**
+* **Am I looping over it?**
+  * **Do I care about correctness?**
+
+If yes to all → copy first
+
+
+## Summary Table 
+
+| Situation | Iterate Over |
+| :--- | :--- |
+| Read-only loop | `my_list` |
+| Modify list items | `my_list[:]` |
+| Build new list | `my_list` |
+| `os.walk` subfolders | `subfolders[:]` |
