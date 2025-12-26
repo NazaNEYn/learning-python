@@ -1,6 +1,21 @@
-# Computer Vision Roadmap for Beginners
+# Computer Vision Roadmap for myself
 
-This document outlines a structured path for individuals with a Python background but no prior experience in Machine Learning or Computer Vision, aiming for practical results within a few months.
+
+## Table of Contents: 8-Week Computer Vision Starter Plan
+
+* [Schedule Assumption](#schedule-assumption)
+* [Daily Structure](#daily-structure)
+* [WEEK 1: Images Are Data](#week-1-images-are-data-raw-images-are-data)
+* [WEEK 2: Image Processing Basics](#week-2-image-processing-basics)
+* [WEEK 3: Color & Motion](#week-3-color-amp-motion)
+* [WEEK 4: Face Detection (Classic CV)](#week-4-face-detection-classic-cv)
+* [WEEK 5: Intro to Machine Learning](#week-5-intro-to-machine-learning)
+* [WEEK 6: Deep Learning Foundations](#week-6-deep-learning-foundations)
+* [WEEK 7: Object Detection](#week-7-object-detection)
+* [WEEK 8: Portfolio Project](#week-8-portfolio-project)
+* [VERY IMPORTANT RULES](#very-important-rules)
+* 
+
 
 ---
 
