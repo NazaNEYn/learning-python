@@ -5,7 +5,7 @@
 
 * [Schedule Assumption](#schedule-assumption)
 * [Daily Structure](#daily-structure)
-* [WEEK 1: Images Are Data](#week-1-images-are-data-raw-images-are-data)
+* [WEEK 1: Images Are Data](#week-1-images-are-data)
 * [WEEK 2: Image Processing Basics](#week-2-image-processing-basics)
 * [WEEK 3: Color & Motion](#week-3-color-amp-motion)
 * [WEEK 4: Face Detection (Classic CV)](#week-4-face-detection-classic-cv)
@@ -14,7 +14,6 @@
 * [WEEK 7: Object Detection](#week-7-object-detection)
 * [WEEK 8: Portfolio Project](#week-8-portfolio-project)
 * [VERY IMPORTANT RULES](#very-important-rules)
-* 
 
 
 ---
