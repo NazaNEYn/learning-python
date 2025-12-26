@@ -47,6 +47,14 @@ It is one syntax, but its behavior and purpose change depending on context and d
 
 ---------------------------------
 
+# `[:]`
+
+The usage of `[:]` is fundamentally about controlling how Python interacts with memory references and object boundaries.
+
+
+---------------------
+
+
 # Assignment vs. Slicing/Shallow Copy
 
 **Slicing/Shallow Copy**
