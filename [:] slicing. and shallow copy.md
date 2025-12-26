@@ -42,7 +42,8 @@ So, the double colon `::` is just a concise way to signal that you want to use t
 
 
 *Note:* `[:]` can act differently, based on the context.<br>
-It depends on how it’s used.
+It depends on how it’s used.<br>
+It is one syntax, but its behavior and purpose change depending on context and data structure.
 
 ---------------------------------
 
