@@ -488,3 +488,20 @@ This comparison shows the difference between creating a new object versus modify
 | **Memory ID of `old_list`** | **CHANGES** (`id(old_list)` is now a new address). | **STAYS THE SAME** (`id(old_list)` is preserved). |
 | **Effect on Aliases** | **Breaks Aliases:** If `list_Z` was an alias of `old_list`, `list_Z` is now pointing to the old content. | **Preserves Aliases:** All aliases (like `list_Z`) are instantly updated because the single object they all point to has been modified. |
 | **Technical Term** | Reassignment (New reference, new object). | In-Place Content Replacement (Same reference, modified object). |
+
+
+--------
+
+# When to use them
+
+* 1. Implementing Aliasing `(new_list = old_list)`
+**When to Use:** When you need a second name for an object and want any change made via one name to immediately affect the other. This is extremely efficient because no new object is created.
+
+* 2.  Implementing Shallow Copy `(new_list = old_list[:])`
+**When to Use:** When you need an independent copy of a list, allowing you to modify the copy without affecting the original (e.g., sorting, filtering, temporary manipulation).
+
+* 3.  Implementing Slicing Assignment `(old_list[:] = new_content)`
+**When to Use:** When you want to change the content of a list entirely, but you must preserve the list's memory reference (ID) because other parts of your program are holding aliases to it. This is more efficient than rebuilding the list from scratch.
+
+* 4.  Implementing Reassignment `(old_list = new_data)`
+**When to Use:** When you are done with the old object and want the variable name to point to a completely different, new object. This is often the default, easiest way to update a variable.
