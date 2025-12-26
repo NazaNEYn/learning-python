@@ -382,8 +382,9 @@ List D, ID END: 2480130017280
 | Reassignment | `old_list = [new_data]` | NEW | NO |
 | Slicing Assignment | `old_list[:] = new_data` | SAME | YES |
 
+<br>
 
-*Here is my [https://static.marimo.app/static/slicing-notation-q4rw](notebook) for the code snippets.*
+| *Here is my [notebook](https://static.marimo.app/static/slicing-notation-q4rw) for the code snippets.*
 
 ---------
 
