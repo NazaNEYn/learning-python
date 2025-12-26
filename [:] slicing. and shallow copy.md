@@ -294,3 +294,46 @@ If yes to all → copy first
 | Modify list items | `my_list[:]` |
 | Build new list | `my_list` |
 | `os.walk` subfolders | `subfolders[:]` |
+
+
+--------------------
+
+
+# Memory Operations Comparison Table
+
+| Feature | 1. Simple Assignment (`list_B = list_A`) | 2. Shallow Copy (`list_B = list_A[:]`) | 3. Slicing Assignment (`list_B[:] = list_A`) |
+| :--- | :--- | :--- | :--- |
+| **Technical Term** | Aliasing / Reassignment | Shallow Copy | In-Place Content Replacement |
+| **Location/Usage of `[:]`** | Not used (uses only `=`) | Right Side (used to create a value) | Left Side (used as a target) |
+| **Action on the Container (The List Itself)** | Variable `list_B` now points to the **SAME** object as `list_A`. | A **NEW** list object (container) is created for `list_B`. | The **SAME** list object (`list_B`) is kept, but its contents are overwritten. |
+| **Memory ID of Target List** | **SAME ID** as `list_A` (They are aliases). | **NEW ID** (It's a separate object). | **SAME ID** as it had before the operation. |
+| **Action on Simple Contents (e.g., numbers)** | Shared, but changing one creates a **NEW** number object (safe). | Copied into the new container (independent). | Replaced with new values (independent). |
+| **Action on Mutable Contents (e.g., nested lists)** | Shared (They are all aliases, so they see the change). | **SHARED REFERENCE.** Both lists point to the **SAME** inner object. (**UNSAFE** for mutable data) | The contents of the inner list in `list_A` are copied into `list_B`. (If `list_A` contained mutable objects, those inner references are still copied, similar to shallow copy.) |
+| **Summary of Dependence** | **FULLY DEPENDENT** (Everything is linked). | **PARTIALLY DEPENDENT** (Outer list is safe, inner mutable objects are linked). | **INDEPENDENT** (The resulting `list_B` is independent of the source `list_A`). |
+
+
+
+
+# 1. Simple Assignment vs. Shallow Copy (`[:]` on the Right)
+This comparison shows how to create an alias (link) versus an independent copy.
+
+| Feature | Simple Assignment (`=`) | Shallow Copy (`old[:]` on the Right) |
+| :--- | :--- | :--- |
+| **Example Code** | `new_list = old_list` | `new_list = old_list[:]` |
+| **Object Creation** | **NO**—The operation only copies the memory reference. | **YES**—A new list container is created in memory. |
+| **Memory ID (Container)** | **STAYS THE SAME** (`id(new_list) == id(old_list)`). | **CHANGES** (`id(new_list) != id(old_list)`). |
+| **Relationship** | **Aliased (Linked):** They are two names for one object. | **Independent** (at the top level). |
+| **Impact of Modification** | Modifying `new_list` always changes `old_list` (and vice versa). | Modifying `new_list` never changes `old_list` (unless nested mutable objects are involved). |
+| **Purpose** | To give an existing object an alternative name (alias). | To create a separate, independent version of the list. |
+
+
+# 2. Simple Assignment vs. Slicing Assignment (`[:]` on the Left)
+This comparison shows the difference between creating a new object versus modifying an existing object in place.
+
+| Feature | Simple Assignment (`=`) | Slicing Assignment (`[:]` on the Left) |
+| :--- | :--- | :--- |
+| **Example Code** | `old_list = new_content` | `old_list[:] = new_content` |
+| **Object Creation** | **YES**—A new list object is created for `new_content`. | **NO**—The existing list object is modified directly. |
+| **Memory ID of `old_list`** | **CHANGES** (`id(old_list)` is now a new address). | **STAYS THE SAME** (`id(old_list)` is preserved). |
+| **Effect on Aliases** | **Breaks Aliases:** If `list_Z` was an alias of `old_list`, `list_Z` is now pointing to the old content. | **Preserves Aliases:** All aliases (like `list_Z`) are instantly updated because the single object they all point to has been modified. |
+| **Technical Term** | Reassignment (New reference, new object). | In-Place Content Replacement (Same reference, modified object). |
