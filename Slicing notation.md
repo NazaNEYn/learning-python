@@ -299,7 +299,7 @@ If yes to all → copy first
 --------------------
 
 
-# Memory Operations Comparison Table
+# Memory (Location) Operations Comparison Table
 
 ## 1. Simple Assignment vs. Slicing Assignment (`[:]` on the Left)
 `[:]` on the left is about Slicing Assignment and modifying an existing object in place.<br>
@@ -374,6 +374,17 @@ List D, ID END: 2480130017280
 ```
 
 
+In a very sinmple term:
+
+* Reassignment creates new location
+* Slicing Assignment uses the same location
+
+--
+
+* Aliasing uses the same location
+* Shallow copy creates new location
+
+<br>
 
 | Operation Type | Syntax | Action on Memory Location (ID) | Aliasing |
 | :--- | :--- | :--- | :--- |
