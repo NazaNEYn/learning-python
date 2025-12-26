@@ -3,18 +3,15 @@
 
 ## Table of Contents: 8-Week Computer Vision Starter Plan
 
-
-* [Schedule Assumption](#schedule-assumption)
-* [Daily Structure](#daily-structure)
-* [WEEK 1: Images Are Data 🖼️](#week-1-images-are-data-raw-1)
-* [WEEK 2: Image Processing Basics 🔧](#week-2-image-processing-basics-raw-2)
-* [WEEK 3: Color & Motion 🎨🎥](#week-3-color-amp-motion-raw-3)
-* [WEEK 4: Face Detection (Classic CV) 😄](#week-4-face-detection-classic-cv-raw-4)
-* [WEEK 5: Intro to Machine Learning 🤖](#week-5-intro-to-machine-learning-raw-5)
-* [WEEK 6: Deep Learning Foundations 🧠🔥](#week-6-deep-learning-foundations-raw-6)
-* [WEEK 7: Object Detection 🚗📦](#week-7-object-detection-raw-7)
-* [WEEK 8: Portfolio Project 🏗️](#week-8-portfolio-project-raw-8)
-* [VERY IMPORTANT RULES ⚠️](#very-important-rules)
+1.  [WEEK 1: Images Are Data](#week-1)
+2.  [WEEK 2: Image Processing Basics](#week-2)
+3.  [WEEK 3: Color & Motion](#week-3)
+4.  [WEEK 4: Face Detection (Classic CV)](#week-4)
+5.  [WEEK 5: Intro to Machine Learning](#week-5)
+6.  [WEEK 6: Deep Learning Foundations](#week-6)
+7.  [WEEK 7: Object Detection](#week-7)
+8.  [WEEK 8: Portfolio Project](#week-8)
+9.  [Rules and Schedule](#rules-and-schedule)
 
 
 ---
@@ -392,6 +389,7 @@ This plan is designed for beginners to gain confidence and practical skills in C
 
 ---
 
+<a id="week-1"></a>
 ## WEEK 1: Images Are Data 🖼️
 
 **Goal**
@@ -415,6 +413,7 @@ Understand what images actually are and get comfortable with OpenCV.
 
 ---
 
+<a id="week-2"></a>
 ## WEEK 2: Image Processing Basics 🔧
 
 **Goal**
@@ -439,6 +438,7 @@ Learn how computers find edges, shapes, and colors.
 
 ---
 
+<a id="week-3"></a>
 ## WEEK 3: Color & Motion 🎨🎥
 
 **Goal**
@@ -462,6 +462,7 @@ Work with color spaces and detect movement.
 
 ---
 
+<a id="week-4"></a>
 ## WEEK 4: Face Detection (Classic CV) 😄
 
 **Goal**
@@ -484,6 +485,7 @@ Build something impressive without deep learning yet.
 
 ---
 
+<a id="week-5"></a>
 ## WEEK 5: Intro to Machine Learning 🤖
 
 **Goal**
@@ -507,6 +509,7 @@ Understand why deep learning exists.
 
 ---
 
+<a id="week-6"></a>
 ## WEEK 6: Deep Learning Foundations 🧠🔥
 
 **Goal**
@@ -530,6 +533,8 @@ Understand CNNs intuitively.
 
 ---
 
+
+<a id="week-7"></a>
 ## WEEK 7: Object Detection 🚗📦
 
 **Goal**
@@ -550,6 +555,7 @@ Detect multiple objects in images/videos.
 
 ---
 
+<a id="week-8"></a>
 ## WEEK 8: Portfolio Project 🏗️
 
 **Goal**
