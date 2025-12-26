@@ -298,8 +298,7 @@ If yes to all → copy first
 
 --------------------
 
-
-# Memory (Location) Operations Comparison Table
+# Memory Location Control
 
 ## 1. Simple Assignment vs. Slicing Assignment (`[:]` on the Left)
 `[:]` on the left is about Slicing Assignment and modifying an existing object in place.<br>
@@ -399,6 +398,7 @@ In a very sinmple term:
 
 ---------
 
+# Memory Operations Comparison Table
 
 
 | Feature | 1. Simple Assignment (`list_B = list_A`) | 2. Shallow Copy (`list_B = list_A[:]`) | 3. Slicing Assignment (`list_B[:] = list_A`) |
